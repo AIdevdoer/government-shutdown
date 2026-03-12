@@ -1,0 +1,102 @@
+---
+interface Props {
+  label: string;
+  deadlineIso: string;
+  note: string;
+}
+
+const { label, deadlineIso, note } = Astro.props;
+const countdownId = `countdown-${label.toLowerCase().replace(/[^a-z0-9]+/g, "-")}`;
+---
+
+<section class="card countdown-card">
+  <div class="section-heading">
+    <span class="eyebrow">Deadline Watch</span>
+    <h2>{label}</h2>
+    <p>{note}</p>
+  </div>
+  <div class="clock" id={countdownId} data-deadline={deadlineIso}>
+    <article>
+      <strong>--</strong>
+      <span>days</span>
+    </article>
+    <article>
+      <strong>--</strong>
+      <span>hours</span>
+    </article>
+    <article>
+      <strong>--</strong>
+      <span>minutes</span>
+    </article>
+    <article>
+      <strong>--</strong>
+      <span>seconds</span>
+    </article>
+  </div>
+</section>
+
+<script define:vars={{ countdownId }}>
+  const root = document.getElementById(countdownId);
+  const deadline = root?.dataset.deadline ? new Date(root.dataset.deadline).getTime() : 0;
+
+  const render = () => {
+    if (!root || !deadline) return;
+    const diff = Math.max(0, deadline - Date.now());
+    const units = [
+      Math.floor(diff / 86400000),
+      Math.floor((diff % 86400000) / 3600000),
+      Math.floor((diff % 3600000) / 60000),
+      Math.floor((diff % 60000) / 1000)
+    ];
+
+    [...root.querySelectorAll("strong")].forEach((node, index) => {
+      node.textContent = String(units[index]).padStart(2, "0");
+    });
+  };
+
+  render();
+  setInterval(render, 1000);
+</script>
+
+<style>
+  .countdown-card {
+    padding: 1.35rem;
+  }
+
+  .clock {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 0.8rem;
+  }
+
+  .clock article {
+    padding: 1rem;
+    border-radius: 1rem;
+    background: rgba(255, 255, 255, 0.52);
+    border: 1px solid rgba(23, 29, 36, 0.08);
+  }
+
+  .clock strong {
+    display: block;
+    font-family: "Barlow Condensed", Impact, sans-serif;
+    font-size: clamp(2.1rem, 4vw, 3rem);
+    line-height: 0.9;
+    text-transform: uppercase;
+  }
+
+  .clock span {
+    display: block;
+    margin-top: 0.35rem;
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 0.72rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+  }
+
+  @media (max-width: 720px) {
+    .clock {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+</style>

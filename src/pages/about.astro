@@ -1,0 +1,47 @@
+---
+import Footer from "../components/Footer.astro";
+import Header from "../components/Header.astro";
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+
+<BaseLayout
+  title="About"
+  description="About Government Shutdown, an independent site covering federal funding deadlines, service impacts, and worker guidance."
+>
+  <Header />
+  <main class="shell" style="padding: 2rem 0 4rem;">
+    <section class="card policy-card" style="padding: 1.5rem;">
+      <div class="section-heading">
+        <span class="eyebrow">About</span>
+        <h1>Built for the moment federal funding drama turns into a practical problem.</h1>
+        <p>
+          Government Shutdown is an independent information site covering the federal funding clock, shutdown risk,
+          agency service impacts, worker-pay questions, and the specific answers people search for when a deadline
+          starts to feel real.
+        </p>
+      </div>
+      <div class="prose">
+        <h2>What this site is for</h2>
+        <p>
+          The site is designed to help readers move from vague anxiety to clear next steps. That means answering
+          operational questions first: whether a benefit check is affected, whether passport processing may slow down,
+          whether TSA remains open, and where federal workers should look for official guidance.
+        </p>
+
+        <h2>What this site is not</h2>
+        <p>
+          This is not an official U.S. government website and is not affiliated with any federal agency. It does not
+          provide legal advice, employment advice, or agency-specific determinations. Readers should confirm critical
+          details using the official sources linked on each page.
+        </p>
+
+        <h2>How to contact us</h2>
+        <p>
+          Editorial questions, correction requests, and partnership inquiries can be sent to
+          <a href="mailto:editor@government-shutdown.com"> editor@government-shutdown.com</a>.
+        </p>
+      </div>
+    </section>
+  </main>
+  <Footer />
+</BaseLayout>

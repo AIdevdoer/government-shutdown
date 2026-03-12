@@ -1,0 +1,41 @@
+---
+import Footer from "../components/Footer.astro";
+import Header from "../components/Header.astro";
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+
+<BaseLayout
+  title="Affiliate Disclosure"
+  description="Affiliate disclosure for Government Shutdown, covering future tax, budgeting, travel, and related recommendations."
+>
+  <Header />
+  <main class="shell" style="padding: 2rem 0 4rem;">
+    <section class="card policy-card" style="padding: 1.5rem;">
+      <div class="section-heading">
+        <span class="eyebrow">Affiliate Disclosure</span>
+        <h1>Some resource recommendations may later use affiliate links.</h1>
+      </div>
+      <div class="prose">
+        <p>
+          Government Shutdown may earn a commission when readers click certain links and complete a qualifying action.
+          If affiliate links are used, they will generally appear in pages tied to practical next steps such as tax
+          filing, budgeting, or travel disruption planning.
+        </p>
+
+        <h2>How recommendations are handled</h2>
+        <p>
+          Affiliate relationships do not determine the editorial answer to whether a service is affected or what readers
+          should do first. Operational guidance is written independently, and affiliate links are intended to sit beside
+          relevant solution-oriented content, not replace it.
+        </p>
+
+        <h2>Disclosure standard</h2>
+        <p>
+          When affiliate links are active, we aim to disclose them clearly and close to the recommendation so readers do
+          not have to guess about the relationship.
+        </p>
+      </div>
+    </section>
+  </main>
+  <Footer />
+</BaseLayout>

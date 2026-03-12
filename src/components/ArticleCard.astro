@@ -1,0 +1,58 @@
+---
+interface Props {
+  href: string;
+  category: string;
+  title: string;
+  description: string;
+  updated: string;
+}
+
+const { href, category, title, description, updated } = Astro.props;
+---
+
+<a class="card article-card" href={href}>
+  <span class="surface-label">{category}</span>
+  <h3>{title}</h3>
+  <p>{description}</p>
+  <div class="card-meta">
+    <span>{updated}</span>
+    <span>Read guide</span>
+  </div>
+</a>
+
+<style>
+  .article-card {
+    display: grid;
+    gap: 0.8rem;
+    padding: 1.2rem;
+    min-height: 100%;
+  }
+
+  .article-card h3 {
+    margin: 0;
+    font-family: "Barlow Condensed", Impact, sans-serif;
+    font-size: 1.7rem;
+    line-height: 0.95;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+  }
+
+  .article-card p {
+    margin: 0;
+    color: var(--ink-soft);
+    line-height: 1.8;
+  }
+
+  .card-meta {
+    display: flex;
+    justify-content: space-between;
+    gap: 0.6rem;
+    margin-top: auto;
+    padding-top: 0.6rem;
+    border-top: 1px solid rgba(23, 29, 36, 0.08);
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 0.72rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+</style>

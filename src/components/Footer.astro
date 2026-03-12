@@ -1,0 +1,72 @@
+<footer class="site-footer">
+  <div class="shell footer-grid">
+    <section class="card footer-panel">
+      <span class="surface-label">Read This First</span>
+      <h2>Independent, source-linked, and built for high-stakes search moments.</h2>
+      <p>
+        Government shutdown searches spike when people need a fast answer. This project is designed to explain the
+        funding clock, who is affected, and where to verify details with official agencies.
+      </p>
+    </section>
+    <section class="card footer-panel">
+      <span class="surface-label">Policy Links</span>
+      <div class="footer-links">
+        <a href="/about/">About</a>
+        <a href="/editorial-policy/">Editorial Policy</a>
+        <a href="/affiliate-disclosure/">Affiliate Disclosure</a>
+        <a href="/privacy-policy/">Privacy Policy</a>
+      </div>
+      <p class="notice">Questions or correction requests: editor@government-shutdown.com</p>
+    </section>
+  </div>
+</footer>
+
+<style>
+  .site-footer {
+    padding: 0 0 2rem;
+  }
+
+  .footer-grid {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: 1.2fr 0.9fr;
+  }
+
+  .footer-panel {
+    padding: 1.35rem;
+  }
+
+  .footer-panel h2 {
+    margin: 0.5rem 0 0.8rem;
+    font-family: "Barlow Condensed", Impact, sans-serif;
+    font-size: clamp(2rem, 4vw, 3rem);
+    line-height: 0.95;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+  }
+
+  .footer-panel p {
+    margin: 0;
+    color: var(--ink-soft);
+    line-height: 1.8;
+  }
+
+  .footer-links {
+    display: grid;
+    gap: 0.65rem;
+    margin-top: 0.75rem;
+  }
+
+  .footer-links a {
+    font-family: "Barlow Condensed", Impact, sans-serif;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+  }
+
+  @media (max-width: 820px) {
+    .footer-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

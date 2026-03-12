@@ -1,0 +1,153 @@
+---
+import Footer from "../components/Footer.astro";
+import Header from "../components/Header.astro";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { articles, getArticle } from "../data/articles";
+
+export function getStaticPaths() {
+  return articles.map((article) => ({ params: { slug: article.slug } }));
+}
+
+const slug = Astro.params.slug ?? "";
+const article = getArticle(slug);
+
+if (!article) {
+  throw new Error(`Missing article for slug: ${slug}`);
+}
+
+const relatedArticles = article.related.map((relatedSlug) => getArticle(relatedSlug)).filter(Boolean);
+---
+
+<BaseLayout title={article.title} description={article.description}>
+  <Header />
+  <main>
+    <section class="page-hero">
+      <div class="shell page-hero-grid">
+        <article class="card hero-copy">
+          <span class="eyebrow">{article.category}</span>
+          <h1>{article.title}</h1>
+          <p class="lede">{article.description}</p>
+        </article>
+        <aside class="card hero-note">
+          <span class="surface-label">{article.updated}</span>
+          <h2>{article.kicker}</h2>
+          <p>
+            Every high-stakes page on this site is written to answer the practical question first, show the update
+            date clearly, and point readers toward official sources.
+          </p>
+        </aside>
+      </div>
+    </section>
+
+    <div class="shell article-shell">
+      <aside class="card meta-panel">
+        <span class="surface-label">Key points</span>
+        <ul>
+          {article.takeaways.map((point) => (
+            <li>{point}</li>
+          ))}
+        </ul>
+      </aside>
+
+      <article class="card content-panel prose">
+        {article.sections.map((section) => (
+          <section>
+            <h2>{section.title}</h2>
+            {section.paragraphs.map((paragraph) => (
+              <p>{paragraph}</p>
+            ))}
+            {section.bullets && (
+              <ul>
+                {section.bullets.map((bullet) => (
+                  <li>{bullet}</li>
+                ))}
+              </ul>
+            )}
+          </section>
+        ))}
+
+        {article.actionBox && (
+          <section class="card action-box">
+            <span class="surface-label">Next Move</span>
+            <h3>{article.actionBox.title}</h3>
+            <p>{article.actionBox.text}</p>
+            <a class="cta-link" href={article.actionBox.ctaHref}>{article.actionBox.ctaLabel}</a>
+          </section>
+        )}
+
+        <section>
+          <h2>Frequently asked</h2>
+          {article.faqs.map((item) => (
+            <details>
+              <summary>{item.question}</summary>
+              <p>{item.answer}</p>
+            </details>
+          ))}
+        </section>
+
+        <section>
+          <h2>Official sources</h2>
+          <div class="source-list">
+            {article.citations.map((citation) => (
+              <a href={citation.href} target="_blank" rel="noreferrer">
+                <strong>{citation.label}</strong>
+                <span>{new URL(citation.href).hostname.replace(/^www\./, "")}</span>
+              </a>
+            ))}
+          </div>
+        </section>
+
+        <section>
+          <h2>Related guides</h2>
+          <div class="related-list">
+            {relatedArticles.map((relatedArticle) => (
+              <a href={`/${relatedArticle!.slug}/`}>
+                <strong>{relatedArticle!.title}</strong>
+                <span>{relatedArticle!.description}</span>
+              </a>
+            ))}
+          </div>
+        </section>
+      </article>
+    </div>
+  </main>
+  <Footer />
+</BaseLayout>
+
+<style>
+  .hero-copy,
+  .hero-note {
+    padding: 1.35rem;
+  }
+
+  .hero-copy h1,
+  .hero-note h2 {
+    margin: 0.6rem 0 0.8rem;
+    font-family: "Barlow Condensed", Impact, sans-serif;
+    text-transform: uppercase;
+    line-height: 0.92;
+    letter-spacing: 0.03em;
+  }
+
+  .hero-copy h1 {
+    font-size: clamp(2.8rem, 6vw, 5.3rem);
+  }
+
+  .hero-note h2 {
+    font-size: clamp(1.8rem, 4vw, 2.8rem);
+  }
+
+  .hero-note p {
+    margin: 0;
+    color: var(--ink-soft);
+    line-height: 1.8;
+  }
+
+  .action-box {
+    padding: 1.15rem;
+  }
+
+  .action-box h3 {
+    margin: 0.6rem 0 0.7rem;
+  }
+</style>

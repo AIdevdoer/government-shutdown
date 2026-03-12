@@ -1,0 +1,47 @@
+---
+import Footer from "../components/Footer.astro";
+import Header from "../components/Header.astro";
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+
+<BaseLayout
+  title="Editorial Policy"
+  description="Editorial standards for Government Shutdown, including sourcing, corrections, timestamps, and update practices."
+>
+  <Header />
+  <main class="shell" style="padding: 2rem 0 4rem;">
+    <section class="card policy-card" style="padding: 1.5rem;">
+      <div class="section-heading">
+        <span class="eyebrow">Editorial Policy</span>
+        <h1>Source-led, timestamped, and built for high-stakes utility.</h1>
+      </div>
+      <div class="prose">
+        <h2>Source hierarchy</h2>
+        <p>
+          We prioritize primary sources such as federal agencies, CRS, GAO, congressional materials, and direct public
+          documentation. News reporting may be used for context, but operational claims should be anchored in primary
+          sources whenever possible.
+        </p>
+
+        <h2>Update policy</h2>
+        <p>
+          Every core guide should display a visible update date. During active funding disputes, pages may be revised
+          multiple times to reflect new deadlines, contingency guidance, or agency notices.
+        </p>
+
+        <h2>Corrections</h2>
+        <p>
+          If a material error is identified, we correct the page and update the timestamp. Readers can request a review
+          by emailing <a href="mailto:editor@government-shutdown.com">editor@government-shutdown.com</a>.
+        </p>
+
+        <h2>Writing standard</h2>
+        <p>
+          We aim to answer the practical question first, separate payment continuity from service continuity, and avoid
+          vague reassurance. Pages should be clear enough for stressed readers to understand quickly.
+        </p>
+      </div>
+    </section>
+  </main>
+  <Footer />
+</BaseLayout>
