@@ -56,6 +56,28 @@
   - `package-lock.json`
   - `dist/*`
 
+### Phase 5: Publishing & Deployment
+- **Status:** complete
+- Actions taken:
+  - Initialized git, committed the project, and created the public GitHub repository `AIdevdoer/government-shutdown`.
+  - Created a Git-backed Cloudflare Pages project through the API and pointed it at the GitHub repository.
+  - Pushed an empty commit to trigger the first `github:push` production deployment.
+  - Verified the live Pages URL returns `HTTP 200`.
+  - Added apex and `www` custom domains to the Pages project.
+- Files created/modified:
+  - `.git/`
+  - GitHub remote `origin`
+
+### Phase 6: Delivery
+- **Status:** in_progress
+- Actions taken:
+  - Investigated custom-domain activation and confirmed it is blocked by missing CNAME DNS records.
+  - Confirmed the available Wrangler OAuth token lacks the permissions needed to write zone DNS records directly.
+- Files created/modified:
+  - `task_plan.md` (updated)
+  - `findings.md` (updated)
+  - `progress.md` (updated)
+
 ## Test Results
 | Test | Input | Expected | Actual | Status |
 |------|-------|----------|--------|--------|
@@ -63,18 +85,22 @@
 | Cloudflare auth | `wrangler whoami` | Authenticated account details | Authenticated Cloudflare account returned | ✓ |
 | Install dependencies | `npm install` | Install Astro dependencies | 285 packages added, 0 vulnerabilities | ✓ |
 | Static build | `npm run build` | Successful static output | Build completed, 18 pages generated | ✓ |
+| GitHub push | `gh repo create ... --push` | Repository created and branch pushed | Repo created and `main` pushed to origin | ✓ |
+| Pages production deployment | Cloudflare API poll after Git push | Successful `github:push` deployment | Deployment `3cbed40c...` reached `success` | ✓ |
+| Live endpoint | `curl -I https://government-shutdown.pages.dev` | `HTTP 200` | `HTTP/2 200` returned | ✓ |
 
 ## Error Log
 | Timestamp | Error | Attempt | Resolution |
 |-----------|-------|---------|------------|
 | 2026-03-12 | `git status` in non-repo directory | 1 | Deferred until git initialization |
 | 2026-03-12 | Chrome DevTools MCP could not open a new local preview page | 1 | Continued with build verification and output inspection |
+| 2026-03-12 | Cloudflare DNS API returned `403 Forbidden` | 1 | Custom domains remain pending; Pages deployment itself succeeded |
 
 ## 5-Question Reboot Check
 | Question | Answer |
 |----------|--------|
 | Where am I? | Phase 5 |
-| Where am I going? | GitHub publishing, Cloudflare Pages connection, final delivery |
+| Where am I going? | Final delivery plus a documented manual DNS step if the custom domain should go live immediately |
 | What's the goal? | Build, publish, and deploy the Government Shutdown site |
-| What have I learned? | Astro static output builds cleanly; Git-integrated Pages may still need dashboard/API authorization handling |
-| What have I done? | Planned the work, built the site, and verified static output |
+| What have I learned? | Git-backed Pages deployment works; custom-domain activation is blocked only by DNS permissions |
+| What have I done? | Planned the work, built the site, pushed it to GitHub, and deployed it to Cloudflare Pages |

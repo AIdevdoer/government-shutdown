@@ -4,7 +4,7 @@
 Build a production-ready content site for `government-shutdown.com`, initialize source control, publish it to a new GitHub repository, and connect that repository to Cloudflare Pages for deployment.
 
 ## Current Phase
-Phase 5
+Phase 6
 
 ## Phases
 
@@ -33,16 +33,16 @@ Phase 5
 - **Status:** in_progress
 
 ### Phase 5: Publishing & Deployment
-- [ ] Initialize git and create GitHub repository
-- [ ] Push repository to GitHub
-- [ ] Connect repository to Cloudflare Pages and verify deployment
-- **Status:** in_progress
+- [x] Initialize git and create GitHub repository
+- [x] Push repository to GitHub
+- [x] Connect repository to Cloudflare Pages and verify deployment
+- **Status:** complete
 
 ### Phase 6: Delivery
 - [ ] Review output files and deployment status
 - [ ] Summarize next steps and risks
 - [ ] Deliver to user
-- **Status:** pending
+- **Status:** in_progress
 
 ## Key Questions
 1. What stack gives fast SEO-friendly delivery and simple Cloudflare Pages deployment?
@@ -56,13 +56,18 @@ Phase 5
 | Use GitHub CLI and Wrangler auth already present in the environment | Reduces user handoff and allows end-to-end execution |
 | Build the site with Astro static output | Good fit for content-heavy SEO pages and simple Cloudflare Pages deployment |
 | Commit `package-lock.json` | Keeps GitHub and Cloudflare builds reproducible |
+| Create the Pages project through the Cloudflare API with GitHub source metadata | Wrangler CLI alone does not expose the full Git-backed project setup flow |
 
 ## Errors Encountered
 | Error | Attempt | Resolution |
 |-------|---------|------------|
 | `git status` failed because the directory was not a git repository | 1 | Deferred git commands until repository initialization |
 | Chrome DevTools MCP browser session could not be opened cleanly for local preview | 1 | Continued with successful static builds and HTML output validation; may need another browser attempt later |
+| Cloudflare DNS records API returned `403 Forbidden` | 1 | Pages project and custom domains were created, but apex and `www` DNS records could not be written with the current OAuth token |
 
 ## Notes
 - Cloudflare Pages Git integration appears to be dashboard-driven; verify if UI automation is needed.
 - The site should favor static generation, SEO structure, and policy/disclosure pages from day one.
+- GitHub repo is live at `https://github.com/AIdevdoer/government-shutdown`.
+- Cloudflare Pages deployment is live at `https://government-shutdown.pages.dev`.
+- Custom domains were attached to the Pages project but remain pending because the required CNAME DNS records could not be written by the current token.
