@@ -1,0 +1,46 @@
+---
+import Footer from "../components/Footer.astro";
+import Header from "../components/Header.astro";
+import { getPolicyPage, type PolicyKey } from "../data/policies";
+import { localizePath, otherLocale, type Locale } from "../data/locales";
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+interface Props {
+  locale: Locale;
+  pageKey: PolicyKey;
+}
+
+const { locale, pageKey } = Astro.props;
+const page = getPolicyPage(locale, pageKey);
+const switchHref = localizePath(otherLocale(locale), pageKey);
+---
+
+<BaseLayout
+  title={page.title}
+  description={page.description}
+  locale={locale}
+  canonicalPath={localizePath(locale, pageKey)}
+  alternates={{ en: localizePath("en", pageKey), zh: localizePath("zh", pageKey) }}
+>
+  <Header locale={locale} switchHref={switchHref} />
+  <main class="shell" style="padding: 2rem 0 4rem;">
+    <section class="card policy-card" style="padding: 1.5rem;">
+      <div class="section-heading">
+        <span class="eyebrow">{page.eyebrow}</span>
+        <h1>{page.heading}</h1>
+        {page.intro && <p>{page.intro}</p>}
+      </div>
+      <div class="prose">
+        {page.sections.map((section) => (
+          <section>
+            <h2>{section.title}</h2>
+            {section.paragraphs.map((paragraph) => (
+              <p>{paragraph}</p>
+            ))}
+          </section>
+        ))}
+      </div>
+    </section>
+  </main>
+  <Footer locale={locale} />
+</BaseLayout>

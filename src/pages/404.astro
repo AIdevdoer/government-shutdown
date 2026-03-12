@@ -4,15 +4,19 @@ import Header from "../components/Header.astro";
 import BaseLayout from "../layouts/BaseLayout.astro";
 ---
 
-<BaseLayout title="Page not found" description="The page you requested could not be found.">
-  <Header />
+<BaseLayout title="Page not found" description="The page you requested could not be found." locale="en" canonicalPath="/404.html">
+  <Header locale="en" switchHref="/zh/" />
   <main class="shell" style="padding: 2rem 0 4rem;">
     <section class="card" style="padding: 1.5rem;">
       <span class="eyebrow">Not Found</span>
       <h1 style="margin: 0.65rem 0 0.8rem; font-family: 'Barlow Condensed', Impact, sans-serif; font-size: clamp(2.6rem, 6vw, 5rem); line-height: 0.92; text-transform: uppercase;">That page is not on the board.</h1>
       <p class="lede">Return to the watch page, browse the main guides, or jump straight to workers, taxes, travel, and benefits coverage.</p>
-      <p><a class="cta-link" href="/">Go back home</a></p>
+      <p class="lede" style="margin-top: 0.75rem;">这个页面不存在。你可以返回英文首页，或者进入中文首页继续查看。</p>
+      <p style="display: flex; flex-wrap: wrap; gap: 1rem;">
+        <a class="cta-link" href="/">Go back home</a>
+        <a class="cta-link" href="/zh/">中文首页</a>
+      </p>
     </section>
   </main>
-  <Footer />
+  <Footer locale="en" />
 </BaseLayout>

@@ -3,34 +3,36 @@ interface Props {
   label: string;
   deadlineIso: string;
   note: string;
+  eyebrow: string;
+  units: [string, string, string, string];
 }
 
-const { label, deadlineIso, note } = Astro.props;
+const { label, deadlineIso, note, eyebrow, units } = Astro.props;
 const countdownId = `countdown-${label.toLowerCase().replace(/[^a-z0-9]+/g, "-")}`;
 ---
 
 <section class="card countdown-card">
   <div class="section-heading">
-    <span class="eyebrow">Deadline Watch</span>
+    <span class="eyebrow">{eyebrow}</span>
     <h2>{label}</h2>
     <p>{note}</p>
   </div>
   <div class="clock" id={countdownId} data-deadline={deadlineIso}>
     <article>
       <strong>--</strong>
-      <span>days</span>
+      <span>{units[0]}</span>
     </article>
     <article>
       <strong>--</strong>
-      <span>hours</span>
+      <span>{units[1]}</span>
     </article>
     <article>
       <strong>--</strong>
-      <span>minutes</span>
+      <span>{units[2]}</span>
     </article>
     <article>
       <strong>--</strong>
-      <span>seconds</span>
+      <span>{units[3]}</span>
     </article>
   </div>
 </section>

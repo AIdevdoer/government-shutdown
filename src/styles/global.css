@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500&family=Spectral:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500&family=Noto+Sans+SC:wght@400;500;700;900&family=Noto+Serif+SC:wght@400;500;600;700&family=Spectral:wght@400;500;600;700&display=swap");
 
 :root {
   --paper: #efe5d8;
@@ -32,6 +32,10 @@ body {
     radial-gradient(circle at 85% 20%, rgba(144, 113, 69, 0.18), transparent 28%),
     linear-gradient(180deg, #f7f0e7 0%, var(--paper) 40%, #e9dfd0 100%);
   min-height: 100vh;
+}
+
+html[lang="zh-CN"] body {
+  font-family: "Noto Serif SC", "PingFang SC", "Hiragino Sans GB", serif;
 }
 
 body::before {
@@ -143,6 +147,50 @@ main {
 
 .cta-link::after {
   content: "->";
+}
+
+html[lang="zh-CN"] .eyebrow,
+html[lang="zh-CN"] .chip,
+html[lang="zh-CN"] .surface-label,
+html[lang="zh-CN"] .cta-link,
+html[lang="zh-CN"] nav a,
+html[lang="zh-CN"] .brand strong,
+html[lang="zh-CN"] .clock span,
+html[lang="zh-CN"] .card-meta {
+  font-family: "Noto Sans SC", "PingFang SC", sans-serif;
+  letter-spacing: 0.04em;
+  text-transform: none;
+}
+
+html[lang="zh-CN"] .section-heading h1,
+html[lang="zh-CN"] .section-heading h2,
+html[lang="zh-CN"] .hero-panel h1,
+html[lang="zh-CN"] .hero-copy h1,
+html[lang="zh-CN"] .hero-note h2,
+html[lang="zh-CN"] .footer-panel h2,
+html[lang="zh-CN"] .signal-panel h2,
+html[lang="zh-CN"] .stack-card h3,
+html[lang="zh-CN"] .quick-answer h3,
+html[lang="zh-CN"] .article-card h3,
+html[lang="zh-CN"] .timeline-item h3,
+html[lang="zh-CN"] .prose h2,
+html[lang="zh-CN"] .prose h3 {
+  font-family: "Noto Sans SC", "PingFang SC", sans-serif;
+  letter-spacing: 0.01em;
+  text-transform: none;
+}
+
+html[lang="zh-CN"] .prose p,
+html[lang="zh-CN"] .prose li,
+html[lang="zh-CN"] .lede,
+html[lang="zh-CN"] .signal-panel p,
+html[lang="zh-CN"] .stack-card p,
+html[lang="zh-CN"] .quick-answer p,
+html[lang="zh-CN"] .article-card p,
+html[lang="zh-CN"] .hero-note p,
+html[lang="zh-CN"] .footer-panel p,
+html[lang="zh-CN"] .notice {
+  line-height: 1.95;
 }
 
 .lede {

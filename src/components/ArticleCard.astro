@@ -5,9 +5,10 @@ interface Props {
   title: string;
   description: string;
   updated: string;
+  ctaLabel: string;
 }
 
-const { href, category, title, description, updated } = Astro.props;
+const { href, category, title, description, updated, ctaLabel } = Astro.props;
 ---
 
 <a class="card article-card" href={href}>
@@ -16,7 +17,7 @@ const { href, category, title, description, updated } = Astro.props;
   <p>{description}</p>
   <div class="card-meta">
     <span>{updated}</span>
-    <span>Read guide</span>
+    <span>{ctaLabel}</span>
   </div>
 </a>
 

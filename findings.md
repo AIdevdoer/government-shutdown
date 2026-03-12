@@ -18,6 +18,8 @@
 - The Cloudflare zone for `government-shutdown.com` exists and is active in the same account.
 - Custom domains were added to the Pages project, but domain validation reports `CNAME record not set`.
 - The current Wrangler OAuth token can manage Pages projects but cannot write zone DNS records, so custom-domain activation is blocked at the DNS layer.
+- The site has been upgraded to a bilingual structure: English remains at `/`, Chinese mirrors the site under `/zh/`.
+- The bilingual implementation includes localized homepage content, 12 mirrored article pages, mirrored policy pages, language switching, and alternate-language metadata.
 
 ## Technical Decisions
 | Decision | Rationale |
@@ -26,6 +28,7 @@
 | Prefer a framework that outputs static files cleanly | Simplifies Cloudflare build settings and future scaling |
 | Use Astro instead of hand-written static HTML | Keeps multi-page SEO structure maintainable while still emitting static output |
 | Trigger the first Pages deployment with an empty commit after project creation | Ensures Cloudflare receives a fresh Git push event after the Git-backed project is attached |
+| Keep English on the root path and place Chinese under `/zh/` | Preserves English SEO landing paths while making bilingual expansion straightforward |
 
 ## Issues Encountered
 | Issue | Resolution |
@@ -42,6 +45,7 @@
 - Cloudflare Git integration overview: https://developers.cloudflare.com/pages/configuration/git-integration/
 - GitHub repository: https://github.com/AIdevdoer/government-shutdown
 - Live Pages URL: https://government-shutdown.pages.dev
+- Chinese homepage: https://government-shutdown.pages.dev/zh/
 
 ## Visual/Browser Findings
 - Cloudflare Pages Git integration docs state the normal flow is `Workers & Pages` -> `Create application` -> `Pages` -> `Connect to Git`.

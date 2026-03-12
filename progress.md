@@ -73,6 +73,9 @@
 - Actions taken:
   - Investigated custom-domain activation and confirmed it is blocked by missing CNAME DNS records.
   - Confirmed the available Wrangler OAuth token lacks the permissions needed to write zone DNS records directly.
+  - Reworked the site into a bilingual structure with English root routes and Chinese `/zh/` routes.
+  - Added localized data, mirrored article/policy pages, language switch links, and alternate-language metadata.
+  - Verified English homepage, Chinese homepage, Chinese article pages, and language switching in a local browser session.
 - Files created/modified:
   - `task_plan.md` (updated)
   - `findings.md` (updated)
@@ -88,6 +91,8 @@
 | GitHub push | `gh repo create ... --push` | Repository created and branch pushed | Repo created and `main` pushed to origin | ✓ |
 | Pages production deployment | Cloudflare API poll after Git push | Successful `github:push` deployment | Deployment `3cbed40c...` reached `success` | ✓ |
 | Live endpoint | `curl -I https://government-shutdown.pages.dev` | `HTTP 200` | `HTTP/2 200` returned | ✓ |
+| Bilingual build | `npm run build` after i18n changes | English and Chinese routes generate cleanly | 35 static pages built successfully | ✓ |
+| Local bilingual review | Open `/`, `/zh/`, `/zh/government-shutdown-2026/`, then switch back to English | Pages render and language switching works | Verified in browser snapshot session | ✓ |
 
 ## Error Log
 | Timestamp | Error | Attempt | Resolution |
@@ -99,8 +104,8 @@
 ## 5-Question Reboot Check
 | Question | Answer |
 |----------|--------|
-| Where am I? | Phase 5 |
+| Where am I? | Phase 6 |
 | Where am I going? | Final delivery plus a documented manual DNS step if the custom domain should go live immediately |
 | What's the goal? | Build, publish, and deploy the Government Shutdown site |
-| What have I learned? | Git-backed Pages deployment works; custom-domain activation is blocked only by DNS permissions |
-| What have I done? | Planned the work, built the site, pushed it to GitHub, and deployed it to Cloudflare Pages |
+| What have I learned? | Git-backed Pages deployment works; bilingual routing is clean; custom-domain activation is blocked only by DNS permissions |
+| What have I done? | Planned the work, built the site, upgraded it to bilingual routing, pushed it to GitHub, and deployed it to Cloudflare Pages |

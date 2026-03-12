@@ -1,6 +1,6 @@
 # Government Shutdown
 
-Static content site for `government-shutdown.com`, built with Astro and designed for event-driven SEO around federal funding deadlines, agency impacts, and worker guidance.
+Static bilingual content site for `government-shutdown.com`, built with Astro and designed for event-driven SEO around federal funding deadlines, agency impacts, and worker guidance.
 
 ## Run locally
 
@@ -18,9 +18,14 @@ npm run build
 ## Project structure
 
 - `src/pages/` static routes and generated article pages
-- `src/data/` structured content for the homepage and article guides
+- `src/data/` localized content for the homepage, article guides, and policy pages
 - `src/components/` reusable UI sections
 - `docs/` strategy and information-architecture notes
+
+## Languages
+
+- English routes live at `/`
+- Chinese routes live at `/zh/`
 
 ## Deployment
 

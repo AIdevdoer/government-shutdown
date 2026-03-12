@@ -1,18 +1,22 @@
 ---
 import "../styles/global.css";
+import { getUiCopy, hreflang, type Locale } from "../data/locales";
 
 interface Props {
   title: string;
   description: string;
+  locale: Locale;
+  canonicalPath?: string;
+  alternates?: Partial<Record<Locale, string>>;
 }
 
-const { title, description } = Astro.props;
-const siteName = "Government Shutdown";
-const canonical = new URL(Astro.url.pathname, Astro.site);
+const { title, description, locale, canonicalPath, alternates } = Astro.props;
+const siteName = getUiCopy(locale).siteName;
+const canonical = new URL(canonicalPath ?? Astro.url.pathname, Astro.site);
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang={hreflang(locale)}>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -22,6 +26,9 @@ const canonical = new URL(Astro.url.pathname, Astro.site);
     <meta name="theme-color" content="#171d24" />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <link rel="canonical" href={canonical} />
+    {alternates?.en && <link rel="alternate" hreflang="en" href={new URL(alternates.en, Astro.site).toString()} />}
+    {alternates?.zh && <link rel="alternate" hreflang="zh-CN" href={new URL(alternates.zh, Astro.site).toString()} />}
+    <link rel="alternate" hreflang="x-default" href={new URL("/", Astro.site).toString()} />
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content={siteName} />
     <meta property="og:title" content={`${title} | ${siteName}`} />

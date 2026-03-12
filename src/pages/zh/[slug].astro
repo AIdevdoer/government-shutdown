@@ -1,0 +1,12 @@
+---
+import { getArticles } from "../../data/content";
+import ArticlePage from "../../templates/ArticlePage.astro";
+
+export function getStaticPaths() {
+  return getArticles("zh").map((article) => ({ params: { slug: article.slug } }));
+}
+
+const slug = Astro.params.slug ?? "";
+---
+
+<ArticlePage locale="zh" slug={slug} />

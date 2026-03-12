@@ -1,22 +1,29 @@
+---
+import { getUiCopy, type Locale } from "../data/locales";
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+const ui = getUiCopy(locale);
+---
+
 <footer class="site-footer">
   <div class="shell footer-grid">
     <section class="card footer-panel">
-      <span class="surface-label">Read This First</span>
-      <h2>Independent, source-linked, and built for high-stakes search moments.</h2>
-      <p>
-        Government shutdown searches spike when people need a fast answer. This project is designed to explain the
-        funding clock, who is affected, and where to verify details with official agencies.
-      </p>
+      <span class="surface-label">{ui.footer.eyebrow}</span>
+      <h2>{ui.footer.title}</h2>
+      <p>{ui.footer.body}</p>
     </section>
     <section class="card footer-panel">
-      <span class="surface-label">Policy Links</span>
+      <span class="surface-label">{ui.footer.linksEyebrow}</span>
       <div class="footer-links">
-        <a href="/about/">About</a>
-        <a href="/editorial-policy/">Editorial Policy</a>
-        <a href="/affiliate-disclosure/">Affiliate Disclosure</a>
-        <a href="/privacy-policy/">Privacy Policy</a>
+        {ui.footer.links.map((link) => (
+          <a href={link.href}>{link.label}</a>
+        ))}
       </div>
-      <p class="notice">Questions or correction requests: editor@government-shutdown.com</p>
+      <p class="notice">{ui.footer.contact}</p>
     </section>
   </div>
 </footer>

@@ -71,3 +71,4 @@ Phase 6
 - GitHub repo is live at `https://github.com/AIdevdoer/government-shutdown`.
 - Cloudflare Pages deployment is live at `https://government-shutdown.pages.dev`.
 - Custom domains were attached to the Pages project but remain pending because the required CNAME DNS records could not be written by the current token.
+- The site now serves English on `/` and Chinese on `/zh/`, with localized article and policy pages plus language switching and `hreflang` links.
