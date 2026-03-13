@@ -38,7 +38,7 @@ const deadlineIso = "2026-09-30T23:59:59-04:00";
 export const homeContentByLocale: Record<Locale, HomeContent> = {
   en: {
     description:
-      "Find out whether a U.S. government shutdown is happening, when the next funding deadline is, and how workers, travel, taxes, and benefits could be affected.",
+      "Find out whether a U.S. government shutdown is happening, how it can happen, when the next funding deadline is, and how workers, travel, taxes, and benefits could be affected.",
     deadlineIso,
     deadlineLabel: "Next federal funding deadline",
     deadlineNote:
@@ -50,33 +50,37 @@ export const homeContentByLocale: Record<Locale, HomeContent> = {
     signalTitle: "Most people come here for one simple answer.",
     signalText:
       "Is a shutdown already happening? Could pay be delayed? Will Social Security, TSA, or passports be affected? Start with the section that matches your question.",
-    architectureTitle: "Start with the part of the shutdown that affects you.",
+    architectureTitle: "Start with the question you actually want answered.",
     architectureDescription:
-      "These guides are organized around the questions people usually need answered first: current status, work and pay, travel, and benefits.",
+      "Most readers need one of four things first: is a shutdown happening now, how can it happen, who still gets paid, and which services might change first.",
     pillars: [
       {
-        title: "Current status",
+        title: "Is it happening now?",
         copy: "Check whether funding is active, what deadline matters next, and which agencies or services are under the most pressure right now.",
         href: "/government-shutdown-2026/"
       },
       {
-        title: "Federal workers",
-        copy: "If you are worried about furlough status, reporting instructions, or paycheck timing, start with the worker and pay guides.",
-        href: "/government-shutdown-federal-workers/"
+        title: "How can it happen?",
+        copy: "Start here if you want the mechanism: what Congress must pass, what happens when funding lapses, and why shutdown risk keeps coming back.",
+        href: "/what-is-a-government-shutdown/"
       },
       {
-        title: "Travel",
-        copy: "If you have a trip coming up, use the travel guides to check what may change for passports, airport screening, and national parks.",
-        href: "/government-shutdown-passports/"
+        title: "Who still gets paid?",
+        copy: "If your real concern is pay, furlough status, or whether work continues during a lapse, go straight to the pay and worker guides.",
+        href: "/who-gets-paid-during-a-government-shutdown/"
       },
       {
-        title: "Benefits",
-        copy: "If you need to know whether checks or services may slow down, go straight to the Social Security and VA guides.",
+        title: "What changes first?",
+        copy: "If you need to know about checks, customer service, passports, TSA, parks, or tax refunds, start with the service and benefits pages.",
         href: "/government-shutdown-social-security/"
       }
     ],
     fastAnswersTitle: "Four questions people usually ask first.",
     quickAnswers: [
+      {
+        question: "How can the government shut down at all?",
+        answer: "It happens when Congress misses a funding deadline and affected agencies no longer have appropriations authority to keep operating normally."
+      },
       {
         question: "Does a shutdown mean every agency closes?",
         answer: "No. Essential and excepted work often continues, but staffing, support, and processing can still slow down."
@@ -86,12 +90,8 @@ export const homeContentByLocale: Record<Locale, HomeContent> = {
         answer: "Some workers keep working, some are furloughed, and paycheck timing can still become a problem during a lapse."
       },
       {
-        question: "Are Social Security checks at risk?",
-        answer: "Benefit payments generally continue, but customer service and some administrative processing can become slower."
-      },
-      {
-        question: "Should travelers expect TSA or passport delays?",
-        answer: "Some services continue, but staffing strain and uneven office capacity can still create real delays."
+        question: "Are Social Security checks, TSA, or passports affected?",
+        answer: "Some services keep running, but staffing strain, slower customer support, and uneven office capacity can still create real disruption."
       }
     ],
     timelineTitle: "Why these dates matter",
@@ -119,18 +119,18 @@ export const homeContentByLocale: Record<Locale, HomeContent> = {
         description: "This is the next standing federal funding cutoff to keep in view."
       }
     ],
-    featuredTitle: "Start with the pages people open most often.",
+    featuredTitle: "Start with the questions people search most.",
     featuredSlugs: [
       "government-shutdown-2026",
+      "what-is-a-government-shutdown",
       "government-shutdown-countdown",
+      "who-gets-paid-during-a-government-shutdown",
       "government-shutdown-federal-workers",
-      "government-shutdown-tax-refunds",
-      "government-shutdown-passports",
       "government-shutdown-social-security"
     ]
   },
   zh: {
-    description: "帮你快速看清美国政府有没有停摆、下一个拨款截止日是什么，以及工资、福利、旅行和税务会不会受影响。",
+    description: "帮你快速看清美国政府有没有停摆、为什么会停摆、下一个拨款截止日是什么，以及工资、福利、旅行和税务会不会受影响。",
     deadlineIso,
     deadlineLabel: "下一次联邦拨款截止日",
     deadlineNote: "国会必须在 9 月 30 日前通过新的联邦拨款。如果赶不上这个日期，停摆风险就会迅速升高。",
@@ -141,32 +141,36 @@ export const homeContentByLocale: Record<Locale, HomeContent> = {
     signalTitle: "大多数人来这里，只想先弄清一个问题。",
     signalText:
       "现在是不是已经停摆？工资会不会延迟？Social Security、TSA 或护照会不会受影响？先点进和你问题最接近的那一栏。",
-    architectureTitle: "先看最可能影响你的那一部分。",
-    architectureDescription: "这些内容按读者最常见的实际问题来分组：当前状态、工作与工资、旅行，以及福利服务。",
+    architectureTitle: "先看你最想弄清的那个问题。",
+    architectureDescription: "大多数读者最先想知道的，其实就四件事：现在有没有停摆、它为什么会发生、谁还能领工资、哪些服务会先受影响。",
     pillars: [
       {
-        title: "当前状态",
+        title: "现在有没有停摆？",
         copy: "先确认现在是否已经停摆、下一个关键截止日是什么，以及哪些机构或服务眼下压力最大。",
         href: "/zh/government-shutdown-2026/"
       },
       {
-        title: "联邦雇员",
-        copy: "如果你担心 furlough、报到指令或工资到账时间，就先看联邦雇员和工资相关页面。",
-        href: "/zh/government-shutdown-federal-workers/"
+        title: "它怎么会停摆？",
+        copy: "如果你最想先搞清机制，就先看这页：国会到底要通过什么、拨款失效后会怎样、为什么这种风险会反复出现。",
+        href: "/zh/what-is-a-government-shutdown/"
       },
       {
-        title: "旅行影响",
-        copy: "如果你近期要出行，可以直接看护照、机场安检和国家公园相关页面，确认哪些环节可能变化。",
-        href: "/zh/government-shutdown-passports/"
+        title: "谁还能拿工资？",
+        copy: "如果你最关心的是工资、furlough、报到指令或停摆期间谁继续工作，就先看工资和联邦雇员页面。",
+        href: "/zh/who-gets-paid-during-a-government-shutdown/"
       },
       {
-        title: "福利服务",
-        copy: "如果你最在意的是支票是否继续发、客服是否变慢，就从 Social Security 和 VA 相关页面开始。",
+        title: "哪些服务会先变？",
+        copy: "如果你想知道福利、客服、护照、TSA、国家公园或退税会不会变化，就从服务类页面开始。",
         href: "/zh/government-shutdown-social-security/"
       }
     ],
     fastAnswersTitle: "大多数人最先会问的四个问题。",
     quickAnswers: [
+      {
+        question: "美国政府怎么会停摆？",
+        answer: "当国会没能在拨款截止日前通过新法案，受影响机构就会失去继续正常运行的拨款授权。"
+      },
       {
         question: "政府停摆是不是等于所有机构都关门？",
         answer: "不是。必要职能和例外职能通常会继续运行，但人手、客服和处理速度仍可能受到影响。"
@@ -176,12 +180,8 @@ export const homeContentByLocale: Record<Locale, HomeContent> = {
         answer: "有些人继续上班，有些人会被 furlough，而工资到账时间在停摆期间也可能成为问题。"
       },
       {
-        question: "Social Security 支票会不会受影响？",
-        answer: "福利发放通常会继续，但客服、回电和部分行政处理速度可能变慢。"
-      },
-      {
-        question: "TSA 或护照业务会不会延误？",
-        answer: "部分服务会继续，但人员压力和窗口能力波动仍可能带来真实延误。"
+        question: "Social Security、TSA 或护照会不会受影响？",
+        answer: "有些服务会继续，但客服变慢、人手吃紧和窗口能力波动，仍可能带来真实影响。"
       }
     ],
     timelineTitle: "为什么这些日期值得看",
@@ -208,13 +208,13 @@ export const homeContentByLocale: Record<Locale, HomeContent> = {
         description: "这是下一次最值得持续关注的联邦拨款截止时间。"
       }
     ],
-    featuredTitle: "先看大家最常打开的几页。",
+    featuredTitle: "先看大家最常搜索的几个问题。",
     featuredSlugs: [
       "government-shutdown-2026",
+      "what-is-a-government-shutdown",
       "government-shutdown-countdown",
+      "who-gets-paid-during-a-government-shutdown",
       "government-shutdown-federal-workers",
-      "government-shutdown-tax-refunds",
-      "government-shutdown-passports",
       "government-shutdown-social-security"
     ]
   }

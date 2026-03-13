@@ -103,50 +103,64 @@ export const articles: Article[] = [
   },
   {
     slug: "what-is-a-government-shutdown",
-    category: "Explainer",
-    title: "What is a government shutdown?",
+    category: "How it happens",
+    title: "How does a U.S. government shutdown happen?",
     description:
-      "A plain-language explainer on how a shutdown starts, why some services continue, and why others pause or slow down.",
+      "A plain-language explanation of the mechanism behind a U.S. government shutdown: funding deadlines, appropriations lapses, and why some services keep running.",
     updated: "Updated March 13, 2026",
-    kicker: "A shutdown is a funding lapse, not a total disappearance of government.",
+    kicker: "A shutdown happens when funding runs out, not because the government literally disappears overnight.",
     takeaways: [
-      "A shutdown begins when funding authority lapses and Congress has not enacted new appropriations in time.",
-      "Not every service stops. Some work continues because it is legally excepted or funded another way.",
-      "Even when services continue, staffing and processing backlogs can still affect the public."
+      "A shutdown starts when Congress misses a funding deadline and affected agencies no longer have appropriations authority.",
+      "The key mechanism is a lapse in funding, often after annual spending bills or a temporary funding bill expires.",
+      "Not everything stops. Some services continue because they are legally excepted, funded another way, or tied to safety and core operations."
     ],
     sections: [
       {
-        title: "How a shutdown starts",
+        title: "The mechanism in simple terms",
         paragraphs: [
-          "The trigger is a lapse in appropriations. If Congress and the president have not put new funding in place before existing authority expires, affected agencies lose the legal basis to keep operating normally.",
-          "That is why shutdown risk usually comes into focus around fiscal deadlines and temporary funding fights."
+          "The basic mechanism is simple: Congress has to pass funding, and the president has to sign it before existing funding runs out. If that does not happen in time, affected agencies lose the legal basis to keep operating normally.",
+          "That is why shutdown risk is really a deadline problem. The political fight may look complicated, but the trigger is usually the same: lawmakers miss a funding date."
+        ]
+      },
+      {
+        title: "Why October 1 and temporary funding bills matter",
+        paragraphs: [
+          "The federal fiscal year starts on October 1. If Congress has not passed the regular appropriations bills by then, it often relies on a temporary funding bill, commonly called a continuing resolution or CR.",
+          "Shutdown risk rises when regular funding is unfinished and the temporary funding bill is about to expire. That is often the moment people suddenly see shutdown headlines everywhere."
         ]
       },
       {
         title: "Why some services continue",
         paragraphs: [
-          "The word shutdown sounds total, but the reality is more uneven. Some employees keep working because their roles are tied to safety, national security, or other protected functions.",
-          "A better way to think about it is disruption by category: some services continue, some slow down, and some public-facing work pauses."
+          "The word shutdown sounds absolute, but the real effect is uneven. Some employees keep working because their roles are tied to safety, national security, benefit delivery, or other protected functions.",
+          "A better way to think about it is this: some services continue, some slow down, and some public-facing work pauses until funding returns."
         ],
         bullets: [
           "National security and public safety roles often continue.",
           "Benefit payments may continue while customer support slows down.",
           "Applications and case processing may become less predictable."
         ]
+      },
+      {
+        title: "Why this keeps happening",
+        paragraphs: [
+          "The United States does not shut down because the whole system forgets how to function. It happens because federal funding depends on repeated deadlines, and political fights over spending can easily spill past those deadlines.",
+          "So the recurring pattern is not mysterious: a hard calendar date arrives, Congress and the White House disagree, and agencies start preparing for a lapse."
+        ]
       }
     ],
     faqs: [
       {
-        question: "Does a shutdown affect every federal program?",
-        answer: "No. The effect depends on how the program is funded and whether the work is classified as excepted."
+        question: "Is a shutdown the same thing as a debt ceiling crisis?",
+        answer: "No. A shutdown is about Congress failing to pass funding in time. The debt ceiling is a different issue about how much the Treasury can borrow."
+      },
+      {
+        question: "Why doesn't everything stop at once?",
+        answer: "Because some activities are legally excepted, some are funded differently, and some continue for safety or essential operations even during a lapse."
       },
       {
         question: "Why does this issue keep coming back?",
-        answer: "Because the federal funding calendar creates recurring deadlines, and political fights over those deadlines can reopen shutdown risk."
-      },
-      {
-        question: "Can delays continue after funding resumes?",
-        answer: "Yes. Even a short lapse can create backlogs that last beyond the shutdown itself."
+        answer: "Because the federal funding system creates recurring deadlines, and political fights over spending can reopen shutdown risk every time those deadlines approach."
       }
     ],
     citations: [
@@ -154,15 +168,16 @@ export const articles: Article[] = [
       { label: "CRS: Shutdown of the Federal Government", href: "https://www.congress.gov/crs_external_products/RS/HTML/RS20348.web.html" }
     ],
     related: [
+      "government-shutdown-2026",
       "government-shutdown-countdown",
       "who-gets-paid-during-a-government-shutdown",
       "government-shutdown-social-security"
     ],
     actionBox: {
-      title: "Need the current version of the story?",
-      text: "The latest status page is the fastest way to see whether a shutdown is active, when the next deadline is, and what people usually need to check next.",
-      ctaLabel: "See the latest status",
-      ctaHref: "/government-shutdown-2026/"
+      title: "Want the next deadline after you understand the mechanism?",
+      text: "The countdown page keeps the next federal funding cutoff in one place, so you can watch the date that could turn this mechanism into a real shutdown.",
+      ctaLabel: "Open the countdown page",
+      ctaHref: "/government-shutdown-countdown/"
     }
   },
   {
