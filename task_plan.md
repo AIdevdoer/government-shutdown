@@ -62,6 +62,13 @@ Phase 9
 - [x] Convert the homepage history strip into a year-rail layout
 - [x] Convert the full history page into a vertical rail with alternating stops
 - [x] Rebuild and visually verify the redesigned timeline sections
+- [x] Publish and verify the Git-backed deployment
+- **Status:** complete
+
+### Phase 10: Interactive Horizontal Rail
+- [x] Make the horizontal history rail draggable
+- [x] Collapse detailed stop information behind click-to-open panels
+- [x] Rebuild and visually verify the new interaction model
 - [ ] Publish and verify the Git-backed deployment
 - **Status:** in_progress
 
@@ -81,6 +88,7 @@ Phase 9
 | Rewrite reader-facing copy in a direct service voice | Homepage and guide pages should answer anxious visitors, not describe site architecture or SEO strategy |
 | Put a long-view shutdown timeline in the homepage hero and on a dedicated page | Global readers need historical context, not only current U.S. funding-risk guidance |
 | Render the history UI as a rail instead of a plain card list | The chronology reads faster and has more visual impact when it feels like a dated route with distinct stops |
+| Keep the horizontal rail compact and reveal detail on demand | A crowded hero loses the rail metaphor; users should browse the line first and only expand the stop they choose |
 
 ## Errors Encountered
 | Error | Attempt | Resolution |

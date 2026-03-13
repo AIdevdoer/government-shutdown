@@ -73,3 +73,5 @@
 - The history page should distinguish between early funding gaps and the more recognizable modern shutdown pattern, rather than implying the politics and operational effects were identical across every era.
 - The first history implementation was informative but still read visually like a set of cards; the topic benefits more from a rail metaphor because it emphasizes continuity, intervals, and memorable stops.
 - A horizontal rail works best in the homepage hero where only highlights are shown, while the full chronology reads better as a vertical center-spine rail with alternating stops.
+- Once the rail existed, always-open cards still made the hero feel overloaded; the horizontal version works better when the rail itself stays compact and detail moves into a separate active panel.
+- Desktop users benefit from mouse-drag scrolling on the horizontal rail, while mobile users already get native swipe behavior from the same overflow container.

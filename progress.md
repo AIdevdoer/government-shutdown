@@ -138,6 +138,19 @@
   - `findings.md` (updated)
   - `progress.md` (updated)
 
+### Phase 10: Interactive Horizontal Rail
+- **Status:** in_progress
+- Actions taken:
+  - Rebuilt the horizontal history strip so it now works as a draggable year rail rather than a row of always-open cards.
+  - Moved stop details into a single click-to-open detail stage below the rail, leaving the top timeline compact and easier to scan.
+  - Added rail-scoped client-side behavior for dragging, keyboard navigation, active-stop switching, and click suppression after drag gestures.
+  - Rebuilt successfully and verified the new compact rail plus single expanded detail panel in a local full-page screenshot.
+- Files created/modified:
+  - `src/components/HistoryHeroTrack.astro`
+  - `src/data/shutdown-history.ts`
+  - `task_plan.md` (updated)
+  - `progress.md` (updated)
+
 ## Test Results
 | Test | Input | Expected | Actual | Status |
 |------|-------|----------|--------|--------|
@@ -156,6 +169,8 @@
 | Generated HTML spot-check | `rg` in `dist/` for history timeline strings | Homepage and history pages contain the new historical sections | English and Chinese HTML confirmed | ✓ |
 | Timeline rail rebuild | `pnpm build` after rail redesign | Redesigned history components build cleanly | 37 static pages built successfully | ✓ |
 | Full-page screenshot QA | `npx playwright screenshot --full-page` for `/` and `/shutdown-history/` | Rail layouts render as intended on local preview | Horizontal home rail and vertical history rail confirmed | ✓ |
+| Interactive rail rebuild | `pnpm build` after interactive rail changes | Drag-enabled rail and tab panels build cleanly | 37 static pages built successfully | ✓ |
+| Compact rail screenshot QA | `npx playwright screenshot --full-page` for `/` after interaction redesign | Horizontal rail renders compactly with one visible detail panel | Compact rail confirmed in local screenshot | ✓ |
 
 ## Error Log
 | Timestamp | Error | Attempt | Resolution |
@@ -164,12 +179,13 @@
 | 2026-03-12 | Chrome DevTools MCP could not open a new local preview page | 1 | Continued with build verification and output inspection |
 | 2026-03-12 | Cloudflare DNS API returned `403 Forbidden` | 1 | Custom domains remain pending; Pages deployment itself succeeded |
 | 2026-03-13 | Chrome DevTools MCP still could not attach due to an existing browser profile | 1 | Switched to Playwright CLI screenshots for visual QA |
+| 2026-03-13 | Temporary `playwright` package injection via `npx` and `npm exec` did not expose the Node module for inline interaction tests | 2 | Fell back to build validation plus screenshot confirmation of the compact rail state |
 
 ## 5-Question Reboot Check
 | Question | Answer |
 |----------|--------|
-| Where am I? | Phase 9 |
-| Where am I going? | Push the year-rail redesign and verify the Git-backed Cloudflare deployment |
+| Where am I? | Phase 10 |
+| Where am I going? | Push the draggable horizontal rail and verify the Git-backed Cloudflare deployment |
 | What's the goal? | Build, publish, deploy, and refine the Government Shutdown site |
-| What have I learned? | Git-backed Pages deployment works; bilingual routing is clean; custom-domain activation is blocked only by DNS permissions; the shutdown-history concept lands better visually when rendered as an actual rail instead of stacked cards |
-| What have I done? | Planned the work, built the site, upgraded it to bilingual routing, rewrote reader-facing copy, added shutdown-history pages, and redesigned the history UI into a horizontal/vertical rail system |
+| What have I learned? | Git-backed Pages deployment works; bilingual routing is clean; custom-domain activation is blocked only by DNS permissions; the horizontal rail reads better when details are hidden until the user actively opens a stop |
+| What have I done? | Planned the work, built the site, upgraded it to bilingual routing, rewrote reader-facing copy, added shutdown-history pages, redesigned the history UI into rails, and made the horizontal rail draggable with on-demand detail panels |

@@ -26,6 +26,8 @@ export interface ShutdownHistoryContent {
   stats: HistoryStat[];
   highlightTitle: string;
   highlightText: string;
+  railLabel: string;
+  railInstruction: string;
   highlightCtaLabel: string;
   fullTitle: string;
   fullText: string;
@@ -66,6 +68,8 @@ export const shutdownHistoryByLocale: Record<Locale, ShutdownHistoryContent> = {
     highlightTitle: "The moments that shaped how the world sees U.S. shutdowns.",
     highlightText:
       "These are the years most people remember: the first post-1976 gap, the Clinton-era confrontations, the Obama and Trump-era shutdowns, and the 2025 record setter.",
+    railLabel: "Interactive rail",
+    railInstruction: "Drag the years sideways, then open the stop you want to read.",
     highlightCtaLabel: "Open the full history page",
     fullTitle: "Full timeline",
     fullText:
@@ -303,6 +307,8 @@ export const shutdownHistoryByLocale: Record<Locale, ShutdownHistoryContent> = {
     highlightTitle: "这些节点，塑造了世界对美国停摆的印象。",
     highlightText:
       "很多人真正记得的，往往不是全部 21 次，而是几次标志性停摆：最早的一轮、1995-96 年的对峙、2013 年的僵局、2018-19 年的超长停摆，以及 2025 年刷新纪录的一次。",
+    railLabel: "交互时间轴",
+    railInstruction: "左右拖动年份轨道，再点开你想看的那个节点。",
     highlightCtaLabel: "查看完整历史页",
     fullTitle: "完整时间线",
     fullText:
