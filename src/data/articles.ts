@@ -168,7 +168,8 @@ export const articles: Article[] = [
       { label: "CRS: Shutdown of the Federal Government", href: "https://www.congress.gov/crs_external_products/RS/HTML/RS20348.web.html" }
     ],
     related: [
-      "government-shutdown-2026",
+      "what-is-a-funding-gap",
+      "why-does-september-30-matter",
       "why-does-the-government-shut-down",
       "what-is-a-continuing-resolution",
       "government-shutdown-vs-debt-ceiling"
@@ -241,6 +242,7 @@ export const articles: Article[] = [
     ],
     related: [
       "what-is-a-government-shutdown",
+      "why-does-september-30-matter",
       "what-is-a-continuing-resolution",
       "government-shutdown-countdown",
       "government-shutdown-2026"
@@ -313,6 +315,8 @@ export const articles: Article[] = [
     ],
     related: [
       "government-shutdown-2026",
+      "government-shutdown-essential-workers",
+      "government-shutdown-contractors",
       "who-gets-paid-during-a-government-shutdown",
       "government-shutdown-social-security",
       "government-shutdown-passports"
@@ -386,6 +390,7 @@ export const articles: Article[] = [
     related: [
       "what-is-a-government-shutdown",
       "why-does-the-government-shut-down",
+      "what-is-a-funding-gap",
       "government-shutdown-countdown",
       "government-shutdown-2026"
     ],
@@ -458,6 +463,7 @@ export const articles: Article[] = [
     related: [
       "what-is-a-government-shutdown",
       "why-does-the-government-shut-down",
+      "why-does-september-30-matter",
       "government-shutdown-countdown",
       "government-shutdown-2026"
     ],
@@ -466,6 +472,430 @@ export const articles: Article[] = [
       text: "The countdown page keeps the next federal funding deadline visible, which is the date to watch once you know how temporary funding works.",
       ctaLabel: "Open the countdown page",
       ctaHref: "/government-shutdown-countdown/"
+    }
+  },
+  {
+    slug: "government-shutdown-contractors",
+    category: "Contractors",
+    title: "Government shutdown contractors: what federal contractors should expect",
+    description:
+      "A practical guide for federal contractors on stop-work risk, invoice delays, contract-specific uncertainty, and why contractors are not treated the same way as federal employees.",
+    updated: "Updated March 13, 2026",
+    kicker: "Federal contractors usually need contract guidance, not federal employee guidance.",
+    takeaways: [
+      "Contractors are usually affected through contract terms, employer instructions, and agency contracting decisions rather than the federal employee pay system.",
+      "A shutdown can bring stop-work orders, delayed option decisions, slower invoice processing, or mixed guidance across contracts.",
+      "The most useful first step is to check your employer, your contracting officer guidance, and whether your specific contract has active funding."
+    ],
+    sections: [
+      {
+        title: "Why contractors are treated differently from federal employees",
+        paragraphs: [
+          "Contractors and federal employees are not in the same legal bucket. Federal employee shutdown rules focus on employee status, while contractors are usually governed by contract funding, employer direction, and agency contracting decisions.",
+          "That is why contractor questions should start with the contract and the employer, not with assumptions drawn from federal civilian worker headlines."
+        ]
+      },
+      {
+        title: "What can change during a shutdown",
+        paragraphs: [
+          "A shutdown can affect whether work continues, whether invoices move quickly, whether new work is authorized, and whether contract options or modifications are delayed.",
+          "The effect is rarely uniform. One contract may keep moving while another pauses, depending on funding, the agency, and the work involved."
+        ],
+        bullets: [
+          "Ask whether the contract is currently funded.",
+          "Check whether any stop-work or pause notice has been issued.",
+          "Treat invoicing, modifications, and option timing as separate questions."
+        ]
+      },
+      {
+        title: "What contractors should check first",
+        paragraphs: [
+          "The fastest way to reduce confusion is to confirm who is giving instructions, what the contract currently says, and whether the work supports functions that continue during a lapse.",
+          "If you need a household answer, separate three issues: whether work continues, whether your employer pays during any interruption, and whether delayed invoicing could ripple into pay timing."
+        ]
+      }
+    ],
+    faqs: [
+      {
+        question: "Are contractors guaranteed back pay like federal employees?",
+        answer: "No. Contractor pay is usually tied to contract terms and employer decisions rather than the federal employee back-pay framework."
+      },
+      {
+        question: "Can some contractors keep working during a shutdown?",
+        answer: "Yes. It depends on the contract, the agency, the funding source, and whether the work is still authorized."
+      },
+      {
+        question: "What should contractors check before assuming work will stop?",
+        answer: "Check employer guidance, the contracting officer's direction, and whether the contract has active funding and a stop-work notice."
+      }
+    ],
+    citations: [
+      { label: "CRS Legal Sidebar: Effects of a Government Shutdown on Federal Contracts and Contracting", href: "https://www.congress.gov/crs_external_products/LSB/HTML/LSB10243.web.html" },
+      { label: "OPM FAQ: Can federal contractors telework?", href: "https://www.opm.gov/frequently-asked-questions/telework-faq/employee/can-federal-contractors-telework/" }
+    ],
+    related: [
+      "government-shutdown-essential-workers",
+      "who-gets-paid-during-a-government-shutdown",
+      "government-shutdown-federal-workers",
+      "government-shutdown-2026"
+    ],
+    actionBox: {
+      title: "Need the federal employee version too?",
+      text: "If you are comparing your situation with a federal employee in the same office, the pay guide explains why the rules often diverge so sharply.",
+      ctaLabel: "Open the pay guide",
+      ctaHref: "/who-gets-paid-during-a-government-shutdown/"
+    }
+  },
+  {
+    slug: "what-is-a-funding-gap",
+    category: "Funding terms",
+    title: "What is a funding gap in the U.S. government?",
+    description:
+      "A plain-language explainer on what a funding gap means, how it relates to a shutdown, and why the term shows up in congressional and budget coverage.",
+    updated: "Updated March 13, 2026",
+    kicker: "A funding gap is the period after old funding expires and before new funding becomes law.",
+    takeaways: [
+      "A funding gap begins when appropriations authority runs out before replacement funding is enacted.",
+      "Some funding gaps are brief, but they are the legal and practical basis for a shutdown risk or an active lapse.",
+      "The term matters because budget experts and official reports often describe shutdown episodes as funding gaps or lapses in appropriations."
+    ],
+    sections: [
+      {
+        title: "The plain-language definition",
+        paragraphs: [
+          "A funding gap is the stretch of time between old funding expiring and new funding taking effect. In official budget language, this is often described as a lapse in appropriations.",
+          "That is why the phrase comes up in GAO and CRS material even when news headlines prefer the word shutdown."
+        ]
+      },
+      {
+        title: "How a funding gap becomes a shutdown story",
+        paragraphs: [
+          "Once a funding gap starts, agencies have to follow the legal rules that apply when appropriations lapse. That is the moment shutdown planning, contingency guidance, and service questions become real.",
+          "Some gaps are short and end quickly. Others last long enough for the public to feel the disruption much more directly."
+        ]
+      },
+      {
+        title: "Why the term matters in coverage",
+        paragraphs: [
+          "If you understand funding gap, you can read official material more clearly. You will see that some reports focus on the legal lapse itself, while public coverage focuses on what that lapse feels like in daily life.",
+          "Both describe the same core problem from different angles: funding expired before lawmakers replaced it."
+        ]
+      }
+    ],
+    faqs: [
+      {
+        question: "Is a funding gap the same as a shutdown?",
+        answer: "They are closely connected, but funding gap is the more technical term for the lapse in funding authority that can trigger shutdown effects."
+      },
+      {
+        question: "Can a funding gap be very short?",
+        answer: "Yes. Some gaps are resolved quickly, which can limit public-facing disruption even though the lapse technically occurred."
+      },
+      {
+        question: "Why do official reports use this term so often?",
+        answer: "Because it describes the legal appropriations problem directly, while shutdown is the more public-facing description of what follows."
+      }
+    ],
+    citations: [
+      { label: "GAO: Lapses in Appropriations", href: "https://www.gao.gov/legal/appropriations-law/lapses-in-appropriations" },
+      { label: "CRS: Shutdown of the Federal Government", href: "https://www.congress.gov/crs_external_products/RS/HTML/RS20348.web.html" }
+    ],
+    related: [
+      "what-is-a-government-shutdown",
+      "what-is-a-continuing-resolution",
+      "government-shutdown-countdown",
+      "government-shutdown-2026"
+    ],
+    actionBox: {
+      title: "Want the non-technical version of what people feel during a lapse?",
+      text: "The main shutdown explainer translates the funding-gap language into the questions most readers actually ask about work, benefits, and services.",
+      ctaLabel: "Open the shutdown explainer",
+      ctaHref: "/what-is-a-government-shutdown/"
+    }
+  },
+  {
+    slug: "why-does-september-30-matter",
+    category: "Deadlines",
+    title: "Why does September 30 matter in a U.S. government shutdown?",
+    description:
+      "A plain-language explanation of why September 30 appears so often in shutdown coverage, how it connects to the federal fiscal year, and why October 1 headlines follow.",
+    updated: "Updated March 13, 2026",
+    kicker: "September 30 matters because it is the last day of the federal fiscal year.",
+    takeaways: [
+      "September 30 is the recurring fiscal-year cutoff that often turns funding fights into immediate shutdown risk.",
+      "If Congress has not passed appropriations or a temporary funding measure by then, October 1 becomes the moment people watch most closely.",
+      "Even when government stays open, September 30 still matters because it often forces lawmakers into a short-term deal or another deadline."
+    ],
+    sections: [
+      {
+        title: "It is the fiscal-year cutoff",
+        paragraphs: [
+          "The federal fiscal year ends on September 30, and a new one begins on October 1. That makes September 30 the natural point where unfinished funding fights stop feeling abstract and start carrying operational risk.",
+          "If lawmakers have not finished the appropriations process by then, they usually need a continuing resolution or another stopgap to avoid a lapse."
+        ]
+      },
+      {
+        title: "Why October 1 headlines show up next",
+        paragraphs: [
+          "September 30 is the last day of the old funding period. If there is no replacement funding in time, the consequences show up as October 1 begins.",
+          "That is why the news often talks about a September 30 deadline and an October 1 shutdown threat in the same breath."
+        ]
+      },
+      {
+        title: "Why this date matters even when there is no shutdown",
+        paragraphs: [
+          "The government can stay open after September 30 if Congress passes a temporary funding bill. But that does not make the date unimportant. It means the deadline forced lawmakers into a patch that creates another date to watch later.",
+          "So September 30 remains one of the most useful dates for readers to remember, even in years when the immediate crisis is delayed."
+        ]
+      }
+    ],
+    faqs: [
+      {
+        question: "Does every shutdown start on September 30?",
+        answer: "No. The risk often peaks there because of the fiscal-year cutoff, but temporary funding measures can move the next crisis point to a later date."
+      },
+      {
+        question: "Why does October 1 come up so often too?",
+        answer: "Because October 1 is the first day after the September 30 fiscal-year deadline passes."
+      },
+      {
+        question: "If Congress passes a CR, does September 30 still matter?",
+        answer: "Yes. It still mattered because it forced a funding decision and set the timing for the next deadline."
+      }
+    ],
+    citations: [
+      { label: "U.S. Senate: Appropriations Process", href: "https://www.senate.gov/reference/reference_index_subjects/Appropriations_vrd.htm" },
+      { label: "CRS: Shutdown of the Federal Government", href: "https://www.congress.gov/crs_external_products/RS/HTML/RS20348.web.html" }
+    ],
+    related: [
+      "government-shutdown-countdown",
+      "what-is-a-continuing-resolution",
+      "why-does-the-government-shut-down",
+      "government-shutdown-2026"
+    ],
+    actionBox: {
+      title: "Want the actual date tracker after you understand why it matters?",
+      text: "The countdown page keeps the next federal funding deadline visible so you can connect the civics explanation to the next live calendar risk.",
+      ctaLabel: "Open the countdown page",
+      ctaHref: "/government-shutdown-countdown/"
+    }
+  },
+  {
+    slug: "government-shutdown-essential-workers",
+    category: "Workers",
+    title: "Government shutdown essential workers: who keeps working?",
+    description:
+      "A plain-language guide to the workers often called essential during a shutdown, why the official terms can differ, and what continued work does and does not guarantee about pay.",
+    updated: "Updated March 13, 2026",
+    kicker: "The media may say essential workers, but the official categories can be more specific than that.",
+    takeaways: [
+      "The workers people call essential are usually the ones agencies direct to keep working because of safety, security, or core operational duties.",
+      "Official shutdown guidance may use terms such as excepted or emergency functions instead of the media shorthand essential.",
+      "Being told to work does not automatically guarantee a normal paycheck timeline during a lapse."
+    ],
+    sections: [
+      {
+        title: "Why the word essential is only part of the story",
+        paragraphs: [
+          "Essential is the phrase many people search, but official shutdown plans often use more formal categories. The underlying idea is still familiar: some roles keep working because the government treats them as necessary to continue.",
+          "That is why the most useful answer is not a vocabulary fight. It is understanding whether your role is being directed to report and how your agency explains that decision."
+        ]
+      },
+      {
+        title: "Who may still report to work",
+        paragraphs: [
+          "Workers tied to national security, public safety, operations that cannot pause, or other protected functions may be told to continue reporting during a lapse.",
+          "But continued work and continued pay timing are not the same promise, which is why households still need to watch payroll updates closely."
+        ],
+        bullets: [
+          "Check whether your agency has classified your role to continue working.",
+          "Separate work status from paycheck timing.",
+          "Use agency contingency plans and OPM guidance instead of headlines alone."
+        ]
+      },
+      {
+        title: "What workers should confirm immediately",
+        paragraphs: [
+          "Start with reporting instructions, timekeeping rules, and payroll expectations. Those three answers usually matter more in the first 24 hours than any political recap.",
+          "If your household budget is tight, treat even a short delay as something to plan around, not something to assume away."
+        ]
+      }
+    ],
+    faqs: [
+      {
+        question: "Is essential the official term every agency uses?",
+        answer: "Not always. Agencies may use more formal shutdown categories even though the public often says essential workers."
+      },
+      {
+        question: "If I am essential, do I definitely get paid on time?",
+        answer: "No. A worker may be required to report and still face delayed pay if funding has lapsed."
+      },
+      {
+        question: "What should essential workers check first?",
+        answer: "Check agency reporting instructions, contingency-plan language, and payroll guidance in that order."
+      }
+    ],
+    citations: [
+      { label: "GAO: Lapses in Appropriations", href: "https://www.gao.gov/legal/appropriations-law/lapses-in-appropriations" },
+      { label: "OPM: Furlough Guidance", href: "https://www.opm.gov/policy-data-oversight/pay-leave/furlough-guidance/" }
+    ],
+    related: [
+      "who-gets-paid-during-a-government-shutdown",
+      "government-shutdown-federal-workers",
+      "government-shutdown-contractors",
+      "government-shutdown-2026"
+    ],
+    actionBox: {
+      title: "Need the paycheck version of this question?",
+      text: "The pay guide goes one step further and explains how continued work, furlough status, and delayed pay can diverge during a shutdown.",
+      ctaLabel: "Open the pay guide",
+      ctaHref: "/who-gets-paid-during-a-government-shutdown/"
+    }
+  },
+  {
+    slug: "government-shutdown-irs",
+    category: "Taxes",
+    title: "Government shutdown and the IRS: what taxpayers should expect",
+    description:
+      "A plain-language IRS explainer covering tax filing, refunds, customer support, and why the answer can depend on the timing and scope of the funding lapse.",
+    updated: "Updated March 13, 2026",
+    kicker: "For most taxpayers, the real question is not just whether the IRS is open, but which IRS functions are still moving.",
+    takeaways: [
+      "Taxpayers should separate filing, refunds, automated tools, phone support, and complex casework instead of asking one all-purpose IRS question.",
+      "The answer can change depending on the time of year and the specific lapse, so the latest IRS operations page matters more than broad commentary.",
+      "Refunds and filing may continue more normally than live support or manually reviewed cases."
+    ],
+    sections: [
+      {
+        title: "Why the IRS answer can feel uneven",
+        paragraphs: [
+          "IRS operations are not a single on-off switch. Electronic filing, refund tracking, and certain automated functions may behave differently from phone assistance, in-person support, or case-specific reviews.",
+          "That is why the most honest answer is often split into smaller parts: can you file, can you track a refund, and can you reach a person if something unusual happens."
+        ]
+      },
+      {
+        title: "What taxpayers should check first",
+        paragraphs: [
+          "Start with the IRS page describing current operations under the funding situation, then check the filing and refund tools you actually need. Those sources tell you much more than a generic shutdown headline.",
+          "If you are waiting on a special case, amended return, or human review, assume those are the areas most likely to feel staffing pressure first."
+        ],
+        bullets: [
+          "Check the current IRS operations notice.",
+          "Use official filing and refund tools before relying on rumors.",
+          "Expect live support and complex casework to be less predictable."
+        ]
+      },
+      {
+        title: "Why tax season timing matters",
+        paragraphs: [
+          "The IRS can look very different during a busy filing season than during a quieter period. The workload, staffing need, and public dependence on refunds all shape how people experience a lapse.",
+          "So even if you read older shutdown coverage, always pair it with the latest IRS operations page for the current year."
+        ]
+      }
+    ],
+    faqs: [
+      {
+        question: "Can taxpayers still file returns during a shutdown?",
+        answer: "Often yes, especially through electronic systems, but the best answer comes from the latest IRS operations notice for the current lapse."
+      },
+      {
+        question: "Will refunds always keep moving normally?",
+        answer: "Not automatically. Refund timing can depend on the filing season setup and which IRS functions are still operating smoothly."
+      },
+      {
+        question: "What part of the IRS is most likely to feel strain first?",
+        answer: "Live support, phone assistance, in-person help, and manually handled cases are often the most vulnerable to staffing pressure."
+      }
+    ],
+    citations: [
+      { label: "IRS: Operations Under the 2026 Lapse in Appropriations", href: "https://www.irs.gov/newsroom/irs-continues-normal-activities-under-the-2026-lapse-in-appropriations" },
+      { label: "IRS Refunds", href: "https://www.irs.gov/refunds" }
+    ],
+    related: [
+      "government-shutdown-tax-refunds",
+      "government-shutdown-2026",
+      "what-happens-during-a-government-shutdown",
+      "what-is-a-government-shutdown"
+    ],
+    actionBox: {
+      title: "Need the shorter refund-first version?",
+      text: "The tax refund guide is the fastest route if your immediate concern is whether filing continues and how refund timing may change.",
+      ctaLabel: "Open the refund guide",
+      ctaHref: "/government-shutdown-tax-refunds/"
+    }
+  },
+  {
+    slug: "government-shutdown-medicare-medicaid-social-security",
+    category: "Benefits",
+    title: "Government shutdown and Medicare, Medicaid, Social Security: what is different?",
+    description:
+      "A plain-language comparison of Medicare, Medicaid, and Social Security during a shutdown, focusing on why these programs are not interchangeable and where people are most likely to feel differences.",
+    updated: "Updated March 13, 2026",
+    kicker: "These programs are often grouped together in searches, but they work differently and can feel different during a shutdown.",
+    takeaways: [
+      "Social Security is a cash-benefit system, while Medicare and Medicaid are health-coverage programs with different structures and service channels.",
+      "A shutdown question about these programs is often really a question about payments, claims, enrollment, support, or state administration, not one single issue.",
+      "Many people feel the difference first through customer service, claims processing, or local administration rather than through an immediate stop in core benefits."
+    ],
+    sections: [
+      {
+        title: "Why these three programs should not be treated as one thing",
+        paragraphs: [
+          "People often search these names together because they all sound like federal benefits. But they are not the same type of program. Social Security centers on cash benefits, Medicare centers on federal health coverage, and Medicaid involves joint federal-state administration.",
+          "That means a shutdown can create different kinds of pressure depending on whether you are asking about a monthly payment, a health claim, an enrollment issue, or a local support office."
+        ]
+      },
+      {
+        title: "Where the public often feels the difference",
+        paragraphs: [
+          "For Social Security, people usually care first about monthly benefit continuity and then about claims or service delays. For Medicare and Medicaid, the questions are more likely to center on coverage use, provider billing, eligibility support, or administrative follow-up.",
+          "So the practical experience can differ even if the headline treats all three as part of the same shutdown story."
+        ],
+        bullets: [
+          "Social Security questions often start with monthly checks and claim processing.",
+          "Medicare questions often center on coverage use and claims handling.",
+          "Medicaid questions can vary more by state administration and local support."
+        ]
+      },
+      {
+        title: "What to check first if one of these affects you",
+        paragraphs: [
+          "Start by identifying which program you actually mean and what action you need right now. A person waiting on a Social Security claim needs a different answer from a Medicare beneficiary using care or a Medicaid enrollee dealing with state paperwork.",
+          "Then go straight to the official program source instead of relying on a generic shutdown roundup."
+        ]
+      }
+    ],
+    faqs: [
+      {
+        question: "Are Social Security, Medicare, and Medicaid handled the same way during a shutdown?",
+        answer: "No. They have different funding structures, administrative systems, and public touchpoints, so people may feel disruption differently."
+      },
+      {
+        question: "Does a shutdown automatically stop Medicare or Medicaid coverage?",
+        answer: "Not as a simple blanket rule. The more useful question is whether your issue is about care access, claims, enrollment, or support channels."
+      },
+      {
+        question: "Why can Medicaid feel different from Social Security?",
+        answer: "Because Medicaid involves state administration and health coverage operations, while Social Security is primarily a federal cash-benefit and claims system."
+      }
+    ],
+    citations: [
+      { label: "GAO: Lapses in Appropriations", href: "https://www.gao.gov/legal/appropriations-law/lapses-in-appropriations" },
+      { label: "SSA: About Social Security", href: "https://www.ssa.gov/about-ssa" },
+      { label: "Medicare Basics", href: "https://www.medicare.gov/basics/get-started-with-medicare/medicare-basics/how-does-medicare-work" },
+      { label: "Medicaid.gov", href: "https://www.medicaid.gov/index.html" }
+    ],
+    related: [
+      "government-shutdown-social-security",
+      "government-shutdown-va-benefits",
+      "what-happens-during-a-government-shutdown",
+      "government-shutdown-2026"
+    ],
+    actionBox: {
+      title: "Need the Social Security-specific answer first?",
+      text: "If your question is really only about checks, claims, or SSA support, the Social Security page is the quickest path.",
+      ctaLabel: "Open the Social Security guide",
+      ctaHref: "/government-shutdown-social-security/"
     }
   },
   {
@@ -521,9 +951,10 @@ export const articles: Article[] = [
       { label: "GAO: Lapses in Appropriations", href: "https://www.gao.gov/legal/appropriations-law/lapses-in-appropriations" }
     ],
     related: [
+      "government-shutdown-essential-workers",
+      "government-shutdown-contractors",
       "government-shutdown-federal-workers",
-      "government-shutdown-military-pay",
-      "government-shutdown-countdown"
+      "government-shutdown-military-pay"
     ],
     actionBox: {
       title: "Need the broader worker guide?",
@@ -585,6 +1016,7 @@ export const articles: Article[] = [
       { label: "IRS Filing Information", href: "https://www.irs.gov/filing" }
     ],
     related: [
+      "government-shutdown-irs",
       "government-shutdown-2026",
       "government-shutdown-federal-workers",
       "what-is-a-government-shutdown"
@@ -771,6 +1203,7 @@ export const articles: Article[] = [
       { label: "SSA Contact and Office Information", href: "https://www.ssa.gov/agency/contact/" }
     ],
     related: [
+      "government-shutdown-medicare-medicaid-social-security",
       "government-shutdown-va-benefits",
       "what-is-a-government-shutdown",
       "government-shutdown-2026"
@@ -1003,6 +1436,8 @@ export const articles: Article[] = [
       { label: "OPM Pay and Leave", href: "https://www.opm.gov/policy-data-oversight/pay-leave/" }
     ],
     related: [
+      "government-shutdown-essential-workers",
+      "government-shutdown-contractors",
       "who-gets-paid-during-a-government-shutdown",
       "government-shutdown-military-pay",
       "government-shutdown-tax-refunds"
@@ -1070,6 +1505,7 @@ export const articles: Article[] = [
       "government-shutdown-2026",
       "what-is-a-government-shutdown",
       "what-is-a-continuing-resolution",
+      "why-does-september-30-matter",
       "government-shutdown-federal-workers"
     ],
     actionBox: {

@@ -125,7 +125,7 @@ export const articlesZh: Article[] = [
       { label: "GAO：拨款中断", href: "https://www.gao.gov/legal/appropriations-law/lapses-in-appropriations" },
       { label: "CRS：联邦政府停摆", href: "https://www.congress.gov/crs_external_products/RS/HTML/RS20348.web.html" }
     ],
-    related: ["government-shutdown-2026", "why-does-the-government-shut-down", "what-is-a-continuing-resolution", "government-shutdown-vs-debt-ceiling"],
+    related: ["what-is-a-funding-gap", "why-does-september-30-matter", "why-does-the-government-shut-down", "what-is-a-continuing-resolution", "government-shutdown-vs-debt-ceiling"],
     actionBox: {
       title: "如果你已经看懂机制，下一步最值得盯的就是日期",
       text: "倒计时页会把下一次联邦拨款截止时间放在最显眼的位置，方便你看这个机制会不会真的变成一次停摆。",
@@ -191,7 +191,7 @@ export const articlesZh: Article[] = [
       { label: "CRS：联邦政府停摆", href: "https://www.congress.gov/crs_external_products/RS/HTML/RS20348.web.html" },
       { label: "美国参议院：拨款流程", href: "https://www.senate.gov/reference/reference_index_subjects/Appropriations_vrd.htm" }
     ],
-    related: ["what-is-a-government-shutdown", "what-is-a-continuing-resolution", "government-shutdown-countdown", "government-shutdown-2026"],
+    related: ["what-is-a-government-shutdown", "why-does-september-30-matter", "what-is-a-continuing-resolution", "government-shutdown-countdown", "government-shutdown-2026"],
     actionBox: {
       title: "想看那个最常用来拖延停摆的临时补丁？",
       text: "continuing resolution 那一页会解释，为什么国会总爱用短期拨款先把政府撑住，以及为什么风险会在它到期时再次回来。",
@@ -257,7 +257,7 @@ export const articlesZh: Article[] = [
       { label: "GAO：拨款中断", href: "https://www.gao.gov/legal/appropriations-law/lapses-in-appropriations" },
       { label: "CRS：联邦政府停摆", href: "https://www.congress.gov/crs_external_products/RS/HTML/RS20348.web.html" }
     ],
-    related: ["government-shutdown-2026", "who-gets-paid-during-a-government-shutdown", "government-shutdown-social-security", "government-shutdown-passports"],
+    related: ["government-shutdown-2026", "government-shutdown-essential-workers", "government-shutdown-contractors", "who-gets-paid-during-a-government-shutdown", "government-shutdown-social-security", "government-shutdown-passports"],
     actionBox: {
       title: "想先确认这件事现在是不是已经在发生？",
       text: "最新状态页是最快的入口，能帮你先看这次截止日是不是已经变成现实中的停摆或服务变化。",
@@ -323,7 +323,7 @@ export const articlesZh: Article[] = [
       { label: "美国财政部：债务上限", href: "https://home.treasury.gov/policy-issues/financial-markets-financial-institutions-and-fiscal-service/debt-limit" },
       { label: "CRS：债务上限暂停", href: "https://www.congress.gov/crs-product/IN11829" }
     ],
-    related: ["what-is-a-government-shutdown", "why-does-the-government-shut-down", "government-shutdown-countdown", "government-shutdown-2026"],
+    related: ["what-is-a-government-shutdown", "why-does-the-government-shut-down", "what-is-a-funding-gap", "government-shutdown-countdown", "government-shutdown-2026"],
     actionBox: {
       title: "如果你想先把 shutdown 本身的机制看懂",
       text: "主解释页会一步一步说明，政府停摆到底是怎么由拨款截止日和 funding lapse 触发的。",
@@ -389,12 +389,400 @@ export const articlesZh: Article[] = [
       { label: "CRS：2026 财年继续拨款概览", href: "https://www.congress.gov/crs-product/R48765" },
       { label: "美国参议院：拨款流程", href: "https://www.senate.gov/reference/reference_index_subjects/Appropriations_vrd.htm" }
     ],
-    related: ["what-is-a-government-shutdown", "why-does-the-government-shut-down", "government-shutdown-countdown", "government-shutdown-2026"],
+    related: ["what-is-a-government-shutdown", "why-does-the-government-shut-down", "why-does-september-30-matter", "government-shutdown-countdown", "government-shutdown-2026"],
     actionBox: {
       title: "如果你想知道下一次真正要盯的日期",
       text: "倒计时页会把下一次联邦拨款截止日放在最显眼的位置，方便你把 CR 的机制和现实时间点对应起来。",
       ctaLabel: "打开倒计时页",
       ctaHref: "/zh/government-shutdown-countdown/"
+    }
+  },
+  {
+    slug: "government-shutdown-contractors",
+    category: "承包商",
+    title: "美国政府停摆时，联邦承包商通常会遇到什么？",
+    description: "给联邦承包商看的实用解释页，围绕停工指令、发票与回款延迟、合同是否仍有资金，以及为什么承包商不能直接套用联邦雇员规则来讲清楚。",
+    updated: "更新于 2026 年 3 月 13 日",
+    kicker: "联邦承包商最该看的通常是合同和雇主通知，而不是联邦雇员的通用规则。",
+    takeaways: [
+      "承包商通常不是按联邦雇员那套停摆规则来处理，而是看合同条款、雇主安排和机构采购决定。",
+      "停摆可能带来停工指令、合同选项延后、发票处理变慢，或者不同合同之间完全不一样的结果。",
+      "最有用的第一步，是确认合同现在是否仍有资金、雇主怎么通知，以及 contracting officer 有没有新的指令。"
+    ],
+    sections: [
+      {
+        title: "为什么承包商和联邦雇员不是同一套规则",
+        paragraphs: [
+          "承包商和联邦雇员在法律和管理上并不是同一个身份。联邦雇员的 shutdown 讨论通常围绕 excepted、furlough 和工资，而承包商更多要看合同资金、雇主安排和机构采购决定。",
+          "所以承包商最不该做的，就是直接把联邦雇员新闻套到自己身上。"
+        ]
+      },
+      {
+        title: "停摆期间，承包商最可能遇到哪些变化",
+        paragraphs: [
+          "停摆可能影响工作是否继续、发票是否按原速度处理、合同修改是否推进，以及后续 option 或续签会不会拖延。",
+          "真正的影响通常不会完全一样。同一家机构下，不同合同也可能出现完全不同的结果。"
+        ],
+        bullets: [
+          "先确认合同当前是否仍有可用资金。",
+          "确认有没有 stop-work 或暂停通知。",
+          "把发票、改约和续签时间分开看。"
+        ]
+      },
+      {
+        title: "承包商最先该核对什么",
+        paragraphs: [
+          "最快减少误判的方法，就是先确认谁在发指令、合同现在写了什么、以及你做的工作是否支撑那些仍会继续的功能。",
+          "如果你关心的是家庭现金流，就把三个问题分开：工作是否继续、雇主在中断期间是否照发、发票延迟会不会反过来影响发薪。"
+        ]
+      }
+    ],
+    faqs: [
+      {
+        question: "承包商会像联邦雇员那样保证补发工资吗？",
+        answer: "不会。承包商的收入通常取决于合同条款和雇主安排，不适用联邦雇员那套补发工资框架。"
+      },
+      {
+        question: "停摆期间有些承包商还能继续工作吗？",
+        answer: "能不能继续，要看合同、机构、资金来源和工作是否仍被允许推进。"
+      },
+      {
+        question: "承包商最先该看什么？",
+        answer: "先看雇主通知、contracting officer 的指令，以及合同当前是否有资金和停工通知。"
+      }
+    ],
+    citations: [
+      { label: "CRS 法律侧栏：政府停摆对联邦合同和采购的影响", href: "https://www.congress.gov/crs_external_products/LSB/HTML/LSB10243.web.html" },
+      { label: "OPM FAQ：联邦承包商能否远程办公", href: "https://www.opm.gov/frequently-asked-questions/telework-faq/employee/can-federal-contractors-telework/" }
+    ],
+    related: ["government-shutdown-essential-workers", "who-gets-paid-during-a-government-shutdown", "government-shutdown-federal-workers", "government-shutdown-2026"],
+    actionBox: {
+      title: "如果你还想对照联邦雇员那边的规则",
+      text: "工资解释页会说明，为什么同一个办公室里，承包商和正式联邦雇员面对的规则差别会这么大。",
+      ctaLabel: "打开工资解释页",
+      ctaHref: "/zh/who-gets-paid-during-a-government-shutdown/"
+    }
+  },
+  {
+    slug: "what-is-a-funding-gap",
+    category: "拨款术语",
+    title: "什么是 funding gap？它和政府停摆是什么关系？",
+    description: "用通俗方式解释 funding gap 这个术语：它到底是什么意思、为什么官方材料老爱用它，以及它和 shutdown 之间是什么关系。",
+    updated: "更新于 2026 年 3 月 13 日",
+    kicker: "funding gap 指的是旧拨款到期后、新拨款还没生效之间的那段空档。",
+    takeaways: [
+      "funding gap 出现时，说明原有拨款授权已经到期，而新的替代资金还没通过。",
+      "有些 funding gap 很短，但它本身就是停摆风险或拨款失效的法律与现实基础。",
+      "这个词之所以重要，是因为 GAO 和 CRS 这类官方材料经常用 funding gap 或 lapse in appropriations 来描述 shutdown。"
+    ],
+    sections: [
+      {
+        title: "先用普通话讲清定义",
+        paragraphs: [
+          "funding gap 就是旧拨款到期了，但新拨款还没正式接上，这中间出现的资金空档。官方预算语言里，也常把它叫做 lapse in appropriations。",
+          "所以你会发现，新闻爱说 shutdown，而官方材料更常直接写 funding gap 或 lapse。"
+        ]
+      },
+      {
+        title: "funding gap 怎么会变成 shutdown 新闻",
+        paragraphs: [
+          "一旦 funding gap 开始，机构就要按拨款失效时的法律规则来行动。也就是从这一刻起，contingency plan、停摆准备和公共服务问题都会从抽象变成现实。",
+          "有些 funding gap 很快就解决了，公众感觉不一定强；有些拖得更久，影响就会明显得多。"
+        ]
+      },
+      {
+        title: "为什么这个术语值得看懂",
+        paragraphs: [
+          "如果你懂 funding gap，就更容易看懂官方材料在说什么。你会发现，有些文件强调的是法律上的拨款失效，有些报道强调的是普通人实际感受到的 shutdown。",
+          "两者讲的是同一个核心问题，只是角度不同：资金先到期了，而新的法案还没接上。"
+        ]
+      }
+    ],
+    faqs: [
+      {
+        question: "funding gap 和 shutdown 是一回事吗？",
+        answer: "两者高度相关，但 funding gap 更偏技术和法律术语，用来描述触发 shutdown 影响的拨款空档。"
+      },
+      {
+        question: "funding gap 可以很短吗？",
+        answer: "可以。有些空档很快就被补上，所以公众感受到的影响会比较有限。"
+      },
+      {
+        question: "为什么官方报告这么爱用这个词？",
+        answer: "因为它更直接描述了拨款授权失效这件事，而 shutdown 是公众更熟悉的后果描述。"
+      }
+    ],
+    citations: [
+      { label: "GAO：拨款中断", href: "https://www.gao.gov/legal/appropriations-law/lapses-in-appropriations" },
+      { label: "CRS：联邦政府停摆", href: "https://www.congress.gov/crs_external_products/RS/HTML/RS20348.web.html" }
+    ],
+    related: ["what-is-a-government-shutdown", "what-is-a-continuing-resolution", "government-shutdown-countdown", "government-shutdown-2026"],
+    actionBox: {
+      title: "如果你想看更不技术化的版本",
+      text: "主解释页会把 funding gap 这种预算术语翻译成普通读者真正关心的工资、福利和服务问题。",
+      ctaLabel: "打开停摆机制解释页",
+      ctaHref: "/zh/what-is-a-government-shutdown/"
+    }
+  },
+  {
+    slug: "why-does-september-30-matter",
+    category: "截止日",
+    title: "为什么 9 月 30 日总出现在美国政府停摆新闻里？",
+    description: "用通俗方式解释为什么 9 月 30 日总是 shutdown 新闻里的关键日子：它和联邦财政年度、10 月 1 日、临时拨款法案到底是什么关系。",
+    updated: "更新于 2026 年 3 月 13 日",
+    kicker: "9 月 30 日之所以重要，是因为它是美国联邦财政年度的最后一天。",
+    takeaways: [
+      "9 月 30 日是联邦财政年度的固定截止点，所以经常把拨款争议变成眼前的停摆风险。",
+      "如果国会在这之前没通过拨款法案或临时拨款，大家接下来就会盯住 10 月 1 日。",
+      "即使政府最后没停摆，9 月 30 日也依然重要，因为它往往逼出了临时续命方案和新的截止日。"
+    ],
+    sections: [
+      {
+        title: "它本来就是财政年度的硬截止",
+        paragraphs: [
+          "美国联邦财政年度在 9 月 30 日结束，10 月 1 日开始新的财政年度。所以每当拨款谈判拖到这一天，风险就会从抽象变成现实。",
+          "如果常规拨款没谈完，国会通常就得在这之前通过一份 continuing resolution 或其他临时方案来避免拨款失效。"
+        ]
+      },
+      {
+        title: "为什么接下来总会看到 10 月 1 日的标题",
+        paragraphs: [
+          "9 月 30 日是旧拨款周期的最后一天。如果新的替代资金没能及时接上，真正的后果就会在 10 月 1 日开始出现。",
+          "所以新闻里才会经常同时出现“9 月 30 日截止日”和“10 月 1 日停摆威胁”这两个说法。"
+        ]
+      },
+      {
+        title: "为什么即使没停摆，这个日期也一样重要",
+        paragraphs: [
+          "就算政府最后没停摆，9 月 30 日也没有失去意义。因为很多时候，正是这个截止日逼着国会先通过一个临时补丁，让危机往后挪。",
+          "也就是说，危机也许没有在这一天爆发，但就是这一天决定了下一次风险会在哪里重新出现。"
+        ]
+      }
+    ],
+    faqs: [
+      {
+        question: "每次政府停摆都会在 9 月 30 日开始吗？",
+        answer: "不一定。9 月 30 日因为财政年度截止而格外重要，但临时拨款可以把下一次危机点往后移。"
+      },
+      {
+        question: "为什么 10 月 1 日也总被提到？",
+        answer: "因为那是 9 月 30 日这个截止点过去后的第一天，也是旧拨款到期后最容易出现后果的时候。"
+      },
+      {
+        question: "如果国会通过了 CR，9 月 30 日还重要吗？",
+        answer: "还是重要。因为正是这个日期逼出了那份临时拨款，并顺手设定了下一次必须盯住的新日期。"
+      }
+    ],
+    citations: [
+      { label: "美国参议院：拨款流程", href: "https://www.senate.gov/reference/reference_index_subjects/Appropriations_vrd.htm" },
+      { label: "CRS：联邦政府停摆", href: "https://www.congress.gov/crs_external_products/RS/HTML/RS20348.web.html" }
+    ],
+    related: ["government-shutdown-countdown", "what-is-a-continuing-resolution", "why-does-the-government-shut-down", "government-shutdown-2026"],
+    actionBox: {
+      title: "如果你想看真正要盯住的日期页面",
+      text: "倒计时页会把下一次联邦拨款截止日直接摆出来，让你把这套机制和现实时间点对应起来。",
+      ctaLabel: "打开倒计时页",
+      ctaHref: "/zh/government-shutdown-countdown/"
+    }
+  },
+  {
+    slug: "government-shutdown-essential-workers",
+    category: "雇员",
+    title: "美国政府停摆时，所谓 essential workers 到底是谁？",
+    description: "用普通读者能看懂的方式解释 shutdown 语境下的 essential workers：谁通常还得继续上班、官方术语为什么不完全一样、继续工作又不代表什么。",
+    updated: "更新于 2026 年 3 月 13 日",
+    kicker: "媒体常说 essential workers，但官方 shutdown 文件里的分类往往更具体。",
+    takeaways: [
+      "大家口中的 essential workers，通常是那些因为安全、核心运行或其他必要原因而被要求继续工作的岗位。",
+      "官方 shutdown 指引未必直接用 essential 这个词，很多时候会用 excepted 或其他更正式的分类。",
+      "被要求继续工作，不等于工资就一定按原节奏到账。"
+    ],
+    sections: [
+      {
+        title: "为什么 essential 这个词只讲对了一半",
+        paragraphs: [
+          "essential 是大家最容易搜索的说法，但机构的 shutdown 计划里往往会用更正式的分类方式。底层意思其实一样：有些岗位被认为必须继续。",
+          "所以最有用的不是纠结词语，而是确认你的岗位到底有没有被要求继续报到。"
+        ]
+      },
+      {
+        title: "哪些人可能还得继续上班",
+        paragraphs: [
+          "和国家安全、公共安全、不能中断的运行功能有关的岗位，往往更可能被要求继续工作。",
+          "但继续工作和按时拿到工资不是同一个承诺，所以家庭层面仍然要密切看 payroll 更新。"
+        ],
+        bullets: [
+          "先确认你的岗位有没有被列为继续工作。",
+          "把工作状态和工资时间分开理解。",
+          "优先看 agency contingency plan 和 OPM 指引，不要只看新闻标题。"
+        ]
+      },
+      {
+        title: "这类岗位最先该确认什么",
+        paragraphs: [
+          "先看报到指令、工时记录规则和工资时间，这三件事在前 24 小时通常比政治讨论更重要。",
+          "如果家庭现金流比较紧张，即使只是短暂延迟，也应该提前做打算。"
+        ]
+      }
+    ],
+    faqs: [
+      {
+        question: "essential 是每个机构都用的官方词吗？",
+        answer: "不一定。机构可能会用更正式的 shutdown 分类，但公众和媒体通常会直接说 essential workers。"
+      },
+      {
+        question: "如果我是 essential worker，就一定按时发工资吗？",
+        answer: "不一定。你可能被要求继续工作，但在拨款失效期间，工资到账时间仍可能变化。"
+      },
+      {
+        question: "这类岗位最先该看什么？",
+        answer: "先看机构报到指令、contingency plan 里的岗位说明，以及 payroll 指引。"
+      }
+    ],
+    citations: [
+      { label: "GAO：拨款中断", href: "https://www.gao.gov/legal/appropriations-law/lapses-in-appropriations" },
+      { label: "OPM：停薪休假指引", href: "https://www.opm.gov/policy-data-oversight/pay-leave/furlough-guidance/" }
+    ],
+    related: ["who-gets-paid-during-a-government-shutdown", "government-shutdown-federal-workers", "government-shutdown-contractors", "government-shutdown-2026"],
+    actionBox: {
+      title: "如果你想接着看工资那一层问题",
+      text: "工资解释页会继续说明，为什么继续工作、furlough 和延迟发薪在 shutdown 期间可能同时出现。",
+      ctaLabel: "打开工资解释页",
+      ctaHref: "/zh/who-gets-paid-during-a-government-shutdown/"
+    }
+  },
+  {
+    slug: "government-shutdown-irs",
+    category: "税务",
+    title: "美国政府停摆与 IRS：报税人最该预期什么？",
+    description: "把 IRS 在政府停摆期间最容易让人困惑的部分拆开讲：报税、退税、客服、人工处理和为什么答案会随着时间点不同而变化。",
+    updated: "更新于 2026 年 3 月 13 日",
+    kicker: "对报税人来说，真正的问题不是 IRS 开没开门，而是哪部分功能还在正常运转。",
+    takeaways: [
+      "IRS 相关问题最好拆开来看：报税、退税、自动化工具、电话支持和复杂个案处理并不是同一件事。",
+      "答案会受报税季时间点和当次拨款失效范围影响，所以最新 IRS 官方运营说明比泛泛新闻更重要。",
+      "报税和退税流程，通常会比电话支持和人工审核更接近正常。"
+    ],
+    sections: [
+      {
+        title: "为什么 IRS 的答案常常显得很不平均",
+        paragraphs: [
+          "IRS 不是一个简单的开关。电子报税、退税查询和某些自动化功能，可能和电话客服、线下支持或人工审核的状态不一样。",
+          "所以最诚实的解释方式，通常是把问题拆开：还能不能报、还能不能查退款、出了特殊情况还能不能很快找到真人。"
+        ]
+      },
+      {
+        title: "报税人最先该看什么",
+        paragraphs: [
+          "先去看 IRS 针对当前 funding 情况发布的运营说明，再看你真正要用的报税或退税工具。这比大而化之的 shutdown 新闻有用得多。",
+          "如果你遇到的是 amended return、人工审核或特殊个案，那些通常会更早受到 staffing 压力。"
+        ],
+        bullets: [
+          "先看 IRS 当前运营说明。",
+          "优先使用官方报税和退税工具，不要靠传言。",
+          "默认把真人支持和复杂个案视为更不稳定的部分。"
+        ]
+      },
+      {
+        title: "为什么报税季时间点会改变答案",
+        paragraphs: [
+          "在报税季最忙的时候，IRS 的压力和公众依赖程度都不同，所以大家感受到的影响也会变得不一样。",
+          "这也是为什么即使你看过旧年份的 shutdown 新闻，也最好结合当年 IRS 最新运营页面重新判断。"
+        ]
+      }
+    ],
+    faqs: [
+      {
+        question: "停摆期间还能继续报税吗？",
+        answer: "很多情况下可以，尤其是电子报税；但最可靠的答案还是看当次 IRS 最新运营说明。"
+      },
+      {
+        question: "退税一定会照常发吗？",
+        answer: "不一定。退税节奏会受到报税季安排和 IRS 当时仍在运行的功能影响。"
+      },
+      {
+        question: "IRS 哪一部分最容易先出压力？",
+        answer: "电话支持、线下帮助和需要人工处理的复杂个案，通常最容易先感受到人手压力。"
+      }
+    ],
+    citations: [
+      { label: "IRS：2026 年拨款中断下继续维持正常活动", href: "https://www.irs.gov/newsroom/irs-continues-normal-activities-under-the-2026-lapse-in-appropriations" },
+      { label: "IRS：退税", href: "https://www.irs.gov/refunds" }
+    ],
+    related: ["government-shutdown-tax-refunds", "government-shutdown-2026", "what-happens-during-a-government-shutdown", "what-is-a-government-shutdown"],
+    actionBox: {
+      title: "如果你只想先看退税那部分",
+      text: "退税指南会更直接回答“能不能报、退款会不会动、客服会不会更难找”这几个问题。",
+      ctaLabel: "打开退税指南",
+      ctaHref: "/zh/government-shutdown-tax-refunds/"
+    }
+  },
+  {
+    slug: "government-shutdown-medicare-medicaid-social-security",
+    category: "福利",
+    title: "政府停摆下，Medicare、Medicaid 和 Social Security 到底有什么不同？",
+    description: "把 Medicare、Medicaid 和 Social Security 这三个经常被混在一起搜索的项目拆开讲，解释它们为什么不是一回事，以及停摆时普通人会先感觉到哪些差别。",
+    updated: "更新于 2026 年 3 月 13 日",
+    kicker: "这三个项目经常被一起搜，但它们的结构、管理方式和停摆时的体验都不一样。",
+    takeaways: [
+      "Social Security 本质上是现金福利系统，而 Medicare 和 Medicaid 是医疗覆盖项目，三者不能当成同一件事来理解。",
+      "普通人搜索它们时，真实问题通常分别是：月度福利、医疗理赔、资格认定、客服支持或州级行政处理。",
+      "很多时候，人们最先感受到的差别不是核心福利立刻停掉，而是客服、理赔、个案处理或本地行政流程的不同。"
+    ],
+    sections: [
+      {
+        title: "为什么不能把这三个项目混成一个问题",
+        paragraphs: [
+          "很多人会一起搜这三个名字，因为它们看起来都像“联邦福利”。但它们并不是同一种项目。Social Security 更偏现金福利，Medicare 更偏联邦医疗覆盖，而 Medicaid 还涉及联邦和州共同管理。",
+          "所以 shutdown 时，你感受到的影响类型也会不同：你问的可能是月度款项，也可能是医疗理赔、资格认定，或者地方窗口支持。"
+        ]
+      },
+      {
+        title: "普通人最容易在哪些地方感觉到差别",
+        paragraphs: [
+          "在 Social Security 上，大家通常最先关心的是月度福利会不会继续，然后才是申诉、回电和 claim 处理。对 Medicare 和 Medicaid 来说，更多人关心的则是 coverage 使用、provider 结算、资格认定或行政支持。",
+          "也正因为如此，即使标题把它们都放进一条 shutdown 新闻里，现实里的感受也未必一样。"
+        ],
+        bullets: [
+          "Social Security：先看月度福利和 claim 处理。",
+          "Medicare：更常见的是 coverage 使用和理赔问题。",
+          "Medicaid：更容易受到州级行政和本地支持差异影响。"
+        ]
+      },
+      {
+        title: "如果你真的受其中一个项目影响，先该看什么",
+        paragraphs: [
+          "先确认你到底问的是哪一个项目，以及你当前最需要处理的动作是什么。等 Social Security claim 的人，和正要看 Medicare 理赔的人，答案不会一样。",
+          "确认具体项目后，再直接去对应的官方来源，而不是只看一篇把所有福利揉在一起的 shutdown 概览。"
+        ]
+      }
+    ],
+    faqs: [
+      {
+        question: "Social Security、Medicare 和 Medicaid 在停摆时会被一样对待吗？",
+        answer: "不会。它们的资金结构、管理体系和面向公众的接触点都不同，所以影响体验也会不同。"
+      },
+      {
+        question: "政府停摆会不会自动让 Medicare 或 Medicaid 停掉？",
+        answer: "不能这么一刀切地说。更有用的问题是：你碰到的是看病、理赔、资格认定，还是客服支持。"
+      },
+      {
+        question: "为什么 Medicaid 经常会和 Social Security 的体验不一样？",
+        answer: "因为 Medicaid 涉及州级行政和医疗覆盖运行，而 Social Security 更像联邦现金福利与 claim 处理体系。"
+      }
+    ],
+    citations: [
+      { label: "GAO：拨款中断", href: "https://www.gao.gov/legal/appropriations-law/lapses-in-appropriations" },
+      { label: "SSA：关于 Social Security", href: "https://www.ssa.gov/about-ssa" },
+      { label: "Medicare Basics", href: "https://www.medicare.gov/basics/get-started-with-medicare/medicare-basics/how-does-medicare-work" },
+      { label: "Medicaid.gov", href: "https://www.medicaid.gov/index.html" }
+    ],
+    related: ["government-shutdown-social-security", "government-shutdown-va-benefits", "what-happens-during-a-government-shutdown", "government-shutdown-2026"],
+    actionBox: {
+      title: "如果你现在只想确认 Social Security 这一项",
+      text: "Social Security 专题页会更快回答支票、claim 和 SSA 客服这些更具体的问题。",
+      ctaLabel: "打开 Social Security 指南",
+      ctaHref: "/zh/government-shutdown-social-security/"
     }
   },
   {
@@ -448,7 +836,7 @@ export const articlesZh: Article[] = [
       { label: "OPM：薪酬与休假", href: "https://www.opm.gov/policy-data-oversight/pay-leave/" },
       { label: "GAO：拨款中断", href: "https://www.gao.gov/legal/appropriations-law/lapses-in-appropriations" }
     ],
-    related: ["government-shutdown-federal-workers", "government-shutdown-military-pay", "government-shutdown-countdown"],
+    related: ["government-shutdown-essential-workers", "government-shutdown-contractors", "government-shutdown-federal-workers", "government-shutdown-military-pay"],
     actionBox: {
       title: "还需要更完整的联邦雇员指南？",
       text: "联邦雇员页会更完整地解释 furlough 机制、报到指令，以及很多家庭在前 24 小时最需要搞清楚的问题。",
@@ -507,7 +895,7 @@ export const articlesZh: Article[] = [
       { label: "IRS：退税", href: "https://www.irs.gov/refunds" },
       { label: "IRS：报税信息", href: "https://www.irs.gov/filing" }
     ],
-    related: ["government-shutdown-2026", "government-shutdown-federal-workers", "what-is-a-government-shutdown"],
+    related: ["government-shutdown-irs", "government-shutdown-2026", "government-shutdown-federal-workers", "what-is-a-government-shutdown"],
     actionBox: {
       title: "如果你也在担心工资问题",
       text: "一旦拨款中断既影响退税判断，也影响家庭现金流，联邦雇员指南通常是最值得接着看的页面。",
@@ -678,7 +1066,7 @@ export const articlesZh: Article[] = [
       { label: "Social Security Administration", href: "https://www.ssa.gov/" },
       { label: "SSA：联系和办公室信息", href: "https://www.ssa.gov/agency/contact/" }
     ],
-    related: ["government-shutdown-va-benefits", "what-is-a-government-shutdown", "government-shutdown-2026"]
+    related: ["government-shutdown-medicare-medicaid-social-security", "government-shutdown-va-benefits", "what-is-a-government-shutdown", "government-shutdown-2026"]
   },
   {
     slug: "government-shutdown-military-pay",
@@ -890,7 +1278,7 @@ export const articlesZh: Article[] = [
       { label: "OPM", href: "https://www.opm.gov/" },
       { label: "OPM：薪酬与休假", href: "https://www.opm.gov/policy-data-oversight/pay-leave/" }
     ],
-    related: ["who-gets-paid-during-a-government-shutdown", "government-shutdown-military-pay", "government-shutdown-tax-refunds"],
+    related: ["government-shutdown-essential-workers", "government-shutdown-contractors", "who-gets-paid-during-a-government-shutdown", "government-shutdown-military-pay", "government-shutdown-tax-refunds"],
     actionBox: {
       title: "如果你最担心的是工资到账时间",
       text: "工资解释页会专门说明谁继续工作、谁会被 furlough，以及为什么下一张工资单的时间仍可能变化。",
@@ -949,7 +1337,7 @@ export const articlesZh: Article[] = [
       { label: "美国参议院：拨款流程", href: "https://www.senate.gov/reference/reference_index_subjects/Appropriations_vrd.htm" },
       { label: "CRS：联邦政府停摆", href: "https://www.congress.gov/crs_external_products/RS/HTML/RS20348.web.html" }
     ],
-    related: ["government-shutdown-2026", "what-is-a-government-shutdown", "what-is-a-continuing-resolution", "government-shutdown-federal-workers"],
+    related: ["government-shutdown-2026", "what-is-a-government-shutdown", "what-is-a-continuing-resolution", "why-does-september-30-matter", "government-shutdown-federal-workers"],
     actionBox: {
       title: "如果你还想知道现在到底发生了什么",
       text: "在日期之后，很多人下一步最想确认的，就是现在是否已经停摆，以及哪些服务最容易先受影响。",
