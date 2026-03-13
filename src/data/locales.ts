@@ -52,9 +52,9 @@ export const uiCopy = {
     },
     footer: {
       eyebrow: "Read This First",
-      title: "Independent, source-linked, and built for high-stakes search moments.",
+      title: "Independent, source-linked, and focused on practical answers.",
       body:
-        "Government shutdown searches spike when people need a fast answer. This project is designed to explain the funding clock, who is affected, and where to verify details with official agencies.",
+        "If you are trying to figure out whether work, benefits, travel, or a federal service could be affected, start with the update date and official sources on each page.",
       linksEyebrow: "Policy Links",
       links: [
         { href: localizePath("en", "about"), label: "About" },
@@ -67,10 +67,10 @@ export const uiCopy = {
     home: {
       pageTitle: "Federal Funding Clock, Agency Impact Guides, and Worker Answers",
       heroCta: "Open the current watch page",
-      heroUpdated: "Updated for March 2026",
-      signalLabel: "Search intent",
-      architectureEyebrow: "Coverage Architecture",
-      lanePrefix: "Lane",
+      heroUpdated: "Updated March 13, 2026",
+      signalLabel: "Start here",
+      architectureEyebrow: "Main Guides",
+      lanePrefix: "Guide",
       openPage: "Open page",
       fastAnswersEyebrow: "Fast Answers",
       timelineEyebrow: "Timeline",
@@ -78,7 +78,7 @@ export const uiCopy = {
     },
     article: {
       heroNote:
-        "Every high-stakes page on this site is written to answer the practical question first, show the update date clearly, and point readers toward official sources.",
+        "Start with the update date, then use the key points and official sources below to confirm what applies to you.",
       keyPoints: "Key points",
       nextMove: "Next Move",
       faqHeading: "Frequently asked",
@@ -110,9 +110,9 @@ export const uiCopy = {
     },
     footer: {
       eyebrow: "先看这里",
-      title: "独立整理、附带来源链接，并专为高风险搜索时刻设计。",
+      title: "独立整理、附带来源链接，并只讲实际影响。",
       body:
-        "当美国政府停摆相关搜索飙升时，用户需要的是快速答案。这个站点的目标是解释拨款倒计时、谁会受影响，以及去哪里核对官方信息。",
+        "如果你担心工作、福利、旅行或某项联邦服务会不会受影响，就先看对应页面的更新时间和官方来源。",
       linksEyebrow: "政策页面",
       links: [
         { href: localizePath("zh", "about"), label: "关于本站" },
@@ -125,17 +125,17 @@ export const uiCopy = {
     home: {
       pageTitle: "美国政府停摆时间表、机构影响与联邦雇员指南",
       heroCta: "查看当前专题页",
-      heroUpdated: "2026 年 3 月版",
-      signalLabel: "搜索意图",
-      architectureEyebrow: "站点架构",
-      lanePrefix: "栏目",
+      heroUpdated: "更新于 2026 年 3 月 13 日",
+      signalLabel: "从这里开始",
+      architectureEyebrow: "核心指南",
+      lanePrefix: "指南",
       openPage: "进入页面",
       fastAnswersEyebrow: "快速答案",
       timelineEyebrow: "时间线",
       featuredEyebrow: "核心页面"
     },
     article: {
-      heroNote: "本站的高价值页面都遵循同一个原则：先回答实际问题，明确更新时间，再把读者导向官方来源。",
+      heroNote: "先看更新时间，再看下方关键要点和官方来源，快速确认哪些信息与你有关。",
       keyPoints: "关键要点",
       nextMove: "下一步",
       faqHeading: "常见问题",

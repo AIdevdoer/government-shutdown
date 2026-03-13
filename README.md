@@ -5,14 +5,14 @@ Static bilingual content site for `government-shutdown.com`, built with Astro an
 ## Run locally
 
 ```bash
-npm install
-npm run dev
+pnpm install
+pnpm dev
 ```
 
 ## Build
 
 ```bash
-npm run build
+pnpm build
 ```
 
 ## Project structure
@@ -31,7 +31,7 @@ npm run build
 
 Cloudflare Pages build settings:
 
-- Build command: `npm run build`
+- Build command: `pnpm build`
 - Build output directory: `dist`
 
 Site URL is configured as `https://government-shutdown.com` in `astro.config.mjs`.

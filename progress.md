@@ -81,6 +81,29 @@
   - `findings.md` (updated)
   - `progress.md` (updated)
 
+## Session: 2026-03-13
+
+### Phase 7: Reader-Facing Content Rewrite
+- **Status:** in_progress
+- Actions taken:
+  - Audited homepage, article, and shared UI copy for operator-facing or SEO-facing language.
+  - Confirmed that the main issue is not layout but voice: several pages explain site strategy instead of answering reader questions directly.
+  - Identified `src/data/home.ts`, `src/data/articles.ts`, `src/data/articles.zh.ts`, and `src/data/locales.ts` as the primary rewrite targets.
+  - Rewrote homepage copy, shared article guidance, and all English and Chinese article data so pages now address readers directly.
+  - Standardized the project on `pnpm`, added `pnpm-lock.yaml`, updated `package.json` and `README.md`, and removed `package-lock.json`.
+- Files created/modified:
+  - `task_plan.md` (updated)
+  - `findings.md` (updated)
+  - `progress.md` (updated)
+  - `README.md`
+  - `package.json`
+  - `pnpm-lock.yaml`
+  - `src/data/home.ts`
+  - `src/data/locales.ts`
+  - `src/data/articles.ts`
+  - `src/data/articles.zh.ts`
+  - `src/data/policies.ts`
+
 ## Test Results
 | Test | Input | Expected | Actual | Status |
 |------|-------|----------|--------|--------|
@@ -93,6 +116,8 @@
 | Live endpoint | `curl -I https://government-shutdown.pages.dev` | `HTTP 200` | `HTTP/2 200` returned | ✓ |
 | Bilingual build | `npm run build` after i18n changes | English and Chinese routes generate cleanly | 35 static pages built successfully | ✓ |
 | Local bilingual review | Open `/`, `/zh/`, `/zh/government-shutdown-2026/`, then switch back to English | Pages render and language switching works | Verified in browser snapshot session | ✓ |
+| `pnpm` install sync | `pnpm install` | Lockfile and dependencies remain consistent | Lockfile up to date; install completed successfully | ✓ |
+| Reader-facing content rebuild | `pnpm build` after copy rewrite | All routes build cleanly after full content rewrite | 35 static pages built successfully | ✓ |
 
 ## Error Log
 | Timestamp | Error | Attempt | Resolution |
@@ -104,8 +129,8 @@
 ## 5-Question Reboot Check
 | Question | Answer |
 |----------|--------|
-| Where am I? | Phase 6 |
-| Where am I going? | Final delivery plus a documented manual DNS step if the custom domain should go live immediately |
-| What's the goal? | Build, publish, and deploy the Government Shutdown site |
-| What have I learned? | Git-backed Pages deployment works; bilingual routing is clean; custom-domain activation is blocked only by DNS permissions |
-| What have I done? | Planned the work, built the site, upgraded it to bilingual routing, pushed it to GitHub, and deployed it to Cloudflare Pages |
+| Where am I? | Phase 7 |
+| Where am I going? | Rewrite all reader-facing copy so the site speaks directly to visitors, then rebuild and verify |
+| What's the goal? | Build, publish, deploy, and refine the Government Shutdown site |
+| What have I learned? | Git-backed Pages deployment works; bilingual routing is clean; custom-domain activation is blocked only by DNS permissions; the remaining quality issue is content voice |
+| What have I done? | Planned the work, built the site, upgraded it to bilingual routing, deployed it, and started a full reader-facing content rewrite audit |

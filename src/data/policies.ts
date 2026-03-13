@@ -22,9 +22,9 @@ export const policyPages: Record<Locale, Record<PolicyKey, PolicyPageContent>> =
       title: "About",
       description: "About Government Shutdown, an independent site covering federal funding deadlines, service impacts, and worker guidance.",
       eyebrow: "About",
-      heading: "Built for the moment federal funding drama turns into a practical problem.",
+      heading: "Independent guidance on federal funding deadlines and practical service impacts.",
       intro:
-        "Government Shutdown is an independent information site covering the federal funding clock, shutdown risk, agency service impacts, worker-pay questions, and the specific answers people search for when a deadline starts to feel real.",
+        "Government Shutdown is an independent information site focused on federal funding deadlines, shutdown risk, agency service impacts, and common questions about workers, travel, taxes, and benefits.",
       sections: [
         {
           title: "What this site is for",
@@ -132,9 +132,9 @@ export const policyPages: Record<Locale, Record<PolicyKey, PolicyPageContent>> =
       title: "关于本站",
       description: "关于 Government Shutdown，这是一家围绕美国联邦拨款截止、服务影响与联邦雇员处境整理信息的独立网站。",
       eyebrow: "关于本站",
-      heading: "当联邦拨款风波变成现实问题时，这个站点就是为那一刻准备的。",
+      heading: "围绕美国联邦拨款截止与实际服务影响的独立信息站。",
       intro:
-        "Government Shutdown 是一个独立信息网站，围绕美国联邦拨款时钟、停摆风险、机构服务影响、联邦雇员工资问题，以及用户在截止日临近时最常搜索的实际问题来组织内容。",
+        "Government Shutdown 是一个独立信息网站，重点整理美国联邦拨款时间点、停摆风险、机构服务影响，以及联邦雇员、旅行、税务和福利相关的常见问题。",
       sections: [
         {
           title: "这个站点要解决什么",

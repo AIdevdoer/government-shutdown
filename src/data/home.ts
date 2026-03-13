@@ -42,62 +42,61 @@ export const homeContentByLocale: Record<Locale, HomeContent> = {
     deadlineIso,
     deadlineLabel: "FY 2027 appropriations deadline",
     deadlineNote:
-      "Congress has to fund the federal government again before the standing September 30 fiscal-year cutoff. This is the annual hard date every shutdown watcher keeps on the board.",
+      "Congress needs new funding in place before the standing September 30 fiscal-year cutoff. If talks stall, this is the date most people will watch first.",
     statusEyebrow: "Funding Clock",
-    statusTitle: "A federal shutdown search spike happens when the clock feels real.",
+    statusTitle: "What to watch if another U.S. government shutdown gets close.",
     statusSummary:
-      "This site is built for the moment people need a straight answer: what a shutdown is, which agencies are affected, whether pay or travel will be disrupted, and what to watch next.",
-    signalTitle:
-      "People do not search this topic for theory. They search because a service, paycheck, trip, or claim feels exposed.",
+      "Use this page to check the next federal funding deadline, see which services are most exposed, and jump quickly to the guide that matches your problem.",
+    signalTitle: "Most visitors are trying to answer one practical question fast.",
     signalText:
-      "The site is built around those moments: current watch coverage, worker guidance, travel disruption pages, and benefit-specific explainers that answer the operational question first.",
-    architectureTitle: "The site is split like an emergency desk, not a blog.",
+      "Is a paycheck at risk? Will Social Security continue? Could TSA or passports slow down? Start with the section that matches what you need to confirm.",
+    architectureTitle: "Start with the part of the shutdown that affects you.",
     architectureDescription:
-      "Each lane captures a different kind of search intent so the homepage can route readers quickly and keep the whole project useful between crises.",
+      "These guides are organized around the questions people usually need answered first: current status, work and pay, travel, and benefits.",
     pillars: [
       {
-        title: "Event page",
-        copy: "Use the annual watch page as the live brief. It should absorb breaking search demand and surface the current state in one screen.",
+        title: "Current status",
+        copy: "Check whether funding is active, what deadline matters next, and which agencies or services are under the most pressure right now.",
         href: "/government-shutdown-2026/"
       },
       {
-        title: "Worker pay",
-        copy: "Federal employees and contractors search with urgency. Worker pay, furlough rules, and practical next steps are core pages, not side topics.",
+        title: "Federal workers",
+        copy: "If you are worried about furlough status, reporting instructions, or paycheck timing, start with the worker and pay guides.",
         href: "/government-shutdown-federal-workers/"
       },
       {
-        title: "Travel impact",
-        copy: "Airports, passports, TSA, and national parks translate news curiosity into concrete service questions with strong recurring demand.",
+        title: "Travel",
+        copy: "If you have a trip coming up, use the travel guides to check what may change for passports, airport screening, and national parks.",
         href: "/government-shutdown-passports/"
       },
       {
-        title: "Benefit checks",
-        copy: "Social Security, VA benefits, Medicare, and SNAP pages capture high-volume searches from people trying to confirm whether money or services are safe.",
+        title: "Benefits",
+        copy: "If you need to know whether checks or services may slow down, go straight to the Social Security and VA guides.",
         href: "/government-shutdown-social-security/"
       }
     ],
-    fastAnswersTitle: "Four questions that always come first.",
+    fastAnswersTitle: "Four questions people usually ask first.",
     quickAnswers: [
       {
         question: "Does a shutdown mean every agency closes?",
-        answer: "No. Essential and excepted functions keep running, but staffing, support, and processing can still slow down."
+        answer: "No. Essential and excepted work often continues, but staffing, support, and processing can still slow down."
       },
       {
         question: "Do federal workers stop getting paid?",
-        answer: "Pay timing depends on role and any later back-pay legislation, but furloughs and delayed paychecks are a real risk during a lapse."
+        answer: "Some workers keep working, some are furloughed, and paycheck timing can still become a problem during a lapse."
       },
       {
         question: "Are Social Security checks at risk?",
-        answer: "Benefits generally continue, but customer service and some administrative processing can become slower."
+        answer: "Benefit payments generally continue, but customer service and some administrative processing can become slower."
       },
       {
         question: "Should travelers expect TSA or passport delays?",
-        answer: "Operations usually continue in some form, but staffing strain and uneven office capacity can create real delays."
+        answer: "Some services continue, but staffing strain and uneven office capacity can still create real delays."
       }
     ],
-    timelineTitle: "The federal funding story only feels sudden if you are not watching the dates.",
+    timelineTitle: "The dates matter because shutdown risk follows the federal funding calendar.",
     timelineDescription:
-      "Shutdown traffic jumps when the deadline becomes tangible. The timeline gives the site a standing narrative spine even between headline weeks.",
+      "If you know the last lapse, the next deadline, and the latest dispute, the headlines make much more sense.",
     timelineEvents: [
       {
         date: "Sep 30, 2025",
@@ -107,20 +106,20 @@ export const homeContentByLocale: Record<Locale, HomeContent> = {
       {
         date: "Nov 12, 2025",
         title: "Full funding restored",
-        description: "The 42-day lapse ends, but the search behavior and agency backlog questions keep spilling over afterward."
+        description: "The 42-day lapse ended, but agency backlogs and service questions lasted much longer."
       },
       {
         date: "Feb 14, 2026",
-        title: "Homeland Security dispute escalates",
-        description: "A partial funding fight puts fresh pressure on travel and border-related search topics."
+        title: "Homeland Security dispute escalated",
+        description: "A partial funding fight renewed concern about travel, border operations, and agency staffing."
       },
       {
         date: "Sep 30, 2026",
         title: "Next annual hard deadline",
-        description: "This is the standing date to watch for the next government-wide funding cliff."
+        description: "This is the next standing federal funding cutoff to keep in view."
       }
     ],
-    featuredTitle: "Start with the pages that answer money, travel, and benefits questions.",
+    featuredTitle: "Start with the guides people need most often.",
     featuredSlugs: [
       "government-shutdown-2026",
       "government-shutdown-countdown",
@@ -131,61 +130,62 @@ export const homeContentByLocale: Record<Locale, HomeContent> = {
     ]
   },
   zh: {
-    description: "独立整理美国政府停摆期限、机构影响、联邦雇员处境和具体服务解释页面的双语站点。",
+    description: "独立整理美国政府停摆期限、机构影响、联邦雇员处境和具体服务变化，帮助读者快速核对信息。",
     deadlineIso,
     deadlineLabel: "2027 财年拨款截止时间",
-    deadlineNote: "美国国会必须在 9 月 30 日财政年度截止前完成新的联邦拨款。这是每一个停摆观察者都必须盯住的硬日期。",
+    deadlineNote: "美国国会需要在 9 月 30 日财政年度截止前完成新的联邦拨款。如果谈判卡住，这通常是大家最先要看的日期。",
     statusEyebrow: "拨款时钟",
-    statusTitle: "当截止日期变得具体时，政府停摆这个词才会真正冲上搜索。",
+    statusTitle: "如果美国政府停摆风险再次升高，你最先该看什么。",
     statusSummary:
-      "这个站点就是为那一刻准备的：用户需要立刻知道什么是停摆、哪些机构会受影响、工资和旅行会不会出问题，以及接下来该盯哪些节点。",
-    signalTitle: "用户不是为了理论而搜这个词，他们是在担心某项服务、某张工资单、某次行程或某个申请会不会出问题。",
-    signalText: "所以站点围绕这些高风险场景来设计：当前专题页、联邦雇员指南、旅行中断页，以及把实际问题放在第一位的福利解释页。",
-    architectureTitle: "这个站点应该像一个应急信息台，而不是普通博客。",
-    architectureDescription: "每个栏目都对应一种不同的搜索意图，让首页能够快速分发流量，并在非事件期依然保持价值。",
+      "这个首页的作用是帮你快速确认下一个联邦拨款截止日、哪些服务最容易受影响，以及你应该先进入哪一篇具体指南。",
+    signalTitle: "大多数人来到这里，都只是想先确认一个实际问题。",
+    signalText:
+      "工资会不会延迟？Social Security 会不会继续发？TSA 或护照会不会变慢？直接从与你最相关的那一栏开始看。",
+    architectureTitle: "先看最可能影响你的那一部分。",
+    architectureDescription: "这些内容按读者最常见的实际问题来分组：当前状态、工作与工资、旅行，以及福利服务。",
     pillars: [
       {
-        title: "事件专题页",
-        copy: "把年度专题页当成实时简报。它要承接新闻爆发流量，并在一个屏幕内给出当前状态和关键链接。",
+        title: "当前状态",
+        copy: "先确认现在是否已经停摆、下一个关键截止日是什么，以及哪些机构或服务眼下压力最大。",
         href: "/zh/government-shutdown-2026/"
       },
       {
-        title: "雇员与工资",
-        copy: "联邦雇员和承包商的搜索通常带着强烈焦虑。工资、停薪休假规则和实际应对建议必须是核心页面。",
+        title: "联邦雇员",
+        copy: "如果你担心 furlough、报到指令或工资到账时间，就先看联邦雇员和工资相关页面。",
         href: "/zh/government-shutdown-federal-workers/"
       },
       {
-        title: "旅行与通关",
-        copy: "机场、护照、TSA 和国家公园会把政治新闻转化成非常具体的服务问题，这类页面需求会反复出现。",
+        title: "旅行影响",
+        copy: "如果你近期要出行，可以直接看护照、机场安检和国家公园相关页面，确认哪些环节可能变化。",
         href: "/zh/government-shutdown-passports/"
       },
       {
-        title: "福利与支票",
-        copy: "社保、退伍军人福利、Medicare 等页面可以覆盖高频搜索，承接用户对钱和服务是否安全的确认需求。",
+        title: "福利服务",
+        copy: "如果你最在意的是支票是否继续发、客服是否变慢，就从 Social Security 和 VA 相关页面开始。",
         href: "/zh/government-shutdown-social-security/"
       }
     ],
-    fastAnswersTitle: "最先被问到的四个问题。",
+    fastAnswersTitle: "大多数人最先会问的四个问题。",
     quickAnswers: [
       {
         question: "政府停摆是不是等于所有机构都关门？",
         answer: "不是。必要职能和例外职能通常会继续运行，但人手、客服和处理速度仍可能受到影响。"
       },
       {
-        question: "联邦雇员会不会立刻停发工资？",
-        answer: "取决于岗位和之后的补发工资立法，但停薪休假和工资延迟的风险确实存在。"
+        question: "联邦雇员会不会停发工资？",
+        answer: "有些人继续上班，有些人会被 furlough，而工资到账时间在停摆期间也可能成为问题。"
       },
       {
-        question: "Social Security 支票会不会停？",
+        question: "Social Security 支票会不会受影响？",
         answer: "福利发放通常会继续，但客服、回电和部分行政处理速度可能变慢。"
       },
       {
-        question: "TSA 或护照业务会不会明显延误？",
-        answer: "很多业务会继续，但人员压力和窗口能力波动可能带来真实延误。"
+        question: "TSA 或护照业务会不会延误？",
+        answer: "部分服务会继续，但人员压力和窗口能力波动仍可能带来真实延误。"
       }
     ],
-    timelineTitle: "如果你一直盯着日期，联邦拨款这件事其实并不突然。",
-    timelineDescription: "当截止日期变得可感知时，停摆搜索量才会真正跳涨。时间线让站点在非爆发期也有持续叙事骨架。",
+    timelineTitle: "这些日期重要，是因为停摆风险总是围绕联邦拨款日历变化。",
+    timelineDescription: "只要知道上一轮拨款中断、下一次截止日和最近一次争议节点，新闻就会好理解得多。",
     timelineEvents: [
       {
         date: "2025-09-30",
@@ -195,20 +195,20 @@ export const homeContentByLocale: Record<Locale, HomeContent> = {
       {
         date: "2025-11-12",
         title: "全面拨款恢复",
-        description: "42 天的拨款中断结束，但相关搜索和机构积压问题会延续更久。"
+        description: "42 天的拨款中断结束，但机构积压和服务疑问持续了更久。"
       },
       {
         date: "2026-02-14",
         title: "国土安全部争议升级",
-        description: "部分拨款争议再次把旅行和边境相关搜索推高。"
+        description: "部分拨款争议再次引发大家对旅行、边境运行和机构人手的担忧。"
       },
       {
         date: "2026-09-30",
         title: "下一次年度硬截止",
-        description: "这是下一次全国性联邦拨款悬崖最值得关注的时间点。"
+        description: "这是下一次最值得持续关注的联邦拨款截止时间。"
       }
     ],
-    featuredTitle: "先看那些最能回答钱、旅行和福利问题的页面。",
+    featuredTitle: "先看大家最常需要的几篇指南。",
     featuredSlugs: [
       "government-shutdown-2026",
       "government-shutdown-countdown",

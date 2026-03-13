@@ -1,10 +1,10 @@
-# Task Plan: Build, Publish, and Deploy Government Shutdown Site
+# Task Plan: Build, Publish, Deploy, and Refine Government Shutdown Site
 
 ## Goal
-Build a production-ready content site for `government-shutdown.com`, initialize source control, publish it to a new GitHub repository, and connect that repository to Cloudflare Pages for deployment.
+Build a production-ready content site for `government-shutdown.com`, publish it to GitHub, deploy it through Cloudflare Pages, and keep all reader-facing copy written for end users instead of internal SEO or site-strategy audiences.
 
 ## Current Phase
-Phase 6
+Phase 7
 
 ## Phases
 
@@ -44,6 +44,13 @@ Phase 6
 - [ ] Deliver to user
 - **Status:** in_progress
 
+### Phase 7: Reader-Facing Content Rewrite
+- [ ] Audit homepage, article pages, and shared copy for internal/SEO language
+- [ ] Rewrite English copy to speak directly to readers
+- [ ] Rewrite Chinese copy to match the same reader-facing intent
+- [ ] Rebuild and verify the resulting routes
+- **Status:** in_progress
+
 ## Key Questions
 1. What stack gives fast SEO-friendly delivery and simple Cloudflare Pages deployment?
 2. Can Cloudflare Pages Git integration be completed from CLI, or does it require dashboard flow?
@@ -55,8 +62,9 @@ Phase 6
 | Use `planning-with-files`, `frontend-design`, and `cloudflare-deploy` skills | Task spans planning, frontend implementation, and Cloudflare deployment |
 | Use GitHub CLI and Wrangler auth already present in the environment | Reduces user handoff and allows end-to-end execution |
 | Build the site with Astro static output | Good fit for content-heavy SEO pages and simple Cloudflare Pages deployment |
-| Commit `package-lock.json` | Keeps GitHub and Cloudflare builds reproducible |
+| Standardize on `pnpm` with a committed `pnpm-lock.yaml` | Keeps local and CI dependency resolution aligned while matching the requested package manager |
 | Create the Pages project through the Cloudflare API with GitHub source metadata | Wrangler CLI alone does not expose the full Git-backed project setup flow |
+| Rewrite reader-facing copy in a direct service voice | Homepage and guide pages should answer anxious visitors, not describe site architecture or SEO strategy |
 
 ## Errors Encountered
 | Error | Attempt | Resolution |
@@ -72,3 +80,4 @@ Phase 6
 - Cloudflare Pages deployment is live at `https://government-shutdown.pages.dev`.
 - Custom domains were attached to the Pages project but remain pending because the required CNAME DNS records could not be written by the current token.
 - The site now serves English on `/` and Chinese on `/zh/`, with localized article and policy pages plus language switching and `hreflang` links.
+- The homepage and several guide pages still contain internal strategy phrasing such as “this page should” or SEO-oriented explanations, so they need a full reader-facing rewrite.
