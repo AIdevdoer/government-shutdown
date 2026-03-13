@@ -69,8 +69,8 @@ Phase 9
 - [x] Make the horizontal history rail draggable
 - [x] Collapse detailed stop information behind click-to-open panels
 - [x] Rebuild and visually verify the new interaction model
-- [ ] Publish and verify the Git-backed deployment
-- **Status:** in_progress
+- [x] Publish and verify the Git-backed deployment
+- **Status:** complete
 
 ## Key Questions
 1. What stack gives fast SEO-friendly delivery and simple Cloudflare Pages deployment?
