@@ -3,9 +3,11 @@ import ArticleCard from "../components/ArticleCard.astro";
 import CountdownCard from "../components/CountdownCard.astro";
 import Footer from "../components/Footer.astro";
 import Header from "../components/Header.astro";
+import HistoryHeroTrack from "../components/HistoryHeroTrack.astro";
 import Timeline from "../components/Timeline.astro";
 import { getArticle } from "../data/content";
 import { getHomeContent } from "../data/home";
+import { getShutdownHistory } from "../data/shutdown-history";
 import { getUiCopy, localizePath, otherLocale, type Locale } from "../data/locales";
 import BaseLayout from "../layouts/BaseLayout.astro";
 
@@ -15,6 +17,7 @@ interface Props {
 
 const { locale } = Astro.props;
 const home = getHomeContent(locale);
+const history = getShutdownHistory(locale);
 const ui = getUiCopy(locale);
 const featuredArticles = home.featuredSlugs.map((slug) => getArticle(locale, slug)).filter(Boolean);
 const switchHref = localizePath(otherLocale(locale));
@@ -55,6 +58,9 @@ const switchHref = localizePath(otherLocale(locale));
             <p>{home.signalText}</p>
           </article>
         </div>
+      </div>
+      <div class="shell hero-history-shell">
+        <HistoryHeroTrack content={history} ctaHref={localizePath(locale, "shutdown-history")} />
       </div>
     </section>
 
@@ -172,6 +178,10 @@ const switchHref = localizePath(otherLocale(locale));
   .hero-side {
     display: grid;
     gap: 1rem;
+  }
+
+  .hero-history-shell {
+    margin-top: 1rem;
   }
 
   .signal-panel h2,

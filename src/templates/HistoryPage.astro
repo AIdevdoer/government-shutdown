@@ -1,0 +1,134 @@
+---
+import Footer from "../components/Footer.astro";
+import Header from "../components/Header.astro";
+import HistoryHeroTrack from "../components/HistoryHeroTrack.astro";
+import HistoryTimelineList from "../components/HistoryTimelineList.astro";
+import { getShutdownHistory } from "../data/shutdown-history";
+import { getUiCopy, localizePath, otherLocale, type Locale } from "../data/locales";
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+const ui = getUiCopy(locale);
+const history = getShutdownHistory(locale);
+const switchHref = localizePath(otherLocale(locale), "shutdown-history");
+---
+
+<BaseLayout
+  title={history.pageTitle}
+  description={history.pageDescription}
+  locale={locale}
+  canonicalPath={localizePath(locale, "shutdown-history")}
+  alternates={{ en: localizePath("en", "shutdown-history"), zh: localizePath("zh", "shutdown-history") }}
+>
+  <Header locale={locale} switchHref={switchHref} />
+  <main>
+    <section class="page-hero">
+      <div class="shell">
+        <div class="card history-page-hero">
+          <div class="section-heading">
+            <span class="eyebrow">{history.eyebrow}</span>
+            <h1>{history.heading}</h1>
+            <p>{history.intro}</p>
+          </div>
+          <article class="card disclaimer-card">
+            <span class="surface-label">{history.disclaimerTitle}</span>
+            <p>{history.disclaimerText}</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="shell section-block">
+      <HistoryHeroTrack content={history} ctaHref={localizePath(locale)} />
+    </section>
+
+    <section class="shell section-block">
+      <div class="section-heading">
+        <span class="eyebrow">{history.eyebrow}</span>
+        <h2>{history.fullTitle}</h2>
+        <p>{history.fullText}</p>
+      </div>
+      <HistoryTimelineList events={history.events} />
+    </section>
+
+    <section class="shell section-block">
+      <div class="section-heading">
+        <span class="eyebrow">{ui.article.sourcesHeading}</span>
+        <h2>{history.sourcesTitle}</h2>
+      </div>
+      <div class="source-list">
+        {history.sources.map((source) => (
+          <a href={source.href} target="_blank" rel="noreferrer">
+            <strong>{source.label}</strong>
+            <span>{new URL(source.href).hostname.replace(/^www\./, "")}</span>
+          </a>
+        ))}
+      </div>
+    </section>
+  </main>
+  <Footer locale={locale} />
+</BaseLayout>
+
+<style>
+  .section-block {
+    padding: 0 0 3rem;
+  }
+
+  .history-page-hero {
+    padding: 1.4rem;
+    display: grid;
+    gap: 1rem;
+  }
+
+  .disclaimer-card {
+    padding: 1rem;
+    display: grid;
+    gap: 0.65rem;
+    border: 1px dashed rgba(180, 59, 36, 0.28);
+    background: rgba(255, 255, 255, 0.42);
+  }
+
+  .disclaimer-card p {
+    margin: 0;
+    color: var(--ink-soft);
+    line-height: 1.85;
+  }
+
+  .source-list {
+    display: grid;
+    gap: 0.85rem;
+  }
+
+  .source-list a {
+    display: grid;
+    gap: 0.25rem;
+    padding: 1rem 1.1rem;
+    border-radius: 1rem;
+    border: 1px solid rgba(23, 29, 36, 0.08);
+    background: rgba(246, 240, 232, 0.84);
+    box-shadow: var(--shadow);
+  }
+
+  .source-list strong {
+    font-family: "Barlow Condensed", Impact, sans-serif;
+    font-size: 1.2rem;
+    line-height: 0.96;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+  }
+
+  .source-list span {
+    color: var(--ink-soft);
+    font-size: 0.95rem;
+  }
+
+  :global(html[lang="zh-CN"]) .source-list strong {
+    font-family: "Noto Sans SC", "PingFang SC", sans-serif;
+    text-transform: none;
+    letter-spacing: 0.01em;
+  }
+</style>

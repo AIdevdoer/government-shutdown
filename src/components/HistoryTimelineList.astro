@@ -1,0 +1,110 @@
+---
+import type { ShutdownHistoryEvent } from "../data/shutdown-history";
+
+interface Props {
+  events: ShutdownHistoryEvent[];
+}
+
+const { events } = Astro.props;
+---
+
+<section class="history-list">
+  {events.map((event) => (
+    <article class="card history-row">
+      <div class="history-year">
+        <span class="surface-label">{event.fiscalYear}</span>
+        <strong>{event.year}</strong>
+        <span class="chip">{event.duration}</span>
+      </div>
+      <div class="history-copy">
+        <p class="history-meta">{event.span}</p>
+        <h3>{event.title}</h3>
+        <p>{event.summary}</p>
+      </div>
+    </article>
+  ))}
+</section>
+
+<style>
+  .history-list {
+    display: grid;
+    gap: 1rem;
+  }
+
+  .history-row {
+    padding: 1.15rem;
+    display: grid;
+    grid-template-columns: minmax(180px, 0.34fr) minmax(0, 1fr);
+    gap: 1.1rem;
+  }
+
+  .history-year {
+    display: grid;
+    align-content: start;
+    gap: 0.6rem;
+    padding-right: 1rem;
+    border-right: 1px solid rgba(23, 29, 36, 0.08);
+  }
+
+  .history-year strong {
+    font-family: "Barlow Condensed", Impact, sans-serif;
+    font-size: clamp(2.6rem, 4vw, 4rem);
+    line-height: 0.88;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+  }
+
+  .history-copy {
+    display: grid;
+    gap: 0.75rem;
+  }
+
+  .history-meta,
+  .history-copy p {
+    margin: 0;
+    color: var(--ink-soft);
+    line-height: 1.8;
+  }
+
+  .history-meta {
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 0.74rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  .history-copy h3 {
+    margin: 0;
+    font-family: "Barlow Condensed", Impact, sans-serif;
+    font-size: clamp(1.8rem, 3vw, 2.6rem);
+    line-height: 0.95;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+  }
+
+  :global(html[lang="zh-CN"]) .history-year strong,
+  :global(html[lang="zh-CN"]) .history-copy h3 {
+    font-family: "Noto Sans SC", "PingFang SC", sans-serif;
+    text-transform: none;
+    letter-spacing: 0.01em;
+  }
+
+  :global(html[lang="zh-CN"]) .history-meta {
+    font-family: "Noto Sans SC", "PingFang SC", sans-serif;
+    text-transform: none;
+    letter-spacing: 0.04em;
+  }
+
+  @media (max-width: 820px) {
+    .history-row {
+      grid-template-columns: 1fr;
+    }
+
+    .history-year {
+      padding-right: 0;
+      border-right: 0;
+      padding-bottom: 0.8rem;
+      border-bottom: 1px solid rgba(23, 29, 36, 0.08);
+    }
+  }
+</style>

@@ -23,6 +23,8 @@
 - A full-text audit shows that many homepage and article strings were written from an operator/SEO perspective rather than a reader perspective.
 - The strongest offenders are `src/data/home.ts`, `src/data/articles.ts`, `src/data/articles.zh.ts`, and the shared article note in `src/data/locales.ts`.
 - The policy pages are mostly acceptable because they explain the site itself, but the primary content routes need a user-facing rewrite.
+- A stronger homepage frame for global readers is to pair current-status guidance with a long-view historical timeline, rather than treating the homepage only as a live U.S. utility page.
+- The CRS shutdown report provides a workable backbone for a historical timeline: it notes 21 funding gaps since FY1977 and explains that the 1980 and 1981 Civiletti opinions changed how agencies handled lapses in appropriations.
 
 ## Technical Decisions
 | Decision | Rationale |
@@ -34,6 +36,7 @@
 | Keep English on the root path and place Chinese under `/zh/` | Preserves English SEO landing paths while making bilingual expansion straightforward |
 | Rewrite content in a service-first voice | Reader-facing pages should explain impact and next steps directly instead of discussing traffic, architecture, or monetization strategy |
 | Standardize the repo on `pnpm` | Matches the requested package manager and keeps dependency resolution consistent through `pnpm-lock.yaml` |
+| Use a dedicated `/shutdown-history/` route plus a homepage hero timeline strip | Gives globally curious readers a clear entry point while preserving the utility-focused current watch page |
 
 ## Issues Encountered
 | Issue | Resolution |
@@ -63,3 +66,8 @@
 - Several English article titles, kickers, FAQs, and action boxes explicitly mention “SEO,” “the site,” “the page should,” or “future affiliate placement.”
 - The Chinese article set mirrors the same issue, including phrases about “SEO 价值,” “站点核心,” and “事件流量.”
 - Shared article-side note copy currently explains how the site writes pages instead of giving the reader a practical orientation cue.
+
+## History Timeline Findings
+- For a global audience, the homepage benefits from explaining that U.S. shutdowns are recurring funding gaps with a long timeline, not just a one-off headline event.
+- The most recognizable modern milestones are 1995-96, 2013, 2018-19, and the FY2026 lapse, but the full chronology reaches back to 1976.
+- The history page should distinguish between early funding gaps and the more recognizable modern shutdown pattern, rather than implying the politics and operational effects were identical across every era.

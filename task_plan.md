@@ -4,7 +4,7 @@
 Build a production-ready content site for `government-shutdown.com`, publish it to GitHub, deploy it through Cloudflare Pages, and keep all reader-facing copy written for end users instead of internal SEO or site-strategy audiences.
 
 ## Current Phase
-Phase 7
+Phase 8
 
 ## Phases
 
@@ -51,6 +51,13 @@ Phase 7
 - [ ] Rebuild and verify the resulting routes
 - **Status:** in_progress
 
+### Phase 8: Historical Timeline Expansion
+- [ ] Add verified U.S. shutdown-history data with reader-facing context
+- [ ] Build dedicated English and Chinese history pages
+- [ ] Bring the historical timeline into the homepage hero section
+- [ ] Rebuild, publish, and verify the deployed result
+- **Status:** in_progress
+
 ## Key Questions
 1. What stack gives fast SEO-friendly delivery and simple Cloudflare Pages deployment?
 2. Can Cloudflare Pages Git integration be completed from CLI, or does it require dashboard flow?
@@ -65,6 +72,7 @@ Phase 7
 | Standardize on `pnpm` with a committed `pnpm-lock.yaml` | Keeps local and CI dependency resolution aligned while matching the requested package manager |
 | Create the Pages project through the Cloudflare API with GitHub source metadata | Wrangler CLI alone does not expose the full Git-backed project setup flow |
 | Rewrite reader-facing copy in a direct service voice | Homepage and guide pages should answer anxious visitors, not describe site architecture or SEO strategy |
+| Put a long-view shutdown timeline in the homepage hero and on a dedicated page | Global readers need historical context, not only current U.S. funding-risk guidance |
 
 ## Errors Encountered
 | Error | Attempt | Resolution |

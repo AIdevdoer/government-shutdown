@@ -43,6 +43,7 @@ export const uiCopy = {
       navLabel: "Primary navigation",
       links: [
         { href: localizePath("en"), label: "Watch" },
+        { href: localizePath("en", "shutdown-history"), label: "History" },
         { href: localizePath("en", "government-shutdown-federal-workers"), label: "Workers" },
         { href: localizePath("en", "government-shutdown-tax-refunds"), label: "Taxes" },
         { href: localizePath("en", "government-shutdown-passports"), label: "Travel" },
@@ -101,6 +102,7 @@ export const uiCopy = {
       navLabel: "主导航",
       links: [
         { href: localizePath("zh"), label: "总览" },
+        { href: localizePath("zh", "shutdown-history"), label: "历史" },
         { href: localizePath("zh", "government-shutdown-federal-workers"), label: "雇员" },
         { href: localizePath("zh", "government-shutdown-tax-refunds"), label: "税务" },
         { href: localizePath("zh", "government-shutdown-passports"), label: "出行" },

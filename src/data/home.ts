@@ -46,10 +46,10 @@ export const homeContentByLocale: Record<Locale, HomeContent> = {
     statusEyebrow: "Funding Clock",
     statusTitle: "What to watch if another U.S. government shutdown gets close.",
     statusSummary:
-      "Use this page to check the next federal funding deadline, see which services are most exposed, and jump quickly to the guide that matches your problem.",
+      "Use this page to check the next federal funding deadline, see which services are most exposed, and move quickly to the guide that matches your problem or curiosity.",
     signalTitle: "Most visitors are trying to answer one practical question fast.",
     signalText:
-      "Is a paycheck at risk? Will Social Security continue? Could TSA or passports slow down? Start with the section that matches what you need to confirm.",
+      "Is a paycheck at risk? Will Social Security continue? Could TSA or passports slow down? Or are you outside the U.S. and just trying to understand why this keeps happening? Start with the section that matches what you need.",
     architectureTitle: "Start with the part of the shutdown that affects you.",
     architectureDescription:
       "These guides are organized around the questions people usually need answered first: current status, work and pay, travel, and benefits.",
@@ -137,10 +137,10 @@ export const homeContentByLocale: Record<Locale, HomeContent> = {
     statusEyebrow: "拨款时钟",
     statusTitle: "如果美国政府停摆风险再次升高，你最先该看什么。",
     statusSummary:
-      "这个首页的作用是帮你快速确认下一个联邦拨款截止日、哪些服务最容易受影响，以及你应该先进入哪一篇具体指南。",
+      "这个首页会帮你快速确认下一个联邦拨款截止日、哪些服务最容易受影响，以及你该先进入哪一篇具体指南或历史页面。",
     signalTitle: "大多数人来到这里，都只是想先确认一个实际问题。",
     signalText:
-      "工资会不会延迟？Social Security 会不会继续发？TSA 或护照会不会变慢？直接从与你最相关的那一栏开始看。",
+      "工资会不会延迟？Social Security 会不会继续发？TSA 或护照会不会变慢？或者你只是想先看懂美国为什么会反复出现停摆？直接从与你最相关的那一栏开始看。",
     architectureTitle: "先看最可能影响你的那一部分。",
     architectureDescription: "这些内容按读者最常见的实际问题来分组：当前状态、工作与工资、旅行，以及福利服务。",
     pillars: [

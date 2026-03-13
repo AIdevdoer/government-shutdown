@@ -1,0 +1,211 @@
+---
+import type { ShutdownHistoryContent } from "../data/shutdown-history";
+
+interface Props {
+  content: ShutdownHistoryContent;
+  ctaHref: string;
+}
+
+const { content, ctaHref } = Astro.props;
+---
+
+<section class="card history-hero">
+  <div class="history-hero-header">
+    <div class="section-heading">
+      <span class="eyebrow">{content.eyebrow}</span>
+      <h2>{content.highlightTitle}</h2>
+      <p>{content.highlightText}</p>
+    </div>
+    <div class="history-stats">
+      {content.stats.map((stat) => (
+        <article class="history-stat">
+          <strong>{stat.value}</strong>
+          <span>{stat.label}</span>
+          {stat.note && <small>{stat.note}</small>}
+        </article>
+      ))}
+    </div>
+  </div>
+
+  <div class="history-track">
+    {content.highlights.map((event) => (
+      <article class="history-hit">
+        <div class="history-hit-top">
+          <span class="chip">{event.year}</span>
+          <strong>{event.duration}</strong>
+        </div>
+        <p class="history-hit-meta">{event.fiscalYear} · {event.span}</p>
+        <h3>{event.title}</h3>
+        <p>{event.summary}</p>
+      </article>
+    ))}
+  </div>
+
+  <div class="history-hero-footer">
+    <p>{content.disclaimerText}</p>
+    <a class="cta-link" href={ctaHref}>{content.highlightCtaLabel}</a>
+  </div>
+</section>
+
+<style>
+  .history-hero {
+    padding: 1.35rem;
+    display: grid;
+    gap: 1.2rem;
+  }
+
+  .history-hero-header {
+    display: grid;
+    grid-template-columns: minmax(0, 1.2fr) minmax(320px, 0.8fr);
+    gap: 1rem;
+    align-items: start;
+  }
+
+  .history-stats {
+    display: grid;
+    gap: 0.8rem;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .history-stat {
+    padding: 1rem;
+    border-radius: 1rem;
+    border: 1px solid rgba(23, 29, 36, 0.08);
+    background: rgba(255, 255, 255, 0.4);
+    display: grid;
+    gap: 0.3rem;
+  }
+
+  .history-stat strong {
+    font-family: "Barlow Condensed", Impact, sans-serif;
+    font-size: clamp(2rem, 4vw, 3rem);
+    line-height: 0.9;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+  }
+
+  .history-stat span,
+  .history-stat small {
+    color: var(--ink-soft);
+    line-height: 1.6;
+  }
+
+  .history-stat span {
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 0.72rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  .history-track {
+    display: grid;
+    gap: 0.95rem;
+    grid-auto-flow: column;
+    grid-auto-columns: minmax(240px, 1fr);
+    overflow-x: auto;
+    padding-bottom: 0.2rem;
+    scrollbar-width: thin;
+  }
+
+  .history-hit {
+    min-height: 100%;
+    padding: 1rem;
+    border-radius: 1rem;
+    border: 1px solid rgba(23, 29, 36, 0.08);
+    background:
+      linear-gradient(180deg, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.22)),
+      rgba(180, 59, 36, 0.04);
+    display: grid;
+    gap: 0.75rem;
+  }
+
+  .history-hit-top {
+    display: flex;
+    justify-content: space-between;
+    gap: 0.8rem;
+    align-items: center;
+  }
+
+  .history-hit-top strong {
+    font-family: "Barlow Condensed", Impact, sans-serif;
+    font-size: 1.4rem;
+    line-height: 0.9;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: var(--signal);
+  }
+
+  .history-hit-meta {
+    margin: 0;
+    color: var(--ink-soft);
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 0.72rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    line-height: 1.7;
+  }
+
+  .history-hit h3 {
+    margin: 0;
+    font-family: "Barlow Condensed", Impact, sans-serif;
+    font-size: 1.9rem;
+    line-height: 0.95;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+  }
+
+  .history-hit p:last-child,
+  .history-hero-footer p {
+    margin: 0;
+    color: var(--ink-soft);
+    line-height: 1.8;
+  }
+
+  .history-hero-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    padding-top: 0.2rem;
+    border-top: 1px solid rgba(23, 29, 36, 0.08);
+  }
+
+  .history-hero-footer p {
+    max-width: 48rem;
+  }
+
+  :global(html[lang="zh-CN"]) .history-stat strong,
+  :global(html[lang="zh-CN"]) .history-hit h3,
+  :global(html[lang="zh-CN"]) .history-hit-top strong {
+    font-family: "Noto Sans SC", "PingFang SC", sans-serif;
+    text-transform: none;
+    letter-spacing: 0.01em;
+  }
+
+  :global(html[lang="zh-CN"]) .history-stat span,
+  :global(html[lang="zh-CN"]) .history-hit-meta {
+    font-family: "Noto Sans SC", "PingFang SC", sans-serif;
+    text-transform: none;
+    letter-spacing: 0.04em;
+  }
+
+  @media (max-width: 980px) {
+    .history-hero-header {
+      grid-template-columns: 1fr;
+    }
+
+    .history-stats {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .history-hero-footer {
+      display: grid;
+    }
+  }
+
+  @media (max-width: 720px) {
+    .history-stats {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

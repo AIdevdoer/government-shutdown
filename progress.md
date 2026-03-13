@@ -104,6 +104,27 @@
   - `src/data/articles.zh.ts`
   - `src/data/policies.ts`
 
+### Phase 8: Historical Timeline Expansion
+- **Status:** in_progress
+- Actions taken:
+  - Added a localized shutdown-history dataset with summary stats, highlight milestones, and a full event chronology.
+  - Built reusable history timeline components for the homepage hero and for a dedicated long-form history page.
+  - Added `/shutdown-history/` and `/zh/shutdown-history/`, and surfaced the new history route in the primary navigation.
+  - Reworked the homepage hero so it now combines current funding guidance with a visually prominent historical timeline aimed at both U.S. readers and global readers.
+- Files created/modified:
+  - `src/data/shutdown-history.ts`
+  - `src/components/HistoryHeroTrack.astro`
+  - `src/components/HistoryTimelineList.astro`
+  - `src/templates/HistoryPage.astro`
+  - `src/templates/HomePage.astro`
+  - `src/pages/shutdown-history.astro`
+  - `src/pages/zh/shutdown-history.astro`
+  - `src/data/home.ts`
+  - `src/data/locales.ts`
+  - `task_plan.md` (updated)
+  - `findings.md` (updated)
+  - `progress.md` (updated)
+
 ## Test Results
 | Test | Input | Expected | Actual | Status |
 |------|-------|----------|--------|--------|
@@ -118,6 +139,8 @@
 | Local bilingual review | Open `/`, `/zh/`, `/zh/government-shutdown-2026/`, then switch back to English | Pages render and language switching works | Verified in browser snapshot session | ✓ |
 | `pnpm` install sync | `pnpm install` | Lockfile and dependencies remain consistent | Lockfile up to date; install completed successfully | ✓ |
 | Reader-facing content rebuild | `pnpm build` after copy rewrite | All routes build cleanly after full content rewrite | 35 static pages built successfully | ✓ |
+| History timeline build | `pnpm build` after history additions | Homepage and new history pages build cleanly | 37 static pages built successfully | ✓ |
+| Generated HTML spot-check | `rg` in `dist/` for history timeline strings | Homepage and history pages contain the new historical sections | English and Chinese HTML confirmed | ✓ |
 
 ## Error Log
 | Timestamp | Error | Attempt | Resolution |
@@ -129,8 +152,8 @@
 ## 5-Question Reboot Check
 | Question | Answer |
 |----------|--------|
-| Where am I? | Phase 7 |
-| Where am I going? | Rewrite all reader-facing copy so the site speaks directly to visitors, then rebuild and verify |
+| Where am I? | Phase 8 |
+| Where am I going? | Push the new history timeline changes and verify the Git-backed Cloudflare deployment |
 | What's the goal? | Build, publish, deploy, and refine the Government Shutdown site |
-| What have I learned? | Git-backed Pages deployment works; bilingual routing is clean; custom-domain activation is blocked only by DNS permissions; the remaining quality issue is content voice |
-| What have I done? | Planned the work, built the site, upgraded it to bilingual routing, deployed it, and started a full reader-facing content rewrite audit |
+| What have I learned? | Git-backed Pages deployment works; bilingual routing is clean; custom-domain activation is blocked only by DNS permissions; homepage framing is stronger when current status is paired with historical context |
+| What have I done? | Planned the work, built the site, upgraded it to bilingual routing, rewrote reader-facing copy, and added a full shutdown-history timeline plus hero-level historical context |
