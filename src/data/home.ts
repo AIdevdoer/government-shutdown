@@ -38,18 +38,18 @@ const deadlineIso = "2026-09-30T23:59:59-04:00";
 export const homeContentByLocale: Record<Locale, HomeContent> = {
   en: {
     description:
-      "Independent federal funding watch covering government shutdown deadlines, agency impacts, federal worker guidance, and service-specific explainers.",
+      "Find out whether a U.S. government shutdown is happening, when the next funding deadline is, and how workers, travel, taxes, and benefits could be affected.",
     deadlineIso,
-    deadlineLabel: "FY 2027 appropriations deadline",
+    deadlineLabel: "Next federal funding deadline",
     deadlineNote:
-      "Congress needs new funding in place before the standing September 30 fiscal-year cutoff. If talks stall, this is the date most people will watch first.",
-    statusEyebrow: "Funding Clock",
-    statusTitle: "What to watch if another U.S. government shutdown gets close.",
+      "Congress needs to pass new funding before September 30. If lawmakers miss that date, shutdown risk rises quickly.",
+    statusEyebrow: "Government shutdown",
+    statusTitle: "Is the U.S. government getting closer to a shutdown?",
     statusSummary:
-      "Use this page to check the next federal funding deadline, see which services are most exposed, and move quickly to the guide that matches your problem or curiosity.",
-    signalTitle: "Most visitors are trying to answer one practical question fast.",
+      "Use this page to see the next funding deadline, what could be affected, and where to go if your question is about pay, benefits, travel, taxes, or the bigger picture.",
+    signalTitle: "Most people come here for one simple answer.",
     signalText:
-      "Is a paycheck at risk? Will Social Security continue? Could TSA or passports slow down? Or are you outside the U.S. and just trying to understand why this keeps happening? Start with the section that matches what you need.",
+      "Is a shutdown already happening? Could pay be delayed? Will Social Security, TSA, or passports be affected? Start with the section that matches your question.",
     architectureTitle: "Start with the part of the shutdown that affects you.",
     architectureDescription:
       "These guides are organized around the questions people usually need answered first: current status, work and pay, travel, and benefits.",
@@ -94,9 +94,9 @@ export const homeContentByLocale: Record<Locale, HomeContent> = {
         answer: "Some services continue, but staffing strain and uneven office capacity can still create real delays."
       }
     ],
-    timelineTitle: "The dates matter because shutdown risk follows the federal funding calendar.",
+    timelineTitle: "Why these dates matter",
     timelineDescription:
-      "If you know the last lapse, the next deadline, and the latest dispute, the headlines make much more sense.",
+      "If you know when the last lapse happened, when the next deadline is, and what the latest dispute is about, the headlines make much more sense.",
     timelineEvents: [
       {
         date: "Sep 30, 2025",
@@ -119,7 +119,7 @@ export const homeContentByLocale: Record<Locale, HomeContent> = {
         description: "This is the next standing federal funding cutoff to keep in view."
       }
     ],
-    featuredTitle: "Start with the guides people need most often.",
+    featuredTitle: "Start with the pages people open most often.",
     featuredSlugs: [
       "government-shutdown-2026",
       "government-shutdown-countdown",
@@ -130,17 +130,17 @@ export const homeContentByLocale: Record<Locale, HomeContent> = {
     ]
   },
   zh: {
-    description: "独立整理美国政府停摆期限、机构影响、联邦雇员处境和具体服务变化，帮助读者快速核对信息。",
+    description: "帮你快速看清美国政府有没有停摆、下一个拨款截止日是什么，以及工资、福利、旅行和税务会不会受影响。",
     deadlineIso,
-    deadlineLabel: "2027 财年拨款截止时间",
-    deadlineNote: "美国国会需要在 9 月 30 日财政年度截止前完成新的联邦拨款。如果谈判卡住，这通常是大家最先要看的日期。",
-    statusEyebrow: "拨款时钟",
-    statusTitle: "如果美国政府停摆风险再次升高，你最先该看什么。",
+    deadlineLabel: "下一次联邦拨款截止日",
+    deadlineNote: "国会必须在 9 月 30 日前通过新的联邦拨款。如果赶不上这个日期，停摆风险就会迅速升高。",
+    statusEyebrow: "美国政府停摆",
+    statusTitle: "美国政府是不是又在接近停摆？",
     statusSummary:
-      "这个首页会帮你快速确认下一个联邦拨款截止日、哪些服务最容易受影响，以及你该先进入哪一篇具体指南或历史页面。",
-    signalTitle: "大多数人来到这里，都只是想先确认一个实际问题。",
+      "这个首页会帮你先看下一个拨款截止日、哪些服务可能受影响，以及你的问题该从哪一页开始看。",
+    signalTitle: "大多数人来这里，只想先弄清一个问题。",
     signalText:
-      "工资会不会延迟？Social Security 会不会继续发？TSA 或护照会不会变慢？或者你只是想先看懂美国为什么会反复出现停摆？直接从与你最相关的那一栏开始看。",
+      "现在是不是已经停摆？工资会不会延迟？Social Security、TSA 或护照会不会受影响？先点进和你问题最接近的那一栏。",
     architectureTitle: "先看最可能影响你的那一部分。",
     architectureDescription: "这些内容按读者最常见的实际问题来分组：当前状态、工作与工资、旅行，以及福利服务。",
     pillars: [
@@ -184,8 +184,8 @@ export const homeContentByLocale: Record<Locale, HomeContent> = {
         answer: "部分服务会继续，但人员压力和窗口能力波动仍可能带来真实延误。"
       }
     ],
-    timelineTitle: "这些日期重要，是因为停摆风险总是围绕联邦拨款日历变化。",
-    timelineDescription: "只要知道上一轮拨款中断、下一次截止日和最近一次争议节点，新闻就会好理解得多。",
+    timelineTitle: "为什么这些日期值得看",
+    timelineDescription: "知道上一轮拨款中断、下一次截止日和最近一次争议发生在什么时候，你就更容易看懂后面的新闻。",
     timelineEvents: [
       {
         date: "2025-09-30",
@@ -208,7 +208,7 @@ export const homeContentByLocale: Record<Locale, HomeContent> = {
         description: "这是下一次最值得持续关注的联邦拨款截止时间。"
       }
     ],
-    featuredTitle: "先看大家最常需要的几篇指南。",
+    featuredTitle: "先看大家最常打开的几页。",
     featuredSlugs: [
       "government-shutdown-2026",
       "government-shutdown-countdown",

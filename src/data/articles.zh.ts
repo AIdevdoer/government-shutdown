@@ -3,7 +3,7 @@ import type { Article } from "./articles";
 export const articlesZh: Article[] = [
   {
     slug: "government-shutdown-2026",
-    category: "当前专题",
+    category: "最新情况",
     title: "2026 美国政府停摆：当前状态、关键日期与可能受影响的人群",
     description: "一页看当前联邦拨款状态、下一个关键截止日，以及联邦雇员、旅行、税务和福利最可能受影响的地方。",
     updated: "更新于 2026 年 3 月 13 日",
@@ -114,8 +114,8 @@ export const articlesZh: Article[] = [
     related: ["government-shutdown-countdown", "who-gets-paid-during-a-government-shutdown", "government-shutdown-social-security"],
     actionBox: {
       title: "想看眼下正在发生什么？",
-      text: "当前专题页会更快告诉你现在的拨款状态、下一个截止日，以及大家下一步最常看的几个问题。",
-      ctaLabel: "进入当前专题页",
+      text: "最新情况页会更快告诉你现在的拨款状态、下一个截止日，以及大家下一步最常会问的几个问题。",
+      ctaLabel: "看最新情况",
       ctaHref: "/zh/government-shutdown-2026/"
     }
   },
@@ -675,7 +675,7 @@ export const articlesZh: Article[] = [
     actionBox: {
       title: "如果你还想知道现在到底发生了什么",
       text: "在日期之后，很多人下一步最想确认的，就是现在是否已经停摆，以及哪些服务最容易先受影响。",
-      ctaLabel: "打开当前专题页",
+      ctaLabel: "看最新情况",
       ctaHref: "/zh/government-shutdown-2026/"
     }
   }

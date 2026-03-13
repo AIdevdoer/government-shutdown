@@ -53,28 +53,28 @@ export const shutdownHistoryByLocale: Record<Locale, ShutdownHistoryContent> = {
     pageTitle: "U.S. Government Shutdown History Timeline",
     pageDescription:
       "A timeline of U.S. government shutdowns and funding gaps from 1976 through 2025, including durations, fiscal years, and the biggest modern standoffs.",
-    eyebrow: "Shutdown History",
-    heading: "A U.S. shutdown timeline, from the 1970s to the latest funding fights.",
+    eyebrow: "History timeline",
+    heading: "Why does the U.S. keep coming close to shutdowns? This timeline starts in the 1970s.",
     intro:
-      "For readers in and outside the United States, this timeline shows that shutdowns are unusual but not rare. Congress has faced repeated funding gaps since the federal fiscal year moved to October 1.",
-    disclaimerTitle: "Read this correctly",
+      "This page shows the bigger picture. U.S. government shutdowns are not common, but they have happened again and again since the federal fiscal year moved to October 1.",
+    disclaimerTitle: "Important context",
     disclaimerText:
-      "CRS counts 21 funding gaps since FY1977. Not every early gap looked like the modern version of a shutdown, because the 1980 and 1981 Civiletti opinions changed how agencies handled lapses in appropriations.",
+      "CRS counts 21 funding gaps since FY1977. The older cases did not always look like a modern shutdown, because the 1980 and 1981 Civiletti opinions changed how agencies handled lapses in appropriations.",
     stats: [
-      { value: "1976-2025", label: "Timeline shown" },
+      { value: "1976-2025", label: "Years covered" },
       { value: "21", label: "Funding gaps since FY1977" },
       { value: "42 days", label: "Longest gap", note: "FY2026 lapse ending November 12, 2025" }
     ],
-    highlightTitle: "The moments that shaped how the world sees U.S. shutdowns.",
+    highlightTitle: "If you only want the big moments, start with these years.",
     highlightText:
-      "These are the years most people remember: the first post-1976 gap, the Clinton-era confrontations, the Obama and Trump-era shutdowns, and the 2025 record setter.",
-    railLabel: "Interactive rail",
-    railInstruction: "Drag the years sideways, then open the stop you want to read.",
-    highlightCtaLabel: "Open the full history page",
-    fullTitle: "Full timeline",
+      "Most people do not need all 21 entries first. These are the years readers usually recognize right away.",
+    railLabel: "Drag the timeline",
+    railInstruction: "Drag left or right, then open the year you want.",
+    highlightCtaLabel: "See the full timeline",
+    fullTitle: "Every shutdown and funding gap on the list",
     fullText:
       "This list follows the CRS chronology. It starts with the first post-fiscal-year funding gap in 1976 and runs through the FY2026 lapse that lasted 42 days.",
-    sourcesTitle: "Primary sources",
+    sourcesTitle: "Official sources",
     sources: sourceLinks,
     highlights: [
       {
@@ -292,24 +292,24 @@ export const shutdownHistoryByLocale: Record<Locale, ShutdownHistoryContent> = {
   zh: {
     pageTitle: "美国政府停摆历史时间线",
     pageDescription: "按时间顺序梳理美国从 1976 年到 2025 年的政府停摆与拨款中断，包括持续时间、财年和几次最有代表性的停摆。",
-    eyebrow: "停摆历史",
-    heading: "把美国政府停摆这件事，从 1970 年代一路看到今天。",
+    eyebrow: "历史时间线",
+    heading: "美国政府为什么会一次次接近停摆？这条时间线从 1970 年代讲到今天。",
     intro:
-      "不管你在美国还是在海外，这条时间线都能帮助你看明白一件事：美国政府停摆并不算日常事件，但也绝不是只发生过一次两次的例外。",
-    disclaimerTitle: "先看这个说明",
+      "这页不是只讲某一次停摆，而是先帮你看全貌：美国政府停摆不算常见，但也绝不是只发生过一次。",
+    disclaimerTitle: "先说明白",
     disclaimerText:
       "CRS 统计自 FY1977 以来共有 21 次拨款中断。需要注意的是，早期并不是每一次都呈现出今天大家理解的“现代停摆”样子，因为 1980 和 1981 年的 Civiletti 意见改变了联邦机构处理拨款失效的方式。",
     stats: [
-      { value: "1976-2025", label: "展示时间范围" },
-      { value: "21 次", label: "FY1977 以来拨款中断" },
+      { value: "1976-2025", label: "时间范围" },
+      { value: "21 次", label: "1977 财年以来拨款中断次数" },
       { value: "42 天", label: "最长一次", note: "FY2026 拨款中断，至 2025 年 11 月 12 日结束" }
     ],
-    highlightTitle: "这些节点，塑造了世界对美国停摆的印象。",
+    highlightTitle: "如果你只想先看最重要的几次，就从下面这些年份开始。",
     highlightText:
-      "很多人真正记得的，往往不是全部 21 次，而是几次标志性停摆：最早的一轮、1995-96 年的对峙、2013 年的僵局、2018-19 年的超长停摆，以及 2025 年刷新纪录的一次。",
-    railLabel: "交互时间轴",
-    railInstruction: "左右拖动年份轨道，再点开你想看的那个节点。",
-    highlightCtaLabel: "查看完整历史页",
+      "大多数人不需要一开始就把整条长时间线看完，先抓住这几个年份就够了。",
+    railLabel: "拖动时间线",
+    railInstruction: "左右拖动年份，再点开你想看的那一次。",
+    highlightCtaLabel: "查看完整时间线",
     fullTitle: "完整时间线",
     fullText:
       "下面这条列表按 CRS 的时间顺序整理，从 1976 年第一轮 post-fiscal-year funding gap，一直到持续 42 天的 FY2026 拨款中断。",

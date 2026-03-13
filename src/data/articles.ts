@@ -39,7 +39,7 @@ export interface Article {
 export const articles: Article[] = [
   {
     slug: "government-shutdown-2026",
-    category: "Current Watch",
+    category: "Latest status",
     title: "Government Shutdown 2026: status, deadlines, and who could be affected",
     description:
       "A current-status guide covering the latest funding posture, the next deadline, and where to check likely impacts on workers, travel, taxes, and benefits.",
@@ -160,8 +160,8 @@ export const articles: Article[] = [
     ],
     actionBox: {
       title: "Need the current version of the story?",
-      text: "The current watch guide is the fastest way to see the latest funding status, next deadline, and the questions people usually ask next.",
-      ctaLabel: "Go to the current watch guide",
+      text: "The latest status page is the fastest way to see whether a shutdown is active, when the next deadline is, and what people usually need to check next.",
+      ctaLabel: "See the latest status",
       ctaHref: "/government-shutdown-2026/"
     }
   },
@@ -771,7 +771,7 @@ export const articles: Article[] = [
     actionBox: {
       title: "Need the full current status?",
       text: "After the date, the next question is usually whether a shutdown is active and which services are most exposed right now.",
-      ctaLabel: "Open the current watch guide",
+      ctaLabel: "See the latest status",
       ctaHref: "/government-shutdown-2026/"
     }
   }

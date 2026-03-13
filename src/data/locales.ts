@@ -35,14 +35,14 @@ export const uiCopy = {
     siteName: "Government Shutdown",
     languageSwitch: "中文",
     header: {
-      noticeLabel: "Independent Watch",
+      noticeLabel: "Independent site",
       noticeText:
         "Not affiliated with the U.S. government. This site summarizes public information and publishes independent analysis.",
       brandTitle: "Government Shutdown",
-      brandSubtitle: "Federal funding clock, agency impacts, and worker guidance.",
+      brandSubtitle: "Shutdown updates, deadlines, and practical guides.",
       navLabel: "Primary navigation",
       links: [
-        { href: localizePath("en"), label: "Watch" },
+        { href: localizePath("en"), label: "Latest" },
         { href: localizePath("en", "shutdown-history"), label: "History" },
         { href: localizePath("en", "government-shutdown-federal-workers"), label: "Workers" },
         { href: localizePath("en", "government-shutdown-tax-refunds"), label: "Taxes" },
@@ -52,11 +52,11 @@ export const uiCopy = {
       ]
     },
     footer: {
-      eyebrow: "Read This First",
-      title: "Independent, source-linked, and focused on practical answers.",
+      eyebrow: "Useful to know",
+      title: "We explain what could change and link to official sources.",
       body:
         "If you are trying to figure out whether work, benefits, travel, or a federal service could be affected, start with the update date and official sources on each page.",
-      linksEyebrow: "Policy Links",
+      linksEyebrow: "Site policies",
       links: [
         { href: localizePath("en", "about"), label: "About" },
         { href: localizePath("en", "editorial-policy"), label: "Editorial Policy" },
@@ -66,16 +66,16 @@ export const uiCopy = {
       contact: "Questions or correction requests: editor@government-shutdown.com"
     },
     home: {
-      pageTitle: "Federal Funding Clock, Agency Impact Guides, and Worker Answers",
-      heroCta: "Open the current watch page",
+      pageTitle: "U.S. Government Shutdown Updates, Deadlines, and Practical Guides",
+      heroCta: "See the latest shutdown update",
       heroUpdated: "Updated March 13, 2026",
-      signalLabel: "Start here",
+      signalLabel: "Most asked",
       architectureEyebrow: "Main Guides",
       lanePrefix: "Guide",
       openPage: "Open page",
       fastAnswersEyebrow: "Fast Answers",
       timelineEyebrow: "Timeline",
-      featuredEyebrow: "Featured Pages"
+      featuredEyebrow: "Popular pages"
     },
     article: {
       heroNote:
@@ -85,7 +85,7 @@ export const uiCopy = {
       faqHeading: "Frequently asked",
       sourcesHeading: "Official sources",
       relatedHeading: "Related guides",
-      readGuide: "Read guide"
+      readGuide: "Open guide"
     },
     common: {
       xDefault: localizePath("en")
@@ -95,13 +95,13 @@ export const uiCopy = {
     siteName: "美国政府停摆",
     languageSwitch: "English",
     header: {
-      noticeLabel: "独立观察",
+      noticeLabel: "独立网站",
       noticeText: "本网站与美国政府无隶属关系，内容基于公开资料整理，并提供独立分析。",
       brandTitle: "美国政府停摆",
-      brandSubtitle: "联邦拨款时钟、机构影响与联邦雇员指南。",
+      brandSubtitle: "停摆动态、关键日期和实用指南。",
       navLabel: "主导航",
       links: [
-        { href: localizePath("zh"), label: "总览" },
+        { href: localizePath("zh"), label: "最新" },
         { href: localizePath("zh", "shutdown-history"), label: "历史" },
         { href: localizePath("zh", "government-shutdown-federal-workers"), label: "雇员" },
         { href: localizePath("zh", "government-shutdown-tax-refunds"), label: "税务" },
@@ -111,11 +111,11 @@ export const uiCopy = {
       ]
     },
     footer: {
-      eyebrow: "先看这里",
-      title: "独立整理、附带来源链接，并只讲实际影响。",
+      eyebrow: "先知道这些",
+      title: "告诉你会不会受影响，并附上官方来源。",
       body:
         "如果你担心工作、福利、旅行或某项联邦服务会不会受影响，就先看对应页面的更新时间和官方来源。",
-      linksEyebrow: "政策页面",
+      linksEyebrow: "网站信息",
       links: [
         { href: localizePath("zh", "about"), label: "关于本站" },
         { href: localizePath("zh", "editorial-policy"), label: "编辑政策" },
@@ -125,16 +125,16 @@ export const uiCopy = {
       contact: "纠错或合作联系：editor@government-shutdown.com"
     },
     home: {
-      pageTitle: "美国政府停摆时间表、机构影响与联邦雇员指南",
-      heroCta: "查看当前专题页",
+      pageTitle: "美国政府停摆最新情况、截止日期与实用指南",
+      heroCta: "看最新情况",
       heroUpdated: "更新于 2026 年 3 月 13 日",
-      signalLabel: "从这里开始",
+      signalLabel: "大家最先会问",
       architectureEyebrow: "核心指南",
       lanePrefix: "指南",
       openPage: "进入页面",
       fastAnswersEyebrow: "快速答案",
       timelineEyebrow: "时间线",
-      featuredEyebrow: "核心页面"
+      featuredEyebrow: "常看页面"
     },
     article: {
       heroNote: "先看更新时间，再看下方关键要点和官方来源，快速确认哪些信息与你有关。",
@@ -143,7 +143,7 @@ export const uiCopy = {
       faqHeading: "常见问题",
       sourcesHeading: "官方来源",
       relatedHeading: "相关文章",
-      readGuide: "查看指南"
+      readGuide: "打开指南"
     },
     common: {
       xDefault: localizePath("en")
