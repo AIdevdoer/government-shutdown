@@ -4,7 +4,7 @@
 Build a production-ready content site for `government-shutdown.com`, publish it to GitHub, deploy it through Cloudflare Pages, and keep all reader-facing copy written for end users instead of internal SEO or site-strategy audiences.
 
 ## Current Phase
-Phase 11
+Phase 6
 
 ## Phases
 
@@ -76,8 +76,8 @@ Phase 11
 - [x] Identify the highest-value explainer and comparison queries to turn into pages
 - [x] Add mirrored English and Chinese article pages for those query intents
 - [x] Rewire homepage featured guides and article relationships to surface the new pages
-- [ ] Publish and verify the Git-backed deployment
-- **Status:** in_progress
+- [x] Publish and verify the Git-backed deployment
+- **Status:** complete
 
 ## Key Questions
 1. What stack gives fast SEO-friendly delivery and simple Cloudflare Pages deployment?

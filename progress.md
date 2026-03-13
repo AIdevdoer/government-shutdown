@@ -152,12 +152,13 @@
   - `progress.md` (updated)
 
 ### Phase 11: Keyword Expansion Pages
-- **Status:** in_progress
+- **Status:** complete
 - Actions taken:
   - Converted the strongest explainer-style keyword clusters into dedicated mirrored English and Chinese pages instead of leaving them implied inside broader guides.
   - Added new routes for `why-does-the-government-shut-down`, `what-happens-during-a-government-shutdown`, `government-shutdown-vs-debt-ceiling`, and `what-is-a-continuing-resolution`.
   - Rewired homepage featured guides and article `related` links so the new pages are discoverable from the homepage and from adjacent core explainers.
   - Rebuilt successfully and confirmed the new English and Chinese routes are generated in static output.
+  - Committed the changes as `1873039` and verified Cloudflare Pages created a new `Active` production deployment for that commit (`7b5f7b5c-a238-47ba-a9b8-868e7f770f92`).
 - Files created/modified:
   - `src/data/home.ts`
   - `src/data/articles.ts`
