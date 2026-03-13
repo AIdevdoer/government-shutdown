@@ -90,9 +90,9 @@ export const articles: Article[] = [
       { label: "GAO: Lapses in Appropriations", href: "https://www.gao.gov/legal/appropriations-law/lapses-in-appropriations" }
     ],
     related: [
+      "what-happens-during-a-government-shutdown",
       "government-shutdown-countdown",
-      "government-shutdown-federal-workers",
-      "government-shutdown-passports"
+      "who-gets-paid-during-a-government-shutdown"
     ],
     actionBox: {
       title: "Need the next deadline at a glance?",
@@ -169,13 +169,301 @@ export const articles: Article[] = [
     ],
     related: [
       "government-shutdown-2026",
-      "government-shutdown-countdown",
-      "who-gets-paid-during-a-government-shutdown",
-      "government-shutdown-social-security"
+      "why-does-the-government-shut-down",
+      "what-is-a-continuing-resolution",
+      "government-shutdown-vs-debt-ceiling"
     ],
     actionBox: {
       title: "Want the next deadline after you understand the mechanism?",
       text: "The countdown page keeps the next federal funding cutoff in one place, so you can watch the date that could turn this mechanism into a real shutdown.",
+      ctaLabel: "Open the countdown page",
+      ctaHref: "/government-shutdown-countdown/"
+    }
+  },
+  {
+    slug: "why-does-the-government-shut-down",
+    category: "Why it keeps happening",
+    title: "Why does the U.S. government keep shutting down?",
+    description:
+      "A plain-language explanation of why shutdown threats keep returning: repeated deadlines, unresolved spending fights, and the politics of governing at the brink.",
+    updated: "Updated March 13, 2026",
+    kicker: "Shutdowns keep coming back because the funding system runs on hard deadlines and political fights often last longer than the clock.",
+    takeaways: [
+      "Shutdown risk returns because Congress has to revisit federal funding again and again rather than solve it permanently once.",
+      "The most dangerous moments usually come when lawmakers leave major spending disputes unresolved until the last days before a deadline.",
+      "A temporary deal can reopen government, but it often just moves the same argument to the next date on the calendar."
+    ],
+    sections: [
+      {
+        title: "The system is built around repeated deadlines",
+        paragraphs: [
+          "The federal government does not get one permanent spending law and move on forever. Congress has to keep passing appropriations or temporary funding to keep agencies operating.",
+          "That means shutdown risk is not a rare glitch in an otherwise deadline-free system. The system itself creates recurring pressure points."
+        ]
+      },
+      {
+        title: "Why lawmakers so often wait until the brink",
+        paragraphs: [
+          "Spending fights usually involve larger arguments about policy, priorities, and leverage. As long as the existing funding deadline has not arrived, leaders often keep bargaining and try to extract concessions late.",
+          "That is why shutdown headlines tend to spike in the final stretch. The real dispute may have been building for weeks or months before the public feels the time pressure."
+        ]
+      },
+      {
+        title: "Why the same drama can return after a deal",
+        paragraphs: [
+          "A reopening deal does not always settle the deeper disagreement. Sometimes Congress passes a short-term continuing resolution, which keeps government open for a while but sets up another deadline soon after.",
+          "So the pattern many people notice is real: a deal arrives at the last minute, the crisis fades, and then the same questions come back when the temporary funding runs out."
+        ],
+        bullets: [
+          "Annual appropriations deadlines keep returning.",
+          "Short-term funding can delay a shutdown without resolving the core dispute.",
+          "Political leverage is often strongest close to the deadline."
+        ]
+      }
+    ],
+    faqs: [
+      {
+        question: "Why does September 30 matter so much?",
+        answer: "Because the federal fiscal year ends then, so it is a recurring cutoff for annual appropriations."
+      },
+      {
+        question: "Does a reopening deal mean the problem is solved?",
+        answer: "Not always. If the deal is temporary, shutdown risk can return when that temporary funding expires."
+      },
+      {
+        question: "Is this mainly about bad planning or political conflict?",
+        answer: "Political conflict is usually the bigger reason. The hard deadline is known in advance, but the fight over spending terms often lasts until the brink."
+      }
+    ],
+    citations: [
+      { label: "CRS: Shutdown of the Federal Government", href: "https://www.congress.gov/crs_external_products/RS/HTML/RS20348.web.html" },
+      { label: "U.S. Senate: Appropriations Process", href: "https://www.senate.gov/reference/reference_index_subjects/Appropriations_vrd.htm" }
+    ],
+    related: [
+      "what-is-a-government-shutdown",
+      "what-is-a-continuing-resolution",
+      "government-shutdown-countdown",
+      "government-shutdown-2026"
+    ],
+    actionBox: {
+      title: "Want to see the temporary fix that often delays a shutdown?",
+      text: "The continuing resolution guide explains why Congress uses short-term funding so often and why the risk can return when that patch expires.",
+      ctaLabel: "Open the CR guide",
+      ctaHref: "/what-is-a-continuing-resolution/"
+    }
+  },
+  {
+    slug: "what-happens-during-a-government-shutdown",
+    category: "What changes",
+    title: "What happens during a government shutdown?",
+    description:
+      "A plain-language guide to what usually changes during a shutdown, including agency operations, employee status, benefits, travel services, and public-facing delays.",
+    updated: "Updated March 13, 2026",
+    kicker: "A shutdown rarely means everything stops. It usually means some services continue, some slow down, and some pause.",
+    takeaways: [
+      "The effects are uneven: some functions continue, some public-facing services slow down, and some activities pause until funding returns.",
+      "Federal workers may be told to keep working or may be furloughed depending on how their roles are classified.",
+      "For the public, the biggest changes often show up as delays, weaker customer support, and less predictable processing times."
+    ],
+    sections: [
+      {
+        title: "What usually changes first",
+        paragraphs: [
+          "The first visible changes are often about staffing and response time. Phone support, application review, case processing, and in-person services may become slower or less available.",
+          "That is why people often notice confusion before they notice a total stop. The public experience can become uneven long before every headline catches up."
+        ]
+      },
+      {
+        title: "What often keeps running",
+        paragraphs: [
+          "Some functions continue because they are tied to safety, national security, benefit delivery, or other activities the government treats differently during a lapse.",
+          "That does not mean people feel no effect. A service can remain technically open while still running with less staff, weaker support, or longer waits."
+        ],
+        bullets: [
+          "Safety and national security roles often continue.",
+          "Benefit payments may continue while help lines and casework slow down.",
+          "Travel operations may keep moving, but staffing pressure can still affect the experience."
+        ]
+      },
+      {
+        title: "Why your experience depends on the agency",
+        paragraphs: [
+          "There is no single universal shutdown experience. Each agency prepares a contingency plan, and those plans determine who works, what pauses, and how public service is handled.",
+          "That is why the most useful next step is usually to check the guide for the specific service you rely on, whether that is passports, TSA, Social Security, VA, parks, or tax refunds."
+        ]
+      }
+    ],
+    faqs: [
+      {
+        question: "Does everything close during a shutdown?",
+        answer: "No. Some activities continue, some slow down, and some stop, depending on the legal status of the work and the agency plan."
+      },
+      {
+        question: "Do benefit checks always stop?",
+        answer: "Not necessarily. Some payments may continue even when customer service and administrative support become harder to access."
+      },
+      {
+        question: "Why do some websites, lines, or offices seem normal while others do not?",
+        answer: "Because each agency handles lapses through its own contingency plan, and some functions depend more heavily on on-site staff or manual processing than others."
+      }
+    ],
+    citations: [
+      { label: "GAO: Lapses in Appropriations", href: "https://www.gao.gov/legal/appropriations-law/lapses-in-appropriations" },
+      { label: "CRS: Shutdown of the Federal Government", href: "https://www.congress.gov/crs_external_products/RS/HTML/RS20348.web.html" }
+    ],
+    related: [
+      "government-shutdown-2026",
+      "who-gets-paid-during-a-government-shutdown",
+      "government-shutdown-social-security",
+      "government-shutdown-passports"
+    ],
+    actionBox: {
+      title: "Need to know whether this is already happening right now?",
+      text: "The current-status page is the fastest way to check whether the latest deadline has already turned into an active shutdown or a service disruption.",
+      ctaLabel: "Open the current-status page",
+      ctaHref: "/government-shutdown-2026/"
+    }
+  },
+  {
+    slug: "government-shutdown-vs-debt-ceiling",
+    category: "Compare",
+    title: "Government shutdown vs. debt ceiling: what is the difference?",
+    description:
+      "A simple comparison of a government shutdown and a debt ceiling crisis, including what triggers each one, what each one affects, and why people often mix them up.",
+    updated: "Updated March 13, 2026",
+    kicker: "They both involve Congress and deadlines, but they are different problems with different triggers.",
+    takeaways: [
+      "A shutdown happens when Congress fails to pass funding in time for affected agencies.",
+      "A debt ceiling crisis is about Treasury's ability to keep borrowing to pay obligations the government already has.",
+      "One problem does not automatically solve the other, even if both show up in the same political season."
+    ],
+    sections: [
+      {
+        title: "A shutdown is about new funding authority",
+        paragraphs: [
+          "A shutdown starts when appropriations lapse. In plain language, Congress did not pass the funding authority needed for affected agencies to keep operating normally.",
+          "That is why shutdown coverage focuses on agency operations, furloughs, and service disruptions."
+        ]
+      },
+      {
+        title: "The debt ceiling is about paying existing obligations",
+        paragraphs: [
+          "The debt ceiling is different. Treasury describes it as the total amount the United States is authorized to borrow to meet existing legal obligations.",
+          "So the debt ceiling is not about approving a new agency budget for the year. It is about whether the government can keep financing commitments that already exist."
+        ]
+      },
+      {
+        title: "Why people confuse the two",
+        paragraphs: [
+          "Both stories involve Congress, deadlines, and the possibility of serious disruption. Both also create last-minute political drama, which makes the headlines sound similar.",
+          "But the fix for one is not automatically the fix for the other. Passing a funding bill can help avoid a shutdown, while debt ceiling action addresses borrowing capacity."
+        ],
+        bullets: [
+          "Shutdown: appropriations problem.",
+          "Debt ceiling: borrowing authority problem.",
+          "Either one can dominate the political calendar, but they are not interchangeable."
+        ]
+      }
+    ],
+    faqs: [
+      {
+        question: "Can the government face both problems around the same time?",
+        answer: "Yes. They are separate issues, so political fights over each one can overlap even though the trigger is different."
+      },
+      {
+        question: "Does raising the debt ceiling keep the government open?",
+        answer: "No. Debt ceiling action does not replace the need for appropriations or temporary funding."
+      },
+      {
+        question: "Does a funding deal automatically solve the debt ceiling?",
+        answer: "No. A funding bill and a debt ceiling measure address different legal and fiscal questions."
+      }
+    ],
+    citations: [
+      { label: "U.S. Treasury: Debt Limit", href: "https://home.treasury.gov/policy-issues/financial-markets-financial-institutions-and-fiscal-service/debt-limit" },
+      { label: "CRS: Debt Limit Suspensions", href: "https://www.congress.gov/crs-product/IN11829" }
+    ],
+    related: [
+      "what-is-a-government-shutdown",
+      "why-does-the-government-shut-down",
+      "government-shutdown-countdown",
+      "government-shutdown-2026"
+    ],
+    actionBox: {
+      title: "Need the shutdown mechanism first?",
+      text: "If you want the plain-language version of how a shutdown itself starts, the main explainer walks through the funding deadline and lapse process step by step.",
+      ctaLabel: "Open the shutdown explainer",
+      ctaHref: "/what-is-a-government-shutdown/"
+    }
+  },
+  {
+    slug: "what-is-a-continuing-resolution",
+    category: "Funding terms",
+    title: "What is a continuing resolution, and how does it stop a shutdown?",
+    description:
+      "A plain-language explainer on continuing resolutions, or CRs, including what they do, why Congress uses them, and why shutdown risk returns when a CR is about to expire.",
+    updated: "Updated March 13, 2026",
+    kicker: "A continuing resolution is the temporary funding patch Congress uses when full-year spending bills are not ready yet.",
+    takeaways: [
+      "A continuing resolution keeps agencies funded temporarily when regular appropriations are not finished.",
+      "CRs can prevent or end a shutdown, but they often just move the next funding fight to a new deadline.",
+      "That is why shutdown coverage gets louder again when a CR nears expiration."
+    ],
+    sections: [
+      {
+        title: "What a continuing resolution actually does",
+        paragraphs: [
+          "A continuing resolution, usually shortened to CR, provides temporary funding when Congress has not enacted the regular appropriations bills on time.",
+          "In practical terms, it buys time. Agencies can keep operating for the period covered by the CR instead of shutting down immediately."
+        ]
+      },
+      {
+        title: "Why Congress uses CRs so often",
+        paragraphs: [
+          "Congress uses CRs because full-year spending negotiations are often unfinished when the fiscal year starts or when an earlier temporary measure is about to expire.",
+          "A CR is the quickest way to avoid an immediate lapse while lawmakers keep negotiating the bigger package."
+        ]
+      },
+      {
+        title: "Why a CR can stop a shutdown without ending the larger fight",
+        paragraphs: [
+          "A CR solves the short-term clock problem, not necessarily the underlying political disagreement. If lawmakers still disagree when the CR expires, shutdown risk comes back.",
+          "That is why people who follow shutdown news should always ask two questions: is there a CR in place now, and when does it expire?"
+        ],
+        bullets: [
+          "A CR is temporary by design.",
+          "It can keep government open even when major budget disputes remain unresolved.",
+          "When the CR expires, the pressure returns."
+        ]
+      }
+    ],
+    faqs: [
+      {
+        question: "Is a CR the same as a full budget deal?",
+        answer: "No. A CR is temporary funding, not the same thing as finishing the regular appropriations process."
+      },
+      {
+        question: "Can a CR end a shutdown that already started?",
+        answer: "Yes. If Congress passes and the president signs a CR after a lapse begins, it can reopen affected agencies for the period the CR covers."
+      },
+      {
+        question: "Why do shutdown headlines come back after a CR?",
+        answer: "Because a CR sets a new expiration date. If lawmakers still have not agreed on longer-term funding by then, the risk returns."
+      }
+    ],
+    citations: [
+      { label: "CRS: Overview of Continuing Appropriations for FY2026", href: "https://www.congress.gov/crs-product/R48765" },
+      { label: "U.S. Senate: Appropriations Process", href: "https://www.senate.gov/reference/reference_index_subjects/Appropriations_vrd.htm" }
+    ],
+    related: [
+      "what-is-a-government-shutdown",
+      "why-does-the-government-shut-down",
+      "government-shutdown-countdown",
+      "government-shutdown-2026"
+    ],
+    actionBox: {
+      title: "Want to watch the next date after you understand CRs?",
+      text: "The countdown page keeps the next federal funding deadline visible, which is the date to watch once you know how temporary funding works.",
       ctaLabel: "Open the countdown page",
       ctaHref: "/government-shutdown-countdown/"
     }
@@ -781,6 +1069,7 @@ export const articles: Article[] = [
     related: [
       "government-shutdown-2026",
       "what-is-a-government-shutdown",
+      "what-is-a-continuing-resolution",
       "government-shutdown-federal-workers"
     ],
     actionBox: {

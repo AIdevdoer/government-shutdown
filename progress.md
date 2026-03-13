@@ -151,6 +151,21 @@
   - `task_plan.md` (updated)
   - `progress.md` (updated)
 
+### Phase 11: Keyword Expansion Pages
+- **Status:** in_progress
+- Actions taken:
+  - Converted the strongest explainer-style keyword clusters into dedicated mirrored English and Chinese pages instead of leaving them implied inside broader guides.
+  - Added new routes for `why-does-the-government-shut-down`, `what-happens-during-a-government-shutdown`, `government-shutdown-vs-debt-ceiling`, and `what-is-a-continuing-resolution`.
+  - Rewired homepage featured guides and article `related` links so the new pages are discoverable from the homepage and from adjacent core explainers.
+  - Rebuilt successfully and confirmed the new English and Chinese routes are generated in static output.
+- Files created/modified:
+  - `src/data/home.ts`
+  - `src/data/articles.ts`
+  - `src/data/articles.zh.ts`
+  - `task_plan.md` (updated)
+  - `findings.md` (updated)
+  - `progress.md` (updated)
+
 ## Test Results
 | Test | Input | Expected | Actual | Status |
 |------|-------|----------|--------|--------|
@@ -171,6 +186,7 @@
 | Full-page screenshot QA | `npx playwright screenshot --full-page` for `/` and `/shutdown-history/` | Rail layouts render as intended on local preview | Horizontal home rail and vertical history rail confirmed | ✓ |
 | Interactive rail rebuild | `pnpm build` after interactive rail changes | Drag-enabled rail and tab panels build cleanly | 37 static pages built successfully | ✓ |
 | Compact rail screenshot QA | `npx playwright screenshot --full-page` for `/` after interaction redesign | Horizontal rail renders compactly with one visible detail panel | Compact rail confirmed in local screenshot | ✓ |
+| Keyword expansion rebuild | `pnpm build` after adding new explainer pages | New bilingual keyword pages build cleanly and route generation includes them | 45 static pages built successfully, including 8 new keyword routes | ✓ |
 
 ## Error Log
 | Timestamp | Error | Attempt | Resolution |
@@ -184,8 +200,8 @@
 ## 5-Question Reboot Check
 | Question | Answer |
 |----------|--------|
-| Where am I? | Phase 10 |
-| Where am I going? | Push the draggable horizontal rail and verify the Git-backed Cloudflare deployment |
+| Where am I? | Phase 11 |
+| Where am I going? | Push the new keyword-targeted explainer pages and verify the Git-backed Cloudflare deployment |
 | What's the goal? | Build, publish, deploy, and refine the Government Shutdown site |
-| What have I learned? | Git-backed Pages deployment works; bilingual routing is clean; custom-domain activation is blocked only by DNS permissions; the horizontal rail reads better when details are hidden until the user actively opens a stop |
-| What have I done? | Planned the work, built the site, upgraded it to bilingual routing, rewrote reader-facing copy, added shutdown-history pages, redesigned the history UI into rails, and made the horizontal rail draggable with on-demand detail panels |
+| What have I learned? | Git-backed Pages deployment works; bilingual routing is clean; custom-domain activation is blocked only by DNS permissions; mechanism-style explainer queries deserve dedicated pages instead of being buried inside broader worker/service guides |
+| What have I done? | Planned the work, built the site, upgraded it to bilingual routing, rewrote reader-facing copy, added shutdown-history pages, redesigned the history UI into rails, made the horizontal rail draggable with on-demand detail panels, and added new keyword-targeted explainer pages in both languages |

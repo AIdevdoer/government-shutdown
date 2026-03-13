@@ -123,9 +123,11 @@ export const homeContentByLocale: Record<Locale, HomeContent> = {
     featuredSlugs: [
       "government-shutdown-2026",
       "what-is-a-government-shutdown",
-      "government-shutdown-countdown",
+      "why-does-the-government-shut-down",
+      "what-happens-during-a-government-shutdown",
+      "government-shutdown-vs-debt-ceiling",
+      "what-is-a-continuing-resolution",
       "who-gets-paid-during-a-government-shutdown",
-      "government-shutdown-federal-workers",
       "government-shutdown-social-security"
     ]
   },
@@ -212,9 +214,11 @@ export const homeContentByLocale: Record<Locale, HomeContent> = {
     featuredSlugs: [
       "government-shutdown-2026",
       "what-is-a-government-shutdown",
-      "government-shutdown-countdown",
+      "why-does-the-government-shut-down",
+      "what-happens-during-a-government-shutdown",
+      "government-shutdown-vs-debt-ceiling",
+      "what-is-a-continuing-resolution",
       "who-gets-paid-during-a-government-shutdown",
-      "government-shutdown-federal-workers",
       "government-shutdown-social-security"
     ]
   }

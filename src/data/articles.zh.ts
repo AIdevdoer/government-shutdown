@@ -52,7 +52,7 @@ export const articlesZh: Article[] = [
       { label: "CRS：联邦政府停摆", href: "https://www.congress.gov/crs_external_products/RS/HTML/RS20348.web.html" },
       { label: "GAO：拨款中断", href: "https://www.gao.gov/legal/appropriations-law/lapses-in-appropriations" }
     ],
-    related: ["government-shutdown-countdown", "government-shutdown-federal-workers", "government-shutdown-passports"],
+    related: ["what-happens-during-a-government-shutdown", "government-shutdown-countdown", "who-gets-paid-during-a-government-shutdown"],
     actionBox: {
       title: "如果你主要想盯住下一个日期",
       text: "倒计时页会把下一次联邦拨款截止时间直接放在最显眼的位置，方便你反复查看。",
@@ -125,10 +125,274 @@ export const articlesZh: Article[] = [
       { label: "GAO：拨款中断", href: "https://www.gao.gov/legal/appropriations-law/lapses-in-appropriations" },
       { label: "CRS：联邦政府停摆", href: "https://www.congress.gov/crs_external_products/RS/HTML/RS20348.web.html" }
     ],
-    related: ["government-shutdown-2026", "government-shutdown-countdown", "who-gets-paid-during-a-government-shutdown"],
+    related: ["government-shutdown-2026", "why-does-the-government-shut-down", "what-is-a-continuing-resolution", "government-shutdown-vs-debt-ceiling"],
     actionBox: {
       title: "如果你已经看懂机制，下一步最值得盯的就是日期",
       text: "倒计时页会把下一次联邦拨款截止时间放在最显眼的位置，方便你看这个机制会不会真的变成一次停摆。",
+      ctaLabel: "打开倒计时页",
+      ctaHref: "/zh/government-shutdown-countdown/"
+    }
+  },
+  {
+    slug: "why-does-the-government-shut-down",
+    category: "为什么总会停摆",
+    title: "美国政府为什么总会差点停摆，甚至真的停摆？",
+    description: "用普通人能看懂的方式解释，为什么美国政府停摆风险总会反复出现：固定截止日、迟迟谈不拢的开支争议，以及临时补丁式的妥协。",
+    updated: "更新于 2026 年 3 月 13 日",
+    kicker: "停摆风险一再出现，不是因为没人知道日期，而是因为政治争议经常拖得比截止日更久。",
+    takeaways: [
+      "美国联邦拨款不是一次性永久解决的，所以停摆风险会随着一次次拨款截止日反复出现。",
+      "最危险的时候通常是国会把大的开支争议拖到截止日前几天才解决。",
+      "就算短期内避免了停摆，如果只是临时续命，风险也会在下一次日期逼近时重新回来。"
+    ],
+    sections: [
+      {
+        title: "这个体系本来就建立在反复出现的截止日上",
+        paragraphs: [
+          "联邦政府不是通过一份永久性的花钱法案就万事大吉。国会必须不断通过拨款法案，或者至少通过临时拨款，让机构继续运转。",
+          "所以停摆风险并不是一个偶发的系统故障，而是这个财政体系本身就会反复制造出来的压力点。"
+        ]
+      },
+      {
+        title: "为什么总是拖到最后关头",
+        paragraphs: [
+          "拨款争议通常不只是数字问题，还牵涉政策优先级、政治博弈和谈判筹码。只要真正的截止日还没到，双方往往就会一直拖着谈。",
+          "这也是为什么一到最后几天，停摆相关搜索和新闻就会突然暴涨。很多争议其实前面已经积累了很久，只是普通人到临近截止日才明显感到时间压力。"
+        ]
+      },
+      {
+        title: "为什么谈成一次，之后还会再来一次",
+        paragraphs: [
+          "一次避免停摆的协议，并不一定解决了更深层的分歧。很多时候，国会只是先通过一份短期 continuing resolution，让政府暂时继续开门。",
+          "所以大家熟悉的那种循环是真实存在的：最后一刻谈成、危机暂时缓解、然后等临时拨款快到期时，同样的问题又回来。"
+        ],
+        bullets: [
+          "年度拨款截止日会不断出现。",
+          "短期拨款可以推迟停摆，但未必解决争议本身。",
+          "越接近截止日，政治筹码通常越大。"
+        ]
+      }
+    ],
+    faqs: [
+      {
+        question: "为什么 9 月 30 日这么重要？",
+        answer: "因为那是美国联邦财政年度的固定截止点，所以经常成为拨款争议的核心压力日。"
+      },
+      {
+        question: "政府重新开门就代表问题解决了吗？",
+        answer: "不一定。如果只是短期续命，等临时拨款到期，停摆风险还是会回来。"
+      },
+      {
+        question: "这更像是规划失误，还是政治冲突？",
+        answer: "通常更像政治冲突。截止日本来大家都知道，但围绕开支条件的争论往往会拖到最后。"
+      }
+    ],
+    citations: [
+      { label: "CRS：联邦政府停摆", href: "https://www.congress.gov/crs_external_products/RS/HTML/RS20348.web.html" },
+      { label: "美国参议院：拨款流程", href: "https://www.senate.gov/reference/reference_index_subjects/Appropriations_vrd.htm" }
+    ],
+    related: ["what-is-a-government-shutdown", "what-is-a-continuing-resolution", "government-shutdown-countdown", "government-shutdown-2026"],
+    actionBox: {
+      title: "想看那个最常用来拖延停摆的临时补丁？",
+      text: "continuing resolution 那一页会解释，为什么国会总爱用短期拨款先把政府撑住，以及为什么风险会在它到期时再次回来。",
+      ctaLabel: "打开 CR 指南",
+      ctaHref: "/zh/what-is-a-continuing-resolution/"
+    }
+  },
+  {
+    slug: "what-happens-during-a-government-shutdown",
+    category: "停摆时会怎样",
+    title: "美国政府停摆时，现实里到底会发生什么？",
+    description: "用尽量直接的方式解释，政府停摆时哪些机构会继续运行、哪些服务会变慢、哪些事情会暂停，以及普通人最容易感受到什么变化。",
+    updated: "更新于 2026 年 3 月 13 日",
+    kicker: "政府停摆通常不是所有东西一起停，而是有些继续、有些变慢、有些暂停。",
+    takeaways: [
+      "真正的影响通常并不平均：有些功能继续运转，有些面对公众的服务会变慢，有些业务会暂停。",
+      "联邦雇员会根据岗位性质被要求继续工作，或者被 furlough。",
+      "对普通人来说，最常见的变化不是突然归零，而是客服更难接通、处理时间更长、结果更不稳定。"
+    ],
+    sections: [
+      {
+        title: "最先发生变化的通常是什么",
+        paragraphs: [
+          "最先让人感觉到的，往往不是“全关了”，而是人手和响应速度开始出问题。电话支持、申请审核、个案处理和线下服务，可能会先变慢、变少，或者更难接触到。",
+          "所以很多人最早感受到的，是混乱和不确定，而不是一个整齐划一的全面停止。"
+        ]
+      },
+      {
+        title: "哪些事情通常还会继续",
+        paragraphs: [
+          "有些功能会继续，因为它们和公共安全、国家安全、福利发放，或者其他被特殊对待的职能有关。",
+          "但继续运行不等于完全没影响。一个服务即使 technically 还开着，也可能因为人手更少、客服更弱、等待更久而让你明显感到差别。"
+        ],
+        bullets: [
+          "安全和国家安全相关岗位通常继续工作。",
+          "某些福利发放可能继续，但客服和个案处理会变慢。",
+          "旅行相关流程可能继续跑，但人手紧张仍会影响体验。"
+        ]
+      },
+      {
+        title: "为什么每个机构给人的感受都不一样",
+        paragraphs: [
+          "并不存在一个“所有机构都一样”的停摆体验。每个机构都会按自己的 contingency plan 去安排谁继续工作、什么暂停、公共服务怎么维持。",
+          "所以最有用的下一步，通常是去看你真正依赖的那个服务专题，比如护照、TSA、Social Security、VA、国家公园或退税。"
+        ]
+      }
+    ],
+    faqs: [
+      {
+        question: "政府停摆时，是不是所有机构都会关门？",
+        answer: "不是。有些继续、有些变慢、有些暂停，具体要看机构计划和岗位的法律分类。"
+      },
+      {
+        question: "福利支票一定会停吗？",
+        answer: "不一定。有些款项可能继续发，但客服支持和行政处理会明显更难接触。"
+      },
+      {
+        question: "为什么有些网站、热线或办公室看起来正常，有些却不正常？",
+        answer: "因为每个机构的应急方案不同，而且有些服务更依赖现场人手或人工处理，所以影响程度也不同。"
+      }
+    ],
+    citations: [
+      { label: "GAO：拨款中断", href: "https://www.gao.gov/legal/appropriations-law/lapses-in-appropriations" },
+      { label: "CRS：联邦政府停摆", href: "https://www.congress.gov/crs_external_products/RS/HTML/RS20348.web.html" }
+    ],
+    related: ["government-shutdown-2026", "who-gets-paid-during-a-government-shutdown", "government-shutdown-social-security", "government-shutdown-passports"],
+    actionBox: {
+      title: "想先确认这件事现在是不是已经在发生？",
+      text: "最新状态页是最快的入口，能帮你先看这次截止日是不是已经变成现实中的停摆或服务变化。",
+      ctaLabel: "打开最新状态页",
+      ctaHref: "/zh/government-shutdown-2026/"
+    }
+  },
+  {
+    slug: "government-shutdown-vs-debt-ceiling",
+    category: "概念对比",
+    title: "政府停摆和债务上限，到底有什么区别？",
+    description: "用普通人能快速看懂的方式，对比 government shutdown 和 debt ceiling：两者分别是怎么触发的、影响什么、为什么总被混在一起讲。",
+    updated: "更新于 2026 年 3 月 13 日",
+    kicker: "它们都和国会、截止日有关，但不是同一件事。",
+    takeaways: [
+      "政府停摆的触发点，是国会没能及时通过拨款。",
+      "债务上限危机的核心，是财政部还能不能继续借钱来履行已经存在的义务。",
+      "这两个问题常常出现在同一个政治周期里，但解决一个，不等于自动解决另一个。"
+    ],
+    sections: [
+      {
+        title: "政府停摆，说的是新的拨款授权",
+        paragraphs: [
+          "政府停摆发生时，问题在于拨款失效。简单说，就是国会没有及时通过受影响机构继续正常运转所需要的资金授权。",
+          "所以大家谈 shutdown 时，重点通常会落在机构运行、furlough 和公共服务是否受影响。"
+        ]
+      },
+      {
+        title: "债务上限，说的是为既有义务融资的能力",
+        paragraphs: [
+          "债务上限是另一回事。美国财政部的定义重点在于，美国被允许借款的总额上限，以便履行已经存在的法律义务。",
+          "所以债务上限不是在讨论某个机构今年有没有新预算，而是在讨论政府还能不能继续为已经承诺的支出融资。"
+        ]
+      },
+      {
+        title: "为什么很多人会把两者混在一起",
+        paragraphs: [
+          "两者都和国会、最后期限以及潜在的严重后果有关，也都常常在最后时刻形成政治戏剧性，所以新闻标题看起来很像。",
+          "但解决方法并不一样。通过拨款法案能避免 shutdown，而处理债务上限则是在解决借款授权。"
+        ],
+        bullets: [
+          "Shutdown：拨款问题。",
+          "Debt ceiling：借款授权问题。",
+          "两者都可能主导政治日程，但不能互相替代。"
+        ]
+      }
+    ],
+    faqs: [
+      {
+        question: "这两个问题会在同一段时间里一起出现吗？",
+        answer: "会。它们是两条不同的线，所以政治争议完全可能同时发生。"
+      },
+      {
+        question: "提高债务上限就能让政府继续开门吗？",
+        answer: "不能。债务上限处理不能替代拨款法案或临时拨款。"
+      },
+      {
+        question: "通过拨款协议就等于债务上限也解决了吗？",
+        answer: "不等于。拨款协议和债务上限法案处理的是不同的法律和财政问题。"
+      }
+    ],
+    citations: [
+      { label: "美国财政部：债务上限", href: "https://home.treasury.gov/policy-issues/financial-markets-financial-institutions-and-fiscal-service/debt-limit" },
+      { label: "CRS：债务上限暂停", href: "https://www.congress.gov/crs-product/IN11829" }
+    ],
+    related: ["what-is-a-government-shutdown", "why-does-the-government-shut-down", "government-shutdown-countdown", "government-shutdown-2026"],
+    actionBox: {
+      title: "如果你想先把 shutdown 本身的机制看懂",
+      text: "主解释页会一步一步说明，政府停摆到底是怎么由拨款截止日和 funding lapse 触发的。",
+      ctaLabel: "打开停摆机制解释页",
+      ctaHref: "/zh/what-is-a-government-shutdown/"
+    }
+  },
+  {
+    slug: "what-is-a-continuing-resolution",
+    category: "拨款术语",
+    title: "什么是 continuing resolution，它为什么能暂时挡住停摆？",
+    description: "用通俗方式解释 continuing resolution，也就是 CR：它到底是什么、为什么国会总在用、以及为什么它快到期时停摆风险又会回来。",
+    updated: "更新于 2026 年 3 月 13 日",
+    kicker: "CR 本质上就是一张临时拨款补丁，在全年拨款还没谈完时先把政府撑住。",
+    takeaways: [
+      "continuing resolution 会在全年拨款没有按时完成时，先给机构一段临时资金。",
+      "CR 可以避免或结束一次停摆，但往往只是把下一场拨款争议推到新的日期。",
+      "所以每次 CR 快到期，shutdown 新闻都会重新升温。"
+    ],
+    sections: [
+      {
+        title: "continuing resolution 到底在做什么",
+        paragraphs: [
+          "continuing resolution，通常简称 CR，是在国会没有按时通过全年拨款法案时，用来提供临时资金的一种办法。",
+          "你可以把它理解成“先买时间”。只要 CR 还有效，相关机构就不用立刻因为资金到期而停摆。"
+        ]
+      },
+      {
+        title: "为什么国会这么常用 CR",
+        paragraphs: [
+          "因为全年拨款谈判经常在财政年度开始时还没谈完，或者上一次临时措施又快到期了。与其立刻停摆，国会更容易先通过一份短期续命方案。",
+          "所以 CR 往往是避免眼前危机最快的办法，让谈判继续往后拖。"
+        ]
+      },
+      {
+        title: "为什么 CR 能挡住停摆，却不等于问题解决",
+        paragraphs: [
+          "CR 解决的是眼前这个日期，而不一定解决背后的政治分歧。如果 CR 到期时大家还是没谈拢，停摆风险就会再次回来。",
+          "所以看 shutdown 新闻时，最值得先问的两个问题是：现在有没有 CR？如果有，它什么时候到期？"
+        ],
+        bullets: [
+          "CR 天生就是临时性的。",
+          "它可以让政府先继续开门，但未必解决预算争议本身。",
+          "CR 一到期，压力就会重新出现。"
+        ]
+      }
+    ],
+    faqs: [
+      {
+        question: "CR 和完整预算协议是一回事吗？",
+        answer: "不是。CR 是临时拨款，不等于把常规拨款流程完整做完。"
+      },
+      {
+        question: "如果停摆已经开始了，CR 能让政府重新开门吗？",
+        answer: "可以。如果国会通过、总统签署了新的 CR，受影响机构就能在 CR 覆盖的期限内恢复运转。"
+      },
+      {
+        question: "为什么每次 CR 之后，停摆新闻还会回来？",
+        answer: "因为 CR 会带来一个新的到期日。如果到那时长期拨款还是没谈成，风险就会重新出现。"
+      }
+    ],
+    citations: [
+      { label: "CRS：2026 财年继续拨款概览", href: "https://www.congress.gov/crs-product/R48765" },
+      { label: "美国参议院：拨款流程", href: "https://www.senate.gov/reference/reference_index_subjects/Appropriations_vrd.htm" }
+    ],
+    related: ["what-is-a-government-shutdown", "why-does-the-government-shut-down", "government-shutdown-countdown", "government-shutdown-2026"],
+    actionBox: {
+      title: "如果你想知道下一次真正要盯的日期",
+      text: "倒计时页会把下一次联邦拨款截止日放在最显眼的位置，方便你把 CR 的机制和现实时间点对应起来。",
       ctaLabel: "打开倒计时页",
       ctaHref: "/zh/government-shutdown-countdown/"
     }
@@ -685,7 +949,7 @@ export const articlesZh: Article[] = [
       { label: "美国参议院：拨款流程", href: "https://www.senate.gov/reference/reference_index_subjects/Appropriations_vrd.htm" },
       { label: "CRS：联邦政府停摆", href: "https://www.congress.gov/crs_external_products/RS/HTML/RS20348.web.html" }
     ],
-    related: ["government-shutdown-2026", "what-is-a-government-shutdown", "government-shutdown-federal-workers"],
+    related: ["government-shutdown-2026", "what-is-a-government-shutdown", "what-is-a-continuing-resolution", "government-shutdown-federal-workers"],
     actionBox: {
       title: "如果你还想知道现在到底发生了什么",
       text: "在日期之后，很多人下一步最想确认的，就是现在是否已经停摆，以及哪些服务最容易先受影响。",

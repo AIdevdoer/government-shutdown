@@ -4,7 +4,7 @@
 Build a production-ready content site for `government-shutdown.com`, publish it to GitHub, deploy it through Cloudflare Pages, and keep all reader-facing copy written for end users instead of internal SEO or site-strategy audiences.
 
 ## Current Phase
-Phase 9
+Phase 11
 
 ## Phases
 
@@ -72,6 +72,13 @@ Phase 9
 - [x] Publish and verify the Git-backed deployment
 - **Status:** complete
 
+### Phase 11: Keyword Expansion Pages
+- [x] Identify the highest-value explainer and comparison queries to turn into pages
+- [x] Add mirrored English and Chinese article pages for those query intents
+- [x] Rewire homepage featured guides and article relationships to surface the new pages
+- [ ] Publish and verify the Git-backed deployment
+- **Status:** in_progress
+
 ## Key Questions
 1. What stack gives fast SEO-friendly delivery and simple Cloudflare Pages deployment?
 2. Can Cloudflare Pages Git integration be completed from CLI, or does it require dashboard flow?
@@ -89,6 +96,7 @@ Phase 9
 | Put a long-view shutdown timeline in the homepage hero and on a dedicated page | Global readers need historical context, not only current U.S. funding-risk guidance |
 | Render the history UI as a rail instead of a plain card list | The chronology reads faster and has more visual impact when it feels like a dated route with distinct stops |
 | Keep the horizontal rail compact and reveal detail on demand | A crowded hero loses the rail metaphor; users should browse the line first and only expand the stop they choose |
+| Expand mechanism, impact, comparison, and CR keywords into dedicated inner pages | These are closer to how readers actually search than a site architecture organized only by audience segment |
 
 ## Errors Encountered
 | Error | Attempt | Resolution |
@@ -106,3 +114,4 @@ Phase 9
 - The site now serves English on `/` and Chinese on `/zh/`, with localized article and policy pages plus language switching and `hreflang` links.
 - The homepage and several guide pages still contain internal strategy phrasing such as “this page should” or SEO-oriented explanations, so they need a full reader-facing rewrite.
 - The history surfaces now need to preserve the rail metaphor on mobile without breaking readability, especially for long Chinese labels and year ranges.
+- The next content expansion should prioritize mechanism-style evergreen queries like “why does the government shut down,” “what happens during a shutdown,” “shutdown vs debt ceiling,” and “what is a continuing resolution.”

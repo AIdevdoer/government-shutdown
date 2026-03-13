@@ -75,3 +75,5 @@
 - A horizontal rail works best in the homepage hero where only highlights are shown, while the full chronology reads better as a vertical center-spine rail with alternating stops.
 - Once the rail existed, always-open cards still made the hero feel overloaded; the horizontal version works better when the rail itself stays compact and detail moves into a separate active panel.
 - Desktop users benefit from mouse-drag scrolling on the horizontal rail, while mobile users already get native swipe behavior from the same overflow container.
+- The next wave of evergreen search intent is more question-shaped than category-shaped: users commonly ask how a shutdown happens, why it keeps happening, what actually changes during one, whether it is the same as the debt ceiling, and what a continuing resolution means.
+- Those keyword intents are strong enough to deserve first-class mirrored pages in both languages rather than being buried only in the current-status, countdown, or worker guides.
