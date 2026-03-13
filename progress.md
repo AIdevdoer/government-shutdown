@@ -125,6 +125,19 @@
   - `findings.md` (updated)
   - `progress.md` (updated)
 
+### Phase 9: Timeline Rail Redesign
+- **Status:** in_progress
+- Actions taken:
+  - Reworked the homepage history strip into a true horizontal year rail with a continuous line, dated stops, and alternating cards above and below the track.
+  - Rebuilt the full history page into a vertical center-spine timeline with alternating left-right stops and compact year markers.
+  - Verified the redesigned layout with repeated `pnpm build` runs and local full-page screenshots captured through Playwright for `/` and `/shutdown-history/`.
+- Files created/modified:
+  - `src/components/HistoryHeroTrack.astro`
+  - `src/components/HistoryTimelineList.astro`
+  - `task_plan.md` (updated)
+  - `findings.md` (updated)
+  - `progress.md` (updated)
+
 ## Test Results
 | Test | Input | Expected | Actual | Status |
 |------|-------|----------|--------|--------|
@@ -141,6 +154,8 @@
 | Reader-facing content rebuild | `pnpm build` after copy rewrite | All routes build cleanly after full content rewrite | 35 static pages built successfully | ✓ |
 | History timeline build | `pnpm build` after history additions | Homepage and new history pages build cleanly | 37 static pages built successfully | ✓ |
 | Generated HTML spot-check | `rg` in `dist/` for history timeline strings | Homepage and history pages contain the new historical sections | English and Chinese HTML confirmed | ✓ |
+| Timeline rail rebuild | `pnpm build` after rail redesign | Redesigned history components build cleanly | 37 static pages built successfully | ✓ |
+| Full-page screenshot QA | `npx playwright screenshot --full-page` for `/` and `/shutdown-history/` | Rail layouts render as intended on local preview | Horizontal home rail and vertical history rail confirmed | ✓ |
 
 ## Error Log
 | Timestamp | Error | Attempt | Resolution |
@@ -148,12 +163,13 @@
 | 2026-03-12 | `git status` in non-repo directory | 1 | Deferred until git initialization |
 | 2026-03-12 | Chrome DevTools MCP could not open a new local preview page | 1 | Continued with build verification and output inspection |
 | 2026-03-12 | Cloudflare DNS API returned `403 Forbidden` | 1 | Custom domains remain pending; Pages deployment itself succeeded |
+| 2026-03-13 | Chrome DevTools MCP still could not attach due to an existing browser profile | 1 | Switched to Playwright CLI screenshots for visual QA |
 
 ## 5-Question Reboot Check
 | Question | Answer |
 |----------|--------|
-| Where am I? | Phase 8 |
-| Where am I going? | Push the new history timeline changes and verify the Git-backed Cloudflare deployment |
+| Where am I? | Phase 9 |
+| Where am I going? | Push the year-rail redesign and verify the Git-backed Cloudflare deployment |
 | What's the goal? | Build, publish, deploy, and refine the Government Shutdown site |
-| What have I learned? | Git-backed Pages deployment works; bilingual routing is clean; custom-domain activation is blocked only by DNS permissions; homepage framing is stronger when current status is paired with historical context |
-| What have I done? | Planned the work, built the site, upgraded it to bilingual routing, rewrote reader-facing copy, and added a full shutdown-history timeline plus hero-level historical context |
+| What have I learned? | Git-backed Pages deployment works; bilingual routing is clean; custom-domain activation is blocked only by DNS permissions; the shutdown-history concept lands better visually when rendered as an actual rail instead of stacked cards |
+| What have I done? | Planned the work, built the site, upgraded it to bilingual routing, rewrote reader-facing copy, added shutdown-history pages, and redesigned the history UI into a horizontal/vertical rail system |

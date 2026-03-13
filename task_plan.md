@@ -4,7 +4,7 @@
 Build a production-ready content site for `government-shutdown.com`, publish it to GitHub, deploy it through Cloudflare Pages, and keep all reader-facing copy written for end users instead of internal SEO or site-strategy audiences.
 
 ## Current Phase
-Phase 8
+Phase 9
 
 ## Phases
 
@@ -28,9 +28,9 @@ Phase 8
 
 ### Phase 4: Testing & Verification
 - [x] Install dependencies and build successfully
-- [ ] Review the rendered site locally
+- [x] Review the rendered site locally
 - [x] Fix issues found during verification
-- **Status:** in_progress
+- **Status:** complete
 
 ### Phase 5: Publishing & Deployment
 - [x] Initialize git and create GitHub repository
@@ -52,10 +52,17 @@ Phase 8
 - **Status:** in_progress
 
 ### Phase 8: Historical Timeline Expansion
-- [ ] Add verified U.S. shutdown-history data with reader-facing context
-- [ ] Build dedicated English and Chinese history pages
-- [ ] Bring the historical timeline into the homepage hero section
-- [ ] Rebuild, publish, and verify the deployed result
+- [x] Add verified U.S. shutdown-history data with reader-facing context
+- [x] Build dedicated English and Chinese history pages
+- [x] Bring the historical timeline into the homepage hero section
+- [x] Rebuild, publish, and verify the deployed result
+- **Status:** complete
+
+### Phase 9: Timeline Rail Redesign
+- [x] Convert the homepage history strip into a year-rail layout
+- [x] Convert the full history page into a vertical rail with alternating stops
+- [x] Rebuild and visually verify the redesigned timeline sections
+- [ ] Publish and verify the Git-backed deployment
 - **Status:** in_progress
 
 ## Key Questions
@@ -73,6 +80,7 @@ Phase 8
 | Create the Pages project through the Cloudflare API with GitHub source metadata | Wrangler CLI alone does not expose the full Git-backed project setup flow |
 | Rewrite reader-facing copy in a direct service voice | Homepage and guide pages should answer anxious visitors, not describe site architecture or SEO strategy |
 | Put a long-view shutdown timeline in the homepage hero and on a dedicated page | Global readers need historical context, not only current U.S. funding-risk guidance |
+| Render the history UI as a rail instead of a plain card list | The chronology reads faster and has more visual impact when it feels like a dated route with distinct stops |
 
 ## Errors Encountered
 | Error | Attempt | Resolution |
@@ -89,3 +97,4 @@ Phase 8
 - Custom domains were attached to the Pages project but remain pending because the required CNAME DNS records could not be written by the current token.
 - The site now serves English on `/` and Chinese on `/zh/`, with localized article and policy pages plus language switching and `hreflang` links.
 - The homepage and several guide pages still contain internal strategy phrasing such as “this page should” or SEO-oriented explanations, so they need a full reader-facing rewrite.
+- The history surfaces now need to preserve the rail metaphor on mobile without breaking readability, especially for long Chinese labels and year ranges.

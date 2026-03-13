@@ -71,3 +71,5 @@
 - For a global audience, the homepage benefits from explaining that U.S. shutdowns are recurring funding gaps with a long timeline, not just a one-off headline event.
 - The most recognizable modern milestones are 1995-96, 2013, 2018-19, and the FY2026 lapse, but the full chronology reaches back to 1976.
 - The history page should distinguish between early funding gaps and the more recognizable modern shutdown pattern, rather than implying the politics and operational effects were identical across every era.
+- The first history implementation was informative but still read visually like a set of cards; the topic benefits more from a rail metaphor because it emphasizes continuity, intervals, and memorable stops.
+- A horizontal rail works best in the homepage hero where only highlights are shown, while the full chronology reads better as a vertical center-spine rail with alternating stops.
